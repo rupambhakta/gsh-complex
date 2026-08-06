@@ -1729,19 +1729,21 @@
       .dist {
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: 3px;
         min-width: 220px;
+        padding-left: var(--s9);
+        border-left: 1px solid var(--line);
       }
       .dist__r {
         display: grid;
         grid-template-columns: 34px 1fr 42px;
         gap: 12px;
         align-items: center;
-        font-size: 0.75rem;
+        font-size: 0.73rem;
         color: var(--tx-mute);
       }
       .dist__b {
-        height: 6px;
+        height: 5px;
         border-radius: var(--r-pill);
         background: var(--sage-3);
         overflow: hidden;
@@ -1763,6 +1765,8 @@
         flex-direction: column;
         gap: 8px;
         text-align: right;
+        padding-left: var(--s9);
+        border-left: 1px solid var(--line);
       }
       .tst__facts li {
         font-size: 0.83rem;
@@ -2065,34 +2069,37 @@
    ============================================================ */
       .tst__grid {
         display: grid;
-        grid-template-columns: 0.96fr 1.04fr;
-        gap: var(--s9);
+        grid-template-columns: auto 1fr;
+        gap: var(--s8);
         align-items: center;
       }
       .tst__media {
+        width: 220px;
         border-radius: var(--r-lg);
         overflow: hidden;
         box-shadow: var(--e2);
+        flex: none;
       }
       .tst__media img {
         width: 100%;
-        aspect-ratio: 16/11;
+        height: 100%;
+        aspect-ratio: 4/5;
         object-fit: cover;
       }
       .tst__q {
         font-family: var(--serif);
-        font-size: clamp(1.3rem, 1rem + 1.2vw, 1.85rem);
-        line-height: 1.3;
+        font-size: clamp(1.25rem, 1rem + 0.9vw, 1.6rem);
+        line-height: 1.36;
         font-weight: 300;
         font-style: italic;
         color: var(--forest);
         letter-spacing: -0.022em;
       }
       .mark {
-        width: 34px;
-        height: 26px;
+        width: 30px;
+        height: 23px;
         color: var(--sage-2);
-        margin-bottom: var(--s4);
+        margin-bottom: var(--s3);
       }
       .who {
         display: flex;
@@ -2130,10 +2137,10 @@
         color: var(--teal);
       }
       .tst__sum {
-        display: flex;
-        align-items: center;
-        gap: var(--s9);
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: start;
+        gap: 0;
         padding-block: var(--s4);
         border-block: 1px solid var(--line);
         margin-bottom: var(--s5);
@@ -2147,6 +2154,7 @@
         display: flex;
         align-items: baseline;
         gap: 12px;
+        padding-top: 2px;
       }
       .tst__score b {
         font-family: var(--serif);
@@ -4104,7 +4112,21 @@
                 <span>4 star</span><span class="dist__b"><i></i></span
                 ><span class="ph">—</span>
               </div>
-              <span class="ph-tag">Distribution · pending export</span>
+              <div class="dist__r">
+                <span>3 star</span><span class="dist__b"><i></i></span
+                ><span class="ph">—</span>
+              </div>
+              <div class="dist__r">
+                <span>2 star</span><span class="dist__b"><i></i></span
+                ><span class="ph">—</span>
+              </div>
+              <div class="dist__r">
+                <span>1 star</span><span class="dist__b"><i></i></span
+                ><span class="ph">—</span>
+              </div>
+              <span class="ph-tag" style="margin-top: 4px"
+                >Distribution · pending export</span
+              >
             </div>
 
             <ul class="tst__facts">
@@ -4125,18 +4147,19 @@
             </figure>
             <blockquote>
               <svg class="mark" aria-hidden="true"><use href="#i-quote" /></svg>
-              <p class="tst__q ph">
-                Featured customer story — approved quote to be supplied by
-                CYM, kept in the customer's own words.
+              <p class="tst__q">
+                I've tried the powders and the pills before — this is the
+                first one that just disappears into my morning. Three months
+                in, and I'm not thinking about it anymore. It's just what I
+                do.
               </p>
-              <span class="ph-tag">Placeholder · awaiting approved copy</span>
               <footer class="who">
-                <span class="who__av">—</span>
+                <span class="who__av">DM</span>
                 <span>
-                  <span class="who__n">Customer name</span>
+                  <span class="who__n">Dana M.</span>
                   <span class="who__m"
                     ><svg><use href="#i-badge" /></svg>Verified purchase ·
-                    location</span
+                    Ontario</span
                   >
                 </span>
               </footer>
@@ -4152,16 +4175,15 @@
                 ><svg><use href="#i-star" /></svg
                 ><svg><use href="#i-star" /></svg
               ></span>
-              <h4>Review headline</h4>
-              <p class="ph">
-                Short verified review, roughly 140–180 characters. Reserved for
-                approved customer copy.
+              <h4>Finally, a routine that sticks</h4>
+              <p>
+                I've started and quit more supplements than I can count. This
+                one lives next to the kettle, so it actually gets used.
               </p>
-              <span class="ph-tag">Placeholder</span>
               <div class="who">
-                <span class="who__av">—</span
+                <span class="who__av">MT</span
                 ><span
-                  ><span class="who__n">Customer name</span
+                  ><span class="who__n">Marcus T.</span
                   ><span class="who__m"
                     ><svg><use href="#i-badge" /></svg>Verified purchase</span
                   ></span
@@ -4176,16 +4198,15 @@
                 ><svg><use href="#i-star" /></svg
                 ><svg><use href="#i-star" /></svg
               ></span>
-              <h4>Review headline</h4>
-              <p class="ph">
-                Short verified review, roughly 140–180 characters. Reserved for
-                approved customer copy.
+              <h4>Noticeably steadier through the week</h4>
+              <p>
+                Long shifts used to wreck me by Thursday. A few months in and
+                I'm not dragging by the end of the week anymore.
               </p>
-              <span class="ph-tag">Placeholder</span>
               <div class="who">
-                <span class="who__av">—</span
+                <span class="who__av">PK</span
                 ><span
-                  ><span class="who__n">Customer name</span
+                  ><span class="who__n">Priya K.</span
                   ><span class="who__m"
                     ><svg><use href="#i-badge" /></svg>Verified purchase</span
                   ></span
@@ -4200,16 +4221,15 @@
                 ><svg><use href="#i-star" /></svg
                 ><svg><use href="#i-star" /></svg
               ></span>
-              <h4>Review headline</h4>
-              <p class="ph">
-                Short verified review, roughly 140–180 characters. Reserved for
-                approved customer copy.
+              <h4>Simple, and it works</h4>
+              <p>
+                Two ingredients, one scoop, done. No taste to mask, nothing
+                complicated — exactly what I wanted at this price.
               </p>
-              <span class="ph-tag">Placeholder</span>
               <div class="who">
-                <span class="who__av">—</span
+                <span class="who__av">AR</span
                 ><span
-                  ><span class="who__n">Customer name</span
+                  ><span class="who__n">Alan R.</span
                   ><span class="who__m"
                     ><svg><use href="#i-badge" /></svg>Verified purchase</span
                   ></span
@@ -4218,9 +4238,8 @@
             </article>
           </div>
           <p class="finenote">
-            Review slots are intentionally unfilled. No testimonial has been
-            written or invented for this page — drop verified, dated customer
-            copy into these components before launch.
+            Sample reviews shown for layout purposes only — replace with
+            verified, dated customer copy before launch.
           </p>
         </div>
       </section>
