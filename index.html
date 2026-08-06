@@ -134,33 +134,38 @@ figure,blockquote,dl,dd,figcaption{margin:0}
    Utility bars + header + drawer  — structure per yourcym.com
    ============================================================ */
 .util{background:var(--ink); color:rgba(195,208,196,.9); font-size:.735rem; letter-spacing:.02em}
-.util__row{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:var(--s5); min-height:42px}
-.util__row > *{white-space:nowrap; min-width:0}
-.util__l{justify-self:start; overflow:hidden; text-overflow:ellipsis}
-.util__c{justify-self:center; color:var(--gold-2); letter-spacing:.09em; text-transform:uppercase; font-size:.685rem; font-weight:500}
-.util__r{justify-self:end; display:flex; align-items:center; gap:var(--s3); min-width:0; overflow:hidden}
-.util b{color:var(--tx-inv); font-weight:600}
-.util__scholar{display:inline-flex; align-items:center; gap:8px; min-width:0; overflow:hidden; text-overflow:ellipsis}
-.util__scholar i{width:20px;height:20px;border-radius:50%;background:linear-gradient(140deg,var(--sage),var(--teal));flex:none}
-.util__r a{padding:4px 12px; border:1px solid rgba(255,255,255,.22); border-radius:var(--r-pill); font-size:.68rem;
-  letter-spacing:.09em; text-transform:uppercase; color:var(--tx-inv); transition:background .3s var(--ease),border-color .3s var(--ease)}
-.util__r a:hover{background:rgba(255,255,255,.1); border-color:var(--sage)}
-.util__r a:last-child{background:var(--gold); border-color:var(--gold); color:#1A1303; font-weight:600}
-.util__r a:last-child:hover{background:var(--gold-2); border-color:var(--gold-2)}
-.ph-inline{color:var(--gold-2)!important; font-style:italic; font-weight:500!important}
+.util__row{display:flex; align-items:center; justify-content:center; min-height:36px}
+.util__c{color:var(--tx-inv); text-align:center; font-size:.78rem; font-weight:400}
 
-.util2{background:var(--cream); border-bottom:1px solid var(--line)}
-.util2__row{display:flex; align-items:center; justify-content:space-between; gap:var(--s5); min-height:38px}
-.util2__tel{display:inline-flex; align-items:center; gap:9px; font-size:.79rem; color:var(--tx-soft); font-weight:500}
-.util2__tel svg{width:14px;height:14px;color:var(--botanical)}
-.util2__tel:hover{color:var(--forest)}
+.util2{background:var(--ink); border-top:1px solid rgba(255,255,255,.08)}
+.util2__row{display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:var(--s5); min-height:58px}
+.util2__l{display:flex; align-items:center; gap:var(--s4); min-width:0}
+.util2__l::after{content:"";width:1px;height:20px;background:rgba(255,255,255,.18)}
+.util2__tel{display:inline-flex; align-items:center; gap:9px; font-size:.82rem; color:var(--tx-inv); font-weight:500; white-space:nowrap}
+.util2__tel svg{width:14px;height:14px;color:var(--sage)}
+.util2__tel:hover{color:var(--sage-2)}
+.util2__stats{justify-self:center; text-align:center; font-size:.78rem; color:rgba(255,255,255,.9); white-space:nowrap}
+.util2__stats b{color:var(--tx-inv); font-weight:700}
+.util2__r{display:flex; flex-direction:column; align-items:flex-end; gap:6px; min-width:0}
+.util2__r-top{display:flex; align-items:center; gap:var(--s5)}
+.util2__shop{display:flex; flex-direction:column; align-items:flex-start; gap:4px}
+.util2__shop-label{font-size:.68rem; color:rgba(255,255,255,.82)}
+.util2__shop-id{background:var(--teal-soft); color:var(--teal); font-weight:600; padding:3px 10px; border-radius:5px; font-size:.72rem; white-space:nowrap}
+.util2__links{display:flex; align-items:center; gap:8px; font-size:.7rem; letter-spacing:.07em; text-transform:uppercase; color:var(--tx-inv); white-space:nowrap}
+.util2__links a{color:var(--tx-inv); transition:color .3s var(--ease)}
+.util2__links a:hover{color:var(--sage-2)}
+.util2__links span{color:rgba(255,255,255,.4)}
+.util2__globe{background:none; border:none; color:rgba(255,255,255,.85); cursor:pointer; width:26px; height:26px;
+  display:grid; place-items:center; border-radius:50%; transition:background .3s var(--ease),color .3s var(--ease)}
+.util2__globe:hover{background:rgba(255,255,255,.08); color:var(--tx-inv)}
+.util2__globe svg{width:16px;height:16px}
 .soc{display:flex; gap:9px}
 .soc a{width:34px;height:34px;border-radius:50%;border:1px solid var(--line-dark);display:grid;place-items:center;
   transition:border-color .3s var(--ease),background .3s var(--ease)}
 .soc a:hover{border-color:var(--sage);background:rgba(255,255,255,.07)}
 .soc svg{width:14px;height:14px}
-.soc--sm a{width:28px;height:28px;border-color:var(--line-2);color:var(--tx-soft)}
-.soc--sm a:hover{border-color:var(--botanical);background:var(--sage-3);color:var(--forest)}
+.soc--sm a{width:28px;height:28px;border-color:rgba(255,255,255,.22);color:var(--tx-inv)}
+.soc--sm a:hover{border-color:var(--sage);background:rgba(255,255,255,.08);color:var(--tx-inv)}
 .soc--sm svg{width:12px;height:12px}
 
 .hdr{position:sticky; top:0; z-index:60; background:rgba(252,250,245,.9); backdrop-filter:blur(16px) saturate(1.3);
@@ -174,30 +179,32 @@ figure,blockquote,dl,dd,figcaption{margin:0}
 .nav a{font-size:.885rem;color:var(--tx-soft);position:relative;padding:6px 0;transition:color .3s var(--ease);white-space:nowrap}
 .nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--botanical);transition:width .38s var(--ease)}
 .nav a:hover{color:var(--forest)} .nav a:hover::after{width:100%}
+.nav a.nav__hot{color:var(--botanical); font-weight:700}
+.nav a.nav__hot:hover{color:var(--forest)}
 .hdr__act{display:flex;align-items:center;gap:var(--s3);flex:none}
 .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:none;
   background:transparent;border-radius:var(--r-pill);color:var(--forest);cursor:pointer;position:relative;
   transition:background .3s var(--ease)}
 .icon-btn:hover{background:var(--sage-3)} .icon-btn svg{width:21px;height:21px}
 .cart-dot{position:absolute;top:6px;right:5px;min-width:17px;height:17px;padding:0 4px;border-radius:var(--r-pill);
-  background:var(--teal);color:#fff;font-size:.62rem;font-weight:700;display:grid;place-items:center;line-height:1}
+  background:var(--ink);color:#fff;font-size:.62rem;font-weight:700;display:grid;place-items:center;line-height:1}
 .lang button{display:inline-flex;align-items:center;gap:5px;background:none;border:none;cursor:pointer;
   font-size:.83rem;color:var(--tx-soft);padding:8px 6px;transition:color .3s var(--ease)}
 .lang button:hover{color:var(--forest)} .lang svg{width:14px;height:14px}
+.hdr .btn--primary{--btn-bg:#000; border-radius:var(--r-pill); text-transform:uppercase; letter-spacing:.05em; font-weight:700}
+.hdr .btn--primary:hover{--btn-bg:#181818}
 .burger{display:none}
 @media (max-width:1180px){
   .nav{display:none} .burger{display:inline-flex} .hdr__inner{gap:var(--s4)}
   .hdr__act{margin-left:auto} .hdr .btn--sm,.lang{display:none}
 }
-@media (max-width:1340px){ .util__l{display:none} }
-@media (max-width:1180px){ .util__scholar{display:none} }
+@media (max-width:1340px){ .util2__stats{display:none} .util2__row{grid-template-columns:auto auto} }
 @media (max-width:900px){
-  .util__row{grid-template-columns:1fr auto; gap:var(--s4)}
-  .util__c{justify-self:start; font-size:.63rem; letter-spacing:.06em}
-  .util__r a{font-size:.62rem; padding:3px 10px}
+  .util2__shop{display:none}
+  .util__c{font-size:.68rem; letter-spacing:.03em}
 }
 @media (max-width:560px){
-  .util__r a:not(:last-child){display:none}
+  .util2__links a:first-child, .util2__links span, .soc--sm{display:none}
   .util2__row{min-height:34px} .util2__tel{font-size:.74rem}
 }
 .drawer{position:fixed;inset:0;z-index:80;visibility:hidden;pointer-events:none}
@@ -710,28 +717,41 @@ figure,blockquote,dl,dd,figcaption{margin:0}
 <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6A21 21 0 0 0 14.5 3C12 3 10.3 4.5 10.3 7.5v2.4H7.6V13h2.7v8h3.2Z"/></symbol>
 <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="4.6"/><circle cx="12" cy="12" r="3.7"/><circle cx="16.9" cy="7.1" r="1" fill="currentColor" stroke="none"/></symbol>
 <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.6a2.5 2.5 0 0 0-1.8-1.8C18.2 5.4 12 5.4 12 5.4s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.6 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.4 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.4ZM10.2 15V9l5.2 3-5.2 3Z"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.5 4 5.6 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.6-4-9s1.4-6.5 4-9Z"/></symbol>
 </svg>
 
 <!-- ══════════════════ SITE HEADER — structure carried over from yourcym.com ══════════════════ -->
 <div class="util">
   <div class="container util__row">
-    <p class="util__l">30+ years in business · <b>652,035</b> satisfied customers</p>
-    <p class="util__c">Special shipping rate on AutoShip orders</p>
-    <div class="util__r">
-      <span class="util__scholar"><i aria-hidden="true"></i>Scholar: <b class="ph-inline">[Scholar name]</b></span>
-      <a href="#">Join Our Team</a>
-      <a href="#pricing">Shop Now</a>
-    </div>
+    <p class="util__c">Special shipping price for Autoship orders</p>
   </div>
 </div>
 
 <div class="util2">
   <div class="container util2__row">
-    <a class="util2__tel" href="tel:+18889683592"><svg><use href="#i-phone"/></svg>1-888-968-3592</a>
-    <div class="soc soc--sm">
-      <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
-      <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
-      <a href="#" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+    <div class="util2__l">
+      <a class="util2__tel" href="tel:+18889683592"><svg><use href="#i-phone"/></svg>1-888-968-3592</a>
+      <div class="soc soc--sm">
+        <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+      </div>
+    </div>
+
+    <p class="util2__stats">More Than 20 Years In Business With <b>652,035</b> Satisfied Customers With An Average Rating Of <b>4.56</b></p>
+
+    <div class="util2__r">
+      <div class="util2__r-top">
+        <div class="util2__shop">
+          <span class="util2__shop-label">You are shopping with</span>
+          <span class="util2__shop-id">YourCYM International, ID:100000</span>
+        </div>
+        <div class="util2__links">
+          <a href="#">Join Our Team</a>
+          <span aria-hidden="true">|</span>
+          <a href="#pricing">Shop Now</a>
+        </div>
+      </div>
+      <button class="util2__globe" type="button" aria-label="Select region"><svg><use href="#i-globe"/></svg></button>
     </div>
   </div>
 </div>
@@ -749,7 +769,7 @@ figure,blockquote,dl,dd,figcaption{margin:0}
         <a href="#">About Us</a>
         <a href="#">Privacy Policy</a>
         <a href="#science">Reference Materials</a>
-        <a href="#pricing">Pre-Launch Offer</a>
+        <a href="#pricing" class="nav__hot">Pre-Launch Offer</a>
         <a href="#">My Account</a>
       </nav>
 
