@@ -1618,14 +1618,14 @@
         display: grid;
         grid-template-columns: auto 1fr;
         gap: var(--s4);
-        align-items: baseline;
+        align-items: start;
       }
-      .note b {
-        font-family: var(--serif);
-        font-size: 1.15rem;
-        font-weight: 500;
+      .note__ic {
+        width: 19px;
+        height: 19px;
         color: var(--gold);
-        letter-spacing: 0.06em;
+        flex: none;
+        margin-top: 2px;
       }
       .note h4 {
         font-family: var(--sans);
@@ -1874,19 +1874,29 @@
       .ing2__row {
         padding-block: var(--s4);
         border-bottom: 1px solid var(--line);
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        gap: var(--s5);
-        align-items: baseline;
+      }
+      .ing2__top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
       }
       .ing2__i {
-        font-family: var(--serif);
-        font-size: 1.05rem;
-        font-weight: 500;
-        color: var(--gold);
-        letter-spacing: 0.08em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--sage-3);
+      }
+      .ing2__i svg {
+        width: 22px;
+        height: 22px;
+        color: var(--botanical);
       }
       .ing2__n {
+        flex: 1;
         font-family: var(--serif);
         font-size: 1.4rem;
         font-weight: 500;
@@ -1898,10 +1908,12 @@
         line-height: 1.55;
         color: var(--tx-soft);
         font-weight: 400;
-        margin-top: 5px;
+        margin-top: 8px;
+        padding-left: 56px;
         max-width: 46ch;
       }
       .ing2__v {
+        flex: none;
         font-size: 0.78rem;
         letter-spacing: 0.13em;
         text-transform: uppercase;
@@ -3842,7 +3854,7 @@
             </p>
             <div class="notes">
               <div class="note">
-                <b>01</b>
+                <svg class="note__ic"><use href="#i-refresh" /></svg>
                 <div>
                   <h4>A routine, not a regimen</h4>
                   <p>
@@ -3852,7 +3864,7 @@
                 </div>
               </div>
               <div class="note">
-                <b>02</b>
+                <svg class="note__ic"><use href="#i-shield" /></svg>
                 <div>
                   <h4>Built for ordinary weeks</h4>
                   <p>
@@ -3862,7 +3874,7 @@
                 </div>
               </div>
               <div class="note">
-                <b>03</b>
+                <svg class="note__ic"><use href="#i-badge" /></svg>
                 <div>
                   <h4>Measured in months</h4>
                   <p>
@@ -3986,26 +3998,26 @@
 
             <div class="ing2">
               <div class="ing2__row">
-                <span class="ing2__i">01</span>
-                <div>
+                <div class="ing2__top">
+                  <span class="ing2__i"><svg><use href="#i-flask" /></svg></span>
                   <div class="ing2__n">Whey Protein Isolate</div>
-                  <p class="ing2__d">
-                    High-quality, minimally processed fresh dairy whey — the
-                    source of the protein fractions this formula is built on.
-                  </p>
+                  <span class="ing2__v">Primary</span>
                 </div>
-                <span class="ing2__v">Primary</span>
+                <p class="ing2__d">
+                  High-quality, minimally processed fresh dairy whey — the
+                  source of the protein fractions this formula is built on.
+                </p>
               </div>
               <div class="ing2__row">
-                <span class="ing2__i">02</span>
-                <div>
+                <div class="ing2__top">
+                  <span class="ing2__i"><svg><use href="#i-leaf" /></svg></span>
                   <div class="ing2__n">Sunflower Lecithin</div>
-                  <p class="ing2__d">
-                    There for solubility, so the powder mixes cleanly. Nothing
-                    else.
-                  </p>
+                  <span class="ing2__v">Under 1%</span>
                 </div>
-                <span class="ing2__v">Under 1%</span>
+                <p class="ing2__d">
+                  There for solubility, so the powder mixes cleanly. Nothing
+                  else.
+                </p>
               </div>
             </div>
 
