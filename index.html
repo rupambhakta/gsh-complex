@@ -1044,6 +1044,8 @@
       .hero__copy .lead {
         max-width: 36ch;
         font-size: clamp(1.15rem, 0.4vw + 1.5vh, 1.4rem);
+        color: var(--tx);
+        font-weight: 500;
       }
       .hero__benefits {
         display: flex;
@@ -1071,40 +1073,30 @@
         color: var(--forest);
         line-height: 1.28;
       }
-      .hero__cta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        max-width: 470px;
-      }
-      .hero__cta .btn {
-        min-height: 52px;
-        padding: 14px 26px;
-        font-size: 0.92rem;
-      }
       .hero__meta {
         display: flex;
         align-items: center;
         gap: var(--s5);
-        padding-top: var(--s4);
-        margin-top: 2px;
-        border-top: 1px solid rgba(22, 51, 40, 0.14);
+        padding-top: var(--s5);
+        margin-top: var(--s2);
+        border-top: 1px solid rgba(20, 38, 29, 0.22);
         width: 100%;
         max-width: 470px;
         flex-wrap: wrap;
       }
       .hero__meta .stars svg {
-        width: 14px;
-        height: 14px;
+        width: 15px;
+        height: 15px;
         color: var(--gold);
       }
       .hero__meta span {
-        font-size: 0.82rem;
-        color: var(--tx-soft);
+        font-size: 0.86rem;
+        font-weight: 500;
+        color: var(--tx);
       }
       .hero__meta b {
         color: var(--forest);
-        font-weight: 600;
+        font-weight: 700;
       }
 
       /* floating purchase card — the premium product selector */
@@ -3587,19 +3579,6 @@
                 <li><svg><use href="#i-antiox" /></svg><span>Antioxidant Protection</span></li>
                 <li><svg><use href="#i-skin" /></svg><span>Skin &amp; Healthy Aging Support</span></li>
               </ul>
-              <div class="hero__cta">
-                <button
-                  class="btn btn--primary btn--lg"
-                  type="button"
-                  data-add
-                  data-qty-set="1"
-                >
-                  Add GSH COMPLEX to Cart <svg><use href="#i-arrow" /></svg>
-                </button>
-                <a class="btn btn--ghost btn--lg" href="#ingredients"
-                  >Explore the Formula</a
-                >
-              </div>
               <div class="hero__meta">
                 <span class="stars" aria-hidden="true"
                   ><svg><use href="#i-star" /></svg
