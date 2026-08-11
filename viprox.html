@@ -1615,8 +1615,9 @@
       }
 
       /* ══════════════════ THE SHIFT ══════════════════
-     A narrow centred column. The symptoms are set as two quiet
-     italic columns divided by a hairline, not as a bulleted list. */
+     Six marks drawn for these six specific complaints, so the section
+     can be understood at a glance rather than read. Ruled rows in two
+     columns, no cards and no icon grid. */
       .shift {
         text-align: center;
       }
@@ -1629,35 +1630,62 @@
         font-size: 1.08rem;
         line-height: 1.7;
         color: var(--tx-soft);
-        max-width: 60ch;
+        max-width: 58ch;
         margin-inline: auto;
         font-weight: 300;
       }
+
       .signs {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0 var(--s9);
+        gap: 0 var(--s8);
         margin-top: var(--s7);
         text-align: left;
-        position: relative;
       }
-      .signs::before {
-        content: "";
-        position: absolute;
-        top: 6px;
-        bottom: 6px;
-        left: 50%;
-        width: 1px;
-        background: var(--line);
+      .sign {
+        display: grid;
+        grid-template-columns: 46px 1fr;
+        gap: var(--s4);
+        align-items: center;
+        padding: var(--s4) 0;
+        border-bottom: 1px solid var(--line);
       }
-      .signs p {
-        padding: 11px 0;
+      .sign:nth-child(-n + 2) {
+        border-top: 1px solid var(--line);
+      }
+      .sign__ic {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        border: 1px solid var(--sand);
+        background: rgba(255, 255, 255, 0.55);
+        display: grid;
+        place-items: center;
+        color: var(--botanical);
+        transition:
+          border-color 0.4s var(--ease),
+          color 0.4s var(--ease);
+      }
+      .sign__ic svg {
+        width: 23px;
+        height: 23px;
+      }
+      .sign:hover .sign__ic {
+        border-color: var(--gold-2);
+        color: var(--teal);
+      }
+      .sign__t {
         font-family: var(--serif);
-        font-style: italic;
-        font-size: 1.1rem;
-        line-height: 1.4;
+        font-size: 1.08rem;
+        line-height: 1.34;
         color: var(--forest);
       }
+      .sign__t span {
+        display: block;
+        font-style: italic;
+        color: var(--tx-mute);
+      }
+
       .shift__end {
         margin-top: var(--s7);
         padding-top: var(--s6);
@@ -1676,16 +1704,16 @@
         font-weight: 500;
         color: var(--forest);
       }
-      @media (max-width: 720px) {
+      @media (max-width: 760px) {
         .signs {
           grid-template-columns: 1fr;
           gap: 0;
         }
-        .signs::before {
-          display: none;
+        .sign:nth-child(-n + 2) {
+          border-top: 0;
         }
-        .signs p {
-          border-bottom: 1px solid var(--line);
+        .sign:first-child {
+          border-top: 1px solid var(--line);
         }
       }
 
@@ -2326,11 +2354,14 @@
         color: var(--tx-soft);
         max-width: 52ch;
       }
+      .price__side {
+        display: grid;
+        align-content: start;
+        gap: var(--s5);
+      }
       .price__cta {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
         gap: var(--s3);
-        margin-top: var(--s6);
       }
       .promiseblk {
         padding: var(--s7) var(--s6);
@@ -2470,11 +2501,21 @@
         font-size: 1.06rem;
         line-height: 1.66;
       }
-      .close__box {
-        width: min(288px, 66%);
-        margin: var(--s6) auto;
-        filter: drop-shadow(0 26px 36px rgba(0, 0, 0, 0.55));
-        transform: perspective(1200px) rotateX(6deg) rotateY(-8deg);
+      .close__pic {
+        width: min(540px, 88%);
+        margin: var(--s7) auto;
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        box-shadow:
+          0 10px 26px rgba(0, 0, 0, 0.28),
+          0 40px 80px rgba(0, 0, 0, 0.34);
+      }
+      .close__pic img {
+        width: 100%;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        object-position: 52% 54%;
+        display: block;
       }
       .close__cta {
         display: flex;
@@ -2900,6 +2941,103 @@
         />
       </symbol>
 
+    <!-- six line marks drawn for this page, in the same weight and
+         cap style as the icons carried over from the homepage -->
+    <svg style="display: none" aria-hidden="true">
+      <symbol
+        id="i-energy"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="2.6" y="7.7" width="16.2" height="8.6" rx="2.5" />
+        <path d="M21.4 10.7v2.6" />
+        <rect
+          x="4.9"
+          y="10"
+          width="2.7"
+          height="4"
+          rx="0.9"
+          fill="currentColor"
+          stroke="none"
+        />
+      </symbol>
+
+      <symbol
+        id="i-recovery"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M6.3 5.9A8.3 8.3 0 1 1 3.7 12" />
+        <path d="M6.3 5.9H2.9m3.4 0V2.5" />
+        <path d="M12 7.9V12l2.9 1.8" />
+      </symbol>
+
+      <symbol
+        id="i-digest"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M8.6 2.8v3.4c0 1.3-.6 2-1.7 2.7-1.9 1.2-3 3.1-3 5.4 0 3.6 2.9 6.3 6.7 6.3 3.3 0 5.6-1.8 6.5-4.3" />
+        <path d="M8.6 5.5h4.7c3.8 0 6.7 2.9 6.7 6.7 0 2.7-1.4 4.9-3.6 6" />
+        <path d="M8.6 2.8h3.1" />
+      </symbol>
+
+      <symbol
+        id="i-rundown"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 21c4.4-2 7-5.4 7-9.6V5.6L12 3 5 5.6v5.8C5 15.6 7.6 19 12 21Z" />
+        <path d="M12 8.4v6.2" />
+        <path d="M9.5 12.1 12 14.6l2.5-2.5" />
+      </symbol>
+
+      <symbol
+        id="i-pill"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <g transform="rotate(-40 12 12)">
+          <rect x="2.6" y="8.7" width="18.8" height="6.6" rx="3.3" />
+          <path d="M12 8.7v6.6" />
+        </g>
+      </symbol>
+
+      <symbol
+        id="i-plateau"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M3.6 4.4v15.2h16.6" opacity=".45" />
+        <path d="M6.3 16.9 10.4 11.1h7.2" />
+        <circle cx="17.6" cy="11.1" r="1.6" />
+      </symbol>
+    </svg>
+
     <!-- ══════════════════ SITE HEADER — structure carried over from yourcym.com ══════════════════ -->
     <div class="util">
       <div class="container util__row">
@@ -3189,14 +3327,44 @@
             things that were each meant to fix one part of it.
           </p>
 
-          <div class="signs rv rv--2">
-            <p>Energy that runs out long before the day does.</p>
-            <p>Recovery that takes longer than it used to.</p>
-            <p>Digestion with opinions it never used to have.</p>
-            <p>Getting run down easily, and staying that way.</p>
-            <p>A multivitamin you take out of habit.</p>
-            <p>The sense of maintaining, not improving.</p>
-          </div>
+          <ul class="signs rv rv--2">
+              <li class="sign">
+                <span class="sign__ic" aria-hidden="true"
+                  ><svg><use href="#i-energy" /></svg
+                ></span>
+                <span class="sign__t">Energy that runs out <span>long before the day does</span></span>
+              </li>
+              <li class="sign">
+                <span class="sign__ic" aria-hidden="true"
+                  ><svg><use href="#i-recovery" /></svg
+                ></span>
+                <span class="sign__t">Recovery that takes longer <span>than it used to</span></span>
+              </li>
+              <li class="sign">
+                <span class="sign__ic" aria-hidden="true"
+                  ><svg><use href="#i-digest" /></svg
+                ></span>
+                <span class="sign__t">Digestion with opinions <span>it never used to have</span></span>
+              </li>
+              <li class="sign">
+                <span class="sign__ic" aria-hidden="true"
+                  ><svg><use href="#i-rundown" /></svg
+                ></span>
+                <span class="sign__t">Getting run down easily, <span>and staying that way</span></span>
+              </li>
+              <li class="sign">
+                <span class="sign__ic" aria-hidden="true"
+                  ><svg><use href="#i-pill" /></svg
+                ></span>
+                <span class="sign__t">A multivitamin you take <span>mostly out of habit</span></span>
+              </li>
+              <li class="sign">
+                <span class="sign__ic" aria-hidden="true"
+                  ><svg><use href="#i-plateau" /></svg
+                ></span>
+                <span class="sign__t">The sense of maintaining, <span>not improving</span></span>
+              </li>
+          </ul>
 
           <p class="shift__end rv rv--3">
             There is no such thing as a quick fix when it comes to your health.
@@ -3632,29 +3800,37 @@
                 sitting in a cupboard.
               </p>
 
+            </div>
+
+            <div class="price__side rv rv--1">
+              <div class="promiseblk">
+                <span class="seal" aria-hidden="true"
+                  ><span><b>45</b><span>Day promise</span></span></span
+                >
+                <h3>Try VIPROX for 45 days.</h3>
+                <p>
+                  If you don&rsquo;t experience a positive difference within 45
+                  days, you will receive a full refund. No questions asked.
+                </p>
+                <p class="fine">
+                  The guarantee applies to your purchase, not to a specific
+                  health outcome. Nobody can honestly promise you the second
+                  one.
+                </p>
+              </div>
+
               <div class="price__cta">
-                <button class="btn btn--primary btn--lg" type="button" data-add>
+                <button
+                  class="btn btn--primary btn--lg btn--block"
+                  type="button"
+                  data-add
+                >
                   Add VIPROX to Cart <svg><use href="#i-arrow" /></svg>
                 </button>
-                <a class="btn btn--ghost btn--lg" href="#faq"
+                <a class="btn btn--ghost btn--lg btn--block" href="#faq"
                   >Read the fine print</a
                 >
               </div>
-            </div>
-
-            <div class="promiseblk rv rv--1">
-              <span class="seal" aria-hidden="true"
-                ><span><b>45</b><span>Day promise</span></span></span
-              >
-              <h3>Try VIPROX for 45 days.</h3>
-              <p>
-                If you don&rsquo;t experience a positive difference within 45
-                days, you will receive a full refund. No questions asked.
-              </p>
-              <p class="fine">
-                The guarantee applies to your purchase, not to a specific health
-                outcome. Nobody can honestly promise you the second one.
-              </p>
             </div>
           </div>
         </div>
@@ -3737,19 +3913,21 @@
               Three formulas, one protocol, forty-five days to judge it
               honestly, and a full refund if it isn&rsquo;t for you.
             </p>
-            <img
-              class="close__box"
-              src="assets/viprox-box@430.png"
-              srcset="
-                assets/viprox-box@430.png  528w,
-                assets/viprox-box.png     1057w
-              "
-              sizes="288px"
-              width="528"
-              height="437"
-              loading="lazy"
-              alt="The VIPROX carton."
-            />
+            <figure class="close__pic">
+              <img
+                src="assets/viprox-system.jpg"
+                srcset="
+                  assets/viprox-system@700.jpg  768w,
+                  assets/viprox-system.jpg     1536w
+                "
+                sizes="(max-width:900px) 86vw, 540px"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                alt="The four items in the VIPROX package: two pouches of GSH Complex, a bottle of Triozyme Complex and a bottle of Une Vie Solution."
+              />
+            </figure>
+
             <div class="close__cta">
               <button class="btn btn--gold btn--lg" type="button" data-add>
                 Add VIPROX to Cart, $250 <svg><use href="#i-arrow" /></svg>
@@ -3957,7 +4135,7 @@
     <!-- sticky mobile purchase bar -->
     <div class="mbar" id="mbar">
       <div class="mbar__i">
-        <img src="assets/viprox-box@430.png" alt="" aria-hidden="true" />
+        <img src="assets/viprox-box@96.png" alt="" aria-hidden="true" />
         <span>
           <span class="mbar__t">VIPROX</span>
           <span class="mbar__p"

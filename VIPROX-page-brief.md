@@ -21,16 +21,16 @@ The previous version borrowed the homepage's actual section components, which is
 | Section | The composition |
 |---|---|
 | **Hero** | Copy and an open, ruled purchase rail on the left. On the right the carton stands on a lit plinth inside a tall arch, tilted in perspective with a contact shadow and a fading reflection, so it reads as an object in a room rather than a cut-out pasted on a page. The homepage uses a full-bleed photograph and a floating white card; this uses neither. |
-| **The shift** | A narrow centred column. The six symptoms are set as two quiet italic columns divided by a single hairline, not as a bulleted or numbered list. |
+| **The shift** | Six line marks drawn specifically for these six complaints, in the same 1.35 stroke and round-cap style as the icons carried over from the homepage: a low battery, a clock with a rewind tail, a stomach, a shield with a falling arrow, a capsule, and a chart line that climbs then flattens. Ruled rows in two columns, icon left in a hairline circle, first line roman and second italic. Not a card grid. |
 | **What arrives** | The photograph runs off the left edge of the page and the contents are read down the right as a packing list: quantity in Vollkorn, name and format, role in small caps, on hairlines. The section is an inventory rather than a picture with captions floating around it. The image stretches to the exact height of the list, so neither column carries dead space. Below 900px the picture becomes a full-bleed band above the list. |
 | **The protocol** | Two beats hung on one continuous gold line, with ringed markers, set large in Vollkorn. On mobile the line rotates to vertical. |
 | **The three formulas** | Three full-width rows on forest, read left to right: what it is, what it does, what you get. Ruled, never boxed, no icons. |
 | **What it supports** | A heading held to the left with three hairline-divided columns beside it, so it reads as one statement rather than three cards. |
 | **Proof** | The four numbers set **inside** a wide banner image under a forest wash, with the three credentials ruled beneath it. |
 | **What people tell us** | Centred: a small round portrait, one large serif quote, then two shorter quotes divided by a vertical hairline. No cards, no star tiles, no badges. |
-| **What $250 buys** | Set as a **receipt**, with dotted leaders running from each item to its price, a struck-through subtotal and the total in Vollkorn, beside the guarantee. |
+| **What $250 buys** | Set as a **receipt**, with dotted leaders running from each item to its price, a struck-through subtotal and the total in Vollkorn. The guarantee sits opposite it as a bordered block, with both calls to action stacked full-width beneath it, so the two columns finish level and the decision lives in one place. |
 | **FAQ** | Two columns, hairline rows, thin gold chevrons. |
-| **Close** | Fully centred on forest, the carton tilted to match the hero. |
+| **Close** | Fully centred on forest, ending on the system photograph in a rounded frame, so the last thing seen before the button is what actually arrives. |
 
 Also carried through from earlier rounds: light palette throughout with two dark sections, no eyebrow labels except the hero's, no em dash anywhere in visible copy, and the content roughly halved from the first draft (eleven short sections, page height about 8,200px at 1440).
 
@@ -82,7 +82,7 @@ Eleven short sections. Each answers the next question a cold visitor actually as
 | Buttons | 1px lift, arrow slides 3px |
 | FAQ | One panel open at a time, gold chevron rotates |
 | Quantity, add to cart | Same demo behaviour and toast as the homepage |
-| Reduced motion | `prefers-reduced-motion: reduce` disables every reveal and smooth scrolling |
+| Reduced motion | `prefers-reduced-motion: reduce` disables every reveal, the checklist transitions and smooth scrolling |
 
 No external requests. Fonts are the self-hosted woff2 files already in `/fonts`. The carton is `fetchpriority="high"`; everything below the fold is `loading="lazy"`. The carton's tilt, contact shadow and reflection are pure CSS, so there is no extra image weight.
 
@@ -108,9 +108,9 @@ Everything upscaled from the presentation deck is gone. Five photographs now car
 | `viprox-hero-mobile.jpg` + `@half` | `hero image-mobile.png` | **Hero, ≤560px.** The portrait frame. |
 | `viprox-system.jpg` + `@700` | `image1.png` | **What arrives.** Annotated in place with gold leader lines. |
 | `viprox-daily.jpg` + `@700` | `image2.png` | **The protocol.** The routine in use, beside the two beats. |
-| `viprox-box.png` + `@430` | your original carton cut-out | **Closing band** and the mobile bar thumbnail. |
+| `viprox-box@96.png` | your original carton cut-out | **Mobile bar thumbnail**, resized to the 46px it is actually drawn at. |
 
-All JPEGs at quality 88 with half-size companions for `srcset`, roughly 245–285 KB at full size instead of ~2 MB per PNG. `viprox-box-open.jpg` was superseded by the wider hero frame and has been removed; `viprox-system-light.jpg`, the last deck crop, is gone too.
+All JPEGs at quality 88 with half-size companions for `srcset`, roughly 245–285 KB at full size instead of ~2 MB per PNG. `viprox-box-open.jpg` was superseded by the wider hero frame and has been removed; `viprox-system-light.jpg`, the last deck crop, is gone too. The full-size carton cut-out went with them once the closing band moved to the system photograph: the only place it was still needed was a 46px thumbnail, so it is now a 10 KB file rather than a 270 KB one on the bar mobile users carry down the whole page.
 
 ### How the hero is built
 
