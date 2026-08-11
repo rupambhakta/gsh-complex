@@ -1074,13 +1074,14 @@
         line-height: 1.28;
       }
       .hero__meta {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: var(--s5);
-        padding-top: var(--s5);
+        gap: var(--s3);
+        padding: 12px 20px;
         margin-top: var(--s5);
-        border-top: 1px solid rgba(20, 38, 29, 0.22);
-        width: 100%;
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: var(--r-pill);
+        box-shadow: var(--e2);
         max-width: 470px;
         flex-wrap: wrap;
       }
@@ -1441,10 +1442,7 @@
         }
         .hero__meta {
           justify-content: center;
-          max-width: none;
-          border-top: 0;
-          padding-top: 0;
-          margin-top: 0;
+          margin-inline: auto;
         }
         .buy {
           grid-column: 1;
