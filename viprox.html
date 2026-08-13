@@ -2523,6 +2523,14 @@
         justify-content: center;
         gap: var(--s3);
       }
+      .close__stamp {
+        margin-top: var(--s5);
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.2rem;
+        letter-spacing: 0.005em;
+        color: var(--gold-2);
+      }
       .close__trust {
         display: flex;
         flex-wrap: wrap;
@@ -2546,6 +2554,19 @@
       }
 
       /* ══════════════════ shared marks ══════════════════ */
+      sup.rmk {
+        font-size: 0.62em;
+        vertical-align: super;
+        line-height: 0;
+        font-weight: inherit;
+        letter-spacing: 0;
+      }
+      .btn sup.rmk,
+      .mbar__t sup.rmk {
+        font-size: 0.72em;
+        vertical-align: 0.3em;
+        line-height: 0;
+      }
       .stars {
         display: inline-flex;
         align-items: center;
@@ -3024,7 +3045,7 @@
       </symbol>
 
       <symbol
-        id="i-plateau"
+        id="i-mind"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -3032,9 +3053,11 @@
         stroke-linecap="round"
         stroke-linejoin="round"
       >
-        <path d="M3.6 4.4v15.2h16.6" opacity=".45" />
-        <path d="M6.3 16.9 10.4 11.1h7.2" />
-        <circle cx="17.6" cy="11.1" r="1.6" />
+        <path
+          d="M16.1 20.8v-2.5h1.4c.9 0 1.6-.7 1.6-1.6v-2.2l1.3-.5c.5-.2.6-.7.3-1.1l-1.1-1.4c-.3-.3-.4-.7-.4-1.2A7.6 7.6 0 1 0 8.2 17.1v3.7"
+        />
+        <path d="M7.4 9.2c1-.9 2.1-.9 3.1 0s2.1.9 3.1 0" opacity=".55" />
+        <path d="M7.4 12.8c1-.9 2.1-.9 3.1 0s2.1.9 3.1 0" opacity=".55" />
       </symbol>
     </svg>
 
@@ -3092,8 +3115,11 @@
         <div class="hdr__inner">
           <a class="brand" href="#top" aria-label="YourCYM — home">
             <img
-              src="assets/logo-dark.png"
-              srcset="assets/logo-dark@210.png 184w, assets/logo-dark.png 368w"
+              src="assets/logo-light.png"
+              srcset="
+                assets/logo-light@210.png 184w,
+                assets/logo-light.png     368w
+              "
               sizes="52px"
               width="368"
               height="420"
@@ -3158,7 +3184,7 @@
       >
         <div class="drawer__top">
           <img
-            src="assets/logo-dark@210.png"
+            src="assets/logo-light@210.png"
             width="184"
             height="210"
             alt="YourCYM"
@@ -3182,7 +3208,7 @@
           <a href="#" data-drawer-close>My Account</a>
         </nav>
         <a class="btn btn--primary btn--block" href="#buy" data-drawer-close
-          >Buy VIPROX, $250 <svg><use href="#i-arrow" /></svg
+          ><span>Buy VIPROX<sup class="rmk">&reg;</sup>, $250</span> <svg><use href="#i-arrow" /></svg
         ></a>
         <a class="btn btn--ghost btn--block" href="#" data-drawer-close
           >Login</a
@@ -3241,7 +3267,7 @@
               youthful sense of well&#8209;being.
             </p>
             <p class="vh__promise">
-              If you feel like you&rsquo;ve tried everything, try VIPROX, backed
+              If you feel like you&rsquo;ve tried everything, try VIPROX<sup class="rmk">&reg;</sup>, backed
               by a 45&#8209;day money&#8209;back guarantee.
             </p>
 
@@ -3253,7 +3279,8 @@
                 >
               </div>
               <p class="rail__inc">
-                2 &times; GSH Complex, Triozyme, Une Vie, and the shaker.
+                2 &times; GSH Complex, Triozyme, Une Vie, and your personal
+                shaker.
               </p>
 
               <div class="seg" role="radiogroup" aria-label="Purchase options">
@@ -3324,7 +3351,7 @@
           <p class="shift__lead rv rv--1">
             There is no single morning when it changes. Just a slow drift
             somewhere in your forties or fifties, and a cupboard filling up with
-            things that were each meant to fix one part of it.
+            unfinished supplements that were each meant to fix one part of it.
           </p>
 
           <ul class="signs rv rv--2">
@@ -3344,7 +3371,7 @@
                 <span class="sign__ic" aria-hidden="true"
                   ><svg><use href="#i-digest" /></svg
                 ></span>
-                <span class="sign__t">Digestion with opinions <span>it never used to have</span></span>
+                <span class="sign__t">Digestive issues <span>you never used to have</span></span>
               </li>
               <li class="sign">
                 <span class="sign__ic" aria-hidden="true"
@@ -3360,9 +3387,9 @@
               </li>
               <li class="sign">
                 <span class="sign__ic" aria-hidden="true"
-                  ><svg><use href="#i-plateau" /></svg
+                  ><svg><use href="#i-mind" /></svg
                 ></span>
-                <span class="sign__t">The sense of maintaining, <span>not improving</span></span>
+                <span class="sign__t">Brain fog or depression <span>that creep up now and again</span></span>
               </li>
           </ul>
 
@@ -3370,7 +3397,7 @@
             There is no such thing as a quick fix when it comes to your health.
             Improving it is a commitment: an ongoing process of smart decisions,
             good habits and positive lifestyle choices.
-            <b>This is why we created VIPROX.</b>
+            <b>This is why we created VIPROX<sup class="rmk">&reg;</sup>.</b>
           </p>
         </div>
       </section>
@@ -3407,7 +3434,7 @@
                   <span class="kit__q">2<i>&times;</i></span>
                   <span class="kit__n"
                     >GSH Complex<sup>&reg;</sup>
-                    <span class="kit__d">Whey protein isolate</span></span
+                    <span class="kit__d">Glutathione precursors</span></span
                   >
                   <span class="kit__r">Cellular protection</span>
                 </li>
@@ -3415,7 +3442,10 @@
                   <span class="kit__q">1<i>&times;</i></span>
                   <span class="kit__n"
                     >Triozyme<sup>&reg;</sup> Complex
-                    <span class="kit__d">180 chewable tablets</span></span
+                    <span class="kit__d"
+                      >Naturally occurring enzymes from organic certified
+                      grains</span
+                    ></span
                   >
                   <span class="kit__r">Digestion</span>
                 </li>
@@ -3423,7 +3453,9 @@
                   <span class="kit__q">1<i>&times;</i></span>
                   <span class="kit__n"
                     >Une Vie<sup>&reg;</sup> Solution
-                    <span class="kit__d">Structured water concentrate</span></span
+                    <span class="kit__d"
+                      >Structured &amp; energised water concentrate</span
+                    ></span
                   >
                   <span class="kit__r">Hydration</span>
                 </li>
@@ -3438,9 +3470,9 @@
               </ol>
 
               <p class="arrive__note">
-                Made ethically and cruelty-free in Canada. GSH Complex is
-                licensed as a natural health product under
-                <b>NPN 800021489</b>.
+                Made ethically and cruelty-free in Canada. GSH Complex and
+                Triozyme Complex are licensed as natural health products under
+                <b>NPN 800021489</b> and <b>NPN 80094773</b>.
               </p>
             </div>
           </div>
@@ -3451,11 +3483,12 @@
       <section class="sec sec--cream sec--snug" id="protocol">
         <div class="container">
           <div class="arrive__head rv">
-            <h2 class="d2">The protocol <em>is the product.</em></h2>
+            <h2 class="d2">At every meal. <em>It is that simple.</em></h2>
             <p>
-              Three products bought separately are not the same thing as VIPROX.
-              The system works because of the order, the timing and the ratio,
-              and it fits around meals you are already eating.
+              Three elements working in synergy for 98.9% efficacy, which no
+              single product can reach on its own. It works because of the
+              order, the timing and the ratio, and it fits around meals you are
+              already eating.
             </p>
           </div>
 
@@ -3523,7 +3556,7 @@
             <h2 class="d2">What each one <em>is actually for.</em></h2>
             <p class="lead">
               Every tissue, every organ and every system in the body depends
-              upon the health of its individual cells. VIPROX works at that
+              upon the health of its individual cells. VIPROX<sup class="rmk">&reg;</sup> works at that
               level rather than chasing conditions.
             </p>
           </div>
@@ -3531,7 +3564,7 @@
           <article class="form__row rv">
             <div>
               <h3 class="form__name">GSH Complex<sup>&reg;</sup></h3>
-              <span class="form__role">The engine</span>
+              <span class="form__role">The engine, the foundation</span>
             </div>
             <div>
               <p>
@@ -3541,9 +3574,8 @@
                 themselves.
               </p>
               <p>
-                Produced through Provida CVE, a process CYM developed across
-                more than thirty years. Two pouches are included, because this
-                is the component the protocol uses most.
+                Produced through our proprietary production process Provida
+                CVE, over thirty years in the making.
               </p>
               <a class="form__link" href="index.html"
                 >See the full GSH Complex page
@@ -3552,7 +3584,7 @@
             </div>
             <dl class="form__spec">
               <div><dt>Ingredients</dt><dd>Whey protein isolate</dd></div>
-              <div><dt>Also contains</dt><dd>Sunflower lecithin &lt;1%</dd></div>
+              <div><dt>Provides</dt><dd>Glutathione precursors</dd></div>
               <div><dt>Licence</dt><dd>NPN 800021489</dd></div>
             </dl>
           </article>
@@ -3578,7 +3610,7 @@
             <dl class="form__spec">
               <div><dt>Format</dt><dd>180 chewable tablets</dd></div>
               <div><dt>Base</dt><dd>Spelt, kamut, rye</dd></div>
-              <div><dt>Taken</dt><dd>After each meal</dd></div>
+              <div><dt>Licence</dt><dd>NPN 80094773</dd></div>
             </dl>
           </article>
 
@@ -3692,10 +3724,10 @@
             <div>
               <dt>The documentation</dt>
               <dd>
-                A randomised, double-blind, placebo-controlled clinical survey of
+                A randomised, double-blind, placebo-controlled clinical study of
                 115 participants over three months, reviewed by a medical ethics
-                committee. The full report is available to health professionals
-                on request.
+                committee and by two U.S. universities. The full report is
+                available to health professionals on request.
               </dd>
             </div>
           </dl>
@@ -3726,11 +3758,11 @@
           <div class="voices rv rv--1">
             <figure>
               <p>
-                &ldquo;I began using VIPROX at the full dosage, and by the fifth
-                week I noticed I wasn&rsquo;t needing my usual mid-afternoon
-                nap. A week later I felt energised enough to run home from the
-                mailbox, a small thing, but I hadn&rsquo;t thought about doing
-                that in years.&rdquo;
+                &ldquo;I began using VIPROX<sup class="rmk">&reg;</sup>, and by the third week I noticed I
+                wasn&rsquo;t needing my usual mid-afternoon nap. A week later I
+                felt energised enough to run home from the mailbox, a small
+                thing, but I hadn&rsquo;t thought about doing that in
+                years.&rdquo;
               </p>
               <figcaption><b>Debbie J.</b> · Verified purchase</figcaption>
             </figure>
@@ -3738,8 +3770,8 @@
               <p>
                 &ldquo;I&rsquo;ve been using this since 2005. I used to have a
                 very weak immune system, about four colds a year plus the flu,
-                and I worked in toxic environments. Today I feel much healthier
-                overall.&rdquo;
+                and I worked in toxic environments. Today I feel vibrant and
+                energised.&rdquo;
               </p>
               <figcaption><b>Martin N.</b> · Verified purchase</figcaption>
             </figure>
@@ -3790,7 +3822,7 @@
                 ><span class="dots"></span><s>$267.20</s>
               </p>
               <p class="rcpt__tot">
-                <span>As the VIPROX system</span><b>$250</b>
+                <span>As the VIPROX<sup class="rmk">&reg;</sup> system</span><b>$250</b>
               </p>
 
               <p class="price__why">
@@ -3807,15 +3839,10 @@
                 <span class="seal" aria-hidden="true"
                   ><span><b>45</b><span>Day promise</span></span></span
                 >
-                <h3>Try VIPROX for 45 days.</h3>
+                <h3>Try VIPROX<sup class="rmk">&reg;</sup> for 45 days.</h3>
                 <p>
                   If you don&rsquo;t experience a positive difference within 45
                   days, you will receive a full refund. No questions asked.
-                </p>
-                <p class="fine">
-                  The guarantee applies to your purchase, not to a specific
-                  health outcome. Nobody can honestly promise you the second
-                  one.
                 </p>
               </div>
 
@@ -3825,7 +3852,7 @@
                   type="button"
                   data-add
                 >
-                  Add VIPROX to Cart <svg><use href="#i-arrow" /></svg>
+                  <span>Add VIPROX<sup class="rmk">&reg;</sup> to Cart</span> <svg><use href="#i-arrow" /></svg>
                 </button>
                 <a class="btn btn--ghost btn--lg btn--block" href="#faq"
                   >Read the fine print</a
@@ -3864,17 +3891,17 @@
               <p>
                 You can, and all three are listed on this site individually. It
                 costs $267.20 rather than $250, and you would need to set up the
-                timing yourself. VIPROX exists as a package because the three
+                timing yourself. VIPROX<sup class="rmk">&reg;</sup> exists as a package because the three
                 were designed to be taken in a particular order around meals.
               </p>
             </details>
             <details>
               <summary>Is there anything I should watch out for?</summary>
               <p>
-                GSH Complex is made from dairy whey, so VIPROX is not suitable
+                GSH Complex is made from dairy whey, so VIPROX<sup class="rmk">&reg;</sup> is not suitable
                 if you have a milk-protein allergy. If you are pregnant,
                 nursing, taking medication or managing a health condition, speak
-                to a qualified practitioner before starting. VIPROX is a natural
+                to a qualified practitioner before starting. VIPROX<sup class="rmk">&reg;</sup> is a natural
                 wellness system, not a treatment for any disease.
               </p>
             </details>
@@ -3907,7 +3934,7 @@
           <div class="rv">
             <h2 class="d2">
               If you feel like you&rsquo;ve tried everything,
-              <em>try VIPROX.</em>
+              <em>try VIPROX<sup class="rmk">&reg;</sup>.</em>
             </h2>
             <p class="close__p">
               Three formulas, one protocol, forty-five days to judge it
@@ -3930,12 +3957,13 @@
 
             <div class="close__cta">
               <button class="btn btn--gold btn--lg" type="button" data-add>
-                Add VIPROX to Cart, $250 <svg><use href="#i-arrow" /></svg>
+                <span>Add VIPROX<sup class="rmk">&reg;</sup> to Cart, $250</span> <svg><use href="#i-arrow" /></svg>
               </button>
               <a class="btn btn--ghost btn--onDark btn--lg" href="#inside"
                 >See what&rsquo;s inside</a
               >
             </div>
+            <p class="close__stamp">Your last stop, we guarantee!</p>
             <ul class="close__trust">
               <li>
                 <svg><use href="#i-lock" /></svg>Secure checkout
@@ -3962,10 +3990,10 @@
           <div class="news">
             <img
               class="ft__logo"
-              src="assets/logo-dark.png"
+              src="assets/logo-light.png"
               srcset="
-                assets/logo-dark@210.png 184w,
-                assets/logo-dark.png     368w
+                assets/logo-light@210.png 184w,
+                assets/logo-light.png     368w
               "
               sizes="60px"
               width="368"
@@ -4137,7 +4165,7 @@
       <div class="mbar__i">
         <img src="assets/viprox-box@96.png" alt="" aria-hidden="true" />
         <span>
-          <span class="mbar__t">VIPROX</span>
+          <span class="mbar__t">VIPROX<sup class="rmk">&reg;</sup></span>
           <span class="mbar__p"
             ><b style="color: var(--forest)">$250</b> · complete system</span
           >
