@@ -2633,6 +2633,181 @@
       }
 
       /* ============================================================
+   DOCUMENTATION & ECOMMERCE MARKETING MATERIAL
+   ============================================================ */
+      sup.rmk {
+        font-size: 0.62em;
+        vertical-align: super;
+        line-height: 0;
+        font-weight: inherit;
+        letter-spacing: 0;
+      }
+      .docs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--s5);
+        margin-top: var(--s7);
+      }
+      .doc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: var(--s5);
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--r-md);
+        transition:
+          transform 0.45s var(--ease),
+          border-color 0.45s var(--ease),
+          box-shadow 0.45s var(--ease);
+      }
+      .doc:hover {
+        transform: translateY(-3px);
+        border-color: var(--sage);
+        box-shadow: var(--e2);
+      }
+      .doc__ic {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--sage-3);
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .doc__ic svg {
+        width: 17px;
+        height: 17px;
+        color: var(--botanical);
+      }
+      .doc__t {
+        font-size: 1.02rem;
+        line-height: 1.28;
+        margin-top: 2px;
+      }
+      .doc__d {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--tx-soft);
+        flex: 1 1 auto;
+      }
+      .doc__a {
+        margin-top: 4px;
+        font-size: 0.78rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .doc__a svg {
+        width: 11px;
+        height: 11px;
+      }
+      .doc--vid {
+        gap: 12px;
+      }
+      .doc__vid {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: var(--r-sm);
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+        background: var(--forest);
+        cursor: pointer;
+      }
+      .doc__vid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s var(--ease);
+      }
+      .doc__vid:hover img {
+        transform: scale(1.05);
+      }
+      .doc__play {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: rgba(252, 250, 245, 0.94);
+        display: grid;
+        place-items: center;
+        transition:
+          transform 0.45s var(--ease),
+          background 0.35s var(--ease);
+      }
+      .doc__play svg {
+        width: 16px;
+        height: 16px;
+        margin-left: 2px;
+        color: var(--forest);
+        fill: var(--forest);
+      }
+      .doc__vid:hover .doc__play {
+        transform: scale(1.1);
+        background: var(--white);
+      }
+      .doc__vid iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+      .docs__note {
+        margin-top: var(--s5);
+        font-size: 0.82rem;
+        color: var(--tx-mute);
+      }
+      .mkt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--s6);
+        flex-wrap: wrap;
+        margin-top: var(--s6);
+        padding: var(--s6);
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: var(--r-lg);
+      }
+      .mkt__txt {
+        max-width: 64ch;
+      }
+      .mkt__eyebrow {
+        display: block;
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--tx-mute);
+        margin-bottom: 8px;
+      }
+      .mkt__d {
+        font-size: 0.92rem;
+        color: var(--tx-soft);
+        line-height: 1.6;
+        margin-top: 8px;
+      }
+      @media (max-width: 1000px) {
+        .docs {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .docs {
+          grid-template-columns: 1fr;
+        }
+        .mkt {
+          padding: var(--s5);
+          gap: var(--s5);
+        }
+      }
+
+      /* ============================================================
    FINAL CTA
    ============================================================ */
       .final {
@@ -3449,7 +3624,7 @@
             <a href="#pricing">Products</a>
             <a href="#">About Us</a>
             <a href="#">Privacy Policy</a>
-            <a href="#science">Reference Materials</a>
+            <a href="#documentation">Reference Materials</a>
             <a href="#pricing" class="nav__hot">Pre-Launch Offer</a>
             <a href="#">My Account</a>
           </nav>
@@ -3521,7 +3696,7 @@
           <a href="#pricing" data-drawer-close>Products</a>
           <a href="#" data-drawer-close>About Us</a>
           <a href="#" data-drawer-close>Privacy Policy</a>
-          <a href="#science" data-drawer-close>Reference Materials</a>
+          <a href="#documentation" data-drawer-close>Reference Materials</a>
           <a href="#pricing" data-drawer-close>Pre-Launch Offer</a>
           <a href="#" data-drawer-close>My Account</a>
         </nav>
@@ -4653,7 +4828,228 @@
         </div>
       </section>
 
-      <!-- ══════════════════ 13 · FINAL CTA ══════════════════ -->
+      <!-- ══════════════════ 13 · DOCUMENTATION ══════════════════ -->
+      <section class="sec" id="documentation">
+        <div class="container">
+          <div class="sec__head">
+            <span class="eyebrow">Documentation</span>
+            <h2 class="d2">Read it for <em>yourself.</em></h2>
+            <p class="lead">
+              Learn more in depth about GSH Complex<sup class="rmk">&reg;</sup>,
+              its ingredients and its benefits. Every file below is the official
+              document published by CYM — the label, the technical profiles and
+              the clinical material, unedited.
+            </p>
+          </div>
+
+          <ul class="docs rv rv--1">
+            <li class="doc">
+              <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+              <h3 class="doc__t">
+                GSH Complex<sup class="rmk">&reg;</sup> live brochure
+              </h3>
+              <p class="doc__d">
+                The full live brochure for GSH Complex<sup class="rmk"
+                  >&reg;</sup
+                >.
+              </p>
+              <a
+                class="link-u doc__a"
+                href="https://yourcym.com/files/Booklet-GSHE-9avril_en.pdf"
+                target="_blank"
+                rel="noopener"
+                >View brochure <svg><use href="#i-ext" /></svg
+              ></a>
+            </li>
+
+            <li class="doc">
+              <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+              <h3 class="doc__t">
+                GSH Complex<sup class="rmk">&reg;</sup> label
+              </h3>
+              <p class="doc__d">
+                The official label for all nutrition facts, method of use and
+                benefits.
+              </p>
+              <a
+                class="link-u doc__a"
+                href="https://yourcym.com/labels/EN/GSHCOMPLEX-BACK-CAN_en.pdf"
+                target="_blank"
+                rel="noopener"
+                >View label <svg><use href="#i-ext" /></svg
+              ></a>
+            </li>
+
+            <li class="doc">
+              <span class="doc__ic"><svg><use href="#i-flask" /></svg></span>
+              <h3 class="doc__t">Product profile (nutrition &amp; enzymes)</h3>
+              <p class="doc__d">
+                The technical sheet, with the basic nutritional facts and the
+                active enzymes.
+              </p>
+              <a
+                class="link-u doc__a"
+                href="https://yourcym.com/labels/EN/112222-011-RV0418-USAback_en.pdf"
+                target="_blank"
+                rel="noopener"
+                >View profile <svg><use href="#i-ext" /></svg
+              ></a>
+            </li>
+
+            <li class="doc">
+              <span class="doc__ic"><svg><use href="#i-flask" /></svg></span>
+              <h3 class="doc__t">Product profile (vitamins &amp; minerals)</h3>
+              <p class="doc__d">
+                The technical sheet listing every vitamin, mineral and trace
+                element in the product.
+              </p>
+              <a
+                class="link-u doc__a"
+                href="https://yourcym.com/files/profiles/EN/GSHComplexAminoAcid_en.pdf"
+                target="_blank"
+                rel="noopener"
+                >View profile <svg><use href="#i-ext" /></svg
+              ></a>
+            </li>
+
+            <li class="doc doc--vid">
+              <button
+                class="doc__vid"
+                type="button"
+                data-yt="5r-RyeiHG-I"
+                aria-label="Play video: Webinar: clinical applications of GSH Complex&reg;"
+              >
+                <img
+                  src="assets/site/yt-5r-RyeiHG-I.jpg"
+                  width="640"
+                  height="360"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="doc__play"
+                  ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+                ></span>
+              </button>
+              <h3 class="doc__t">
+                Webinar: clinical applications of GSH Complex<sup class="rmk"
+                  >&reg;</sup
+                >
+              </h3>
+              <p class="doc__d">
+                Medical experts discuss and share their clinical experience with
+                GSH Complex<sup class="rmk">&reg;</sup>.
+              </p>
+              <a
+                class="link-u doc__a"
+                href="https://youtu.be/5r-RyeiHG-I"
+                target="_blank"
+                rel="noopener"
+                >Watch on YouTube <svg><use href="#i-ext" /></svg
+              ></a>
+            </li>
+
+            <li class="doc">
+              <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+              <h3 class="doc__t">Give Yourself A Fighting Chance</h3>
+              <p class="doc__d">
+                A publication by our former medical advisor,
+                <b>Robert I. Bender, M.D., FAAFP</b>, on glutathione and its
+                importance in maintaining optimal health.
+              </p>
+              <a
+                class="link-u doc__a"
+                href="https://yourcym.com/labels/EN/Give-Yourself-A-Fighting-Chance_en.pdf"
+                target="_blank"
+                rel="noopener"
+                >Read more <svg><use href="#i-ext" /></svg
+              ></a>
+            </li>
+
+            <li class="doc doc--vid">
+              <button
+                class="doc__vid"
+                type="button"
+                data-yt="gs0-LnUnZ-4"
+                aria-label="Play video: My GSH Complex&reg; experience"
+              >
+                <img
+                  src="assets/site/yt-gs0-LnUnZ-4.jpg"
+                  width="640"
+                  height="360"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="doc__play"
+                  ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+                ></span>
+              </button>
+              <h3 class="doc__t">
+                My GSH Complex<sup class="rmk">&reg;</sup> experience
+              </h3>
+              <p class="doc__d">
+                Julien Lacroix, rock climber, on what GSH Complex<sup
+                  class="rmk"
+                  >&reg;</sup
+                >
+                has done for him.
+              </p>
+              <a
+                class="link-u doc__a"
+                href="https://www.youtube.com/watch?v=gs0-LnUnZ-4"
+                target="_blank"
+                rel="noopener"
+                >Watch on YouTube <svg><use href="#i-ext" /></svg
+              ></a>
+            </li>
+
+            <li class="doc">
+              <span class="doc__ic"><svg><use href="#i-badge" /></svg></span>
+              <h3 class="doc__t">Licence</h3>
+              <p class="doc__d">
+                GSH Complex<sup class="rmk">&reg;</sup> is a natural health
+                product licensed under Natural Product Number
+                <b>800021489</b>.
+              </p>
+              <a class="link-u doc__a" href="#science"
+                >Science &amp; quality <svg><use href="#i-arrow" /></svg
+              ></a>
+            </li>
+          </ul>
+
+          <!-- ─── eCommerce marketing material ─── -->
+          <div class="mkt rv" id="marketing-material">
+            <div class="mkt__txt">
+              <span class="mkt__eyebrow">eCommerce marketing material</span>
+              <h3 class="d4">
+                GSH Complex<sup class="rmk">&reg;</sup> presentation deck
+              </h3>
+              <p class="mkt__d">
+                The eCommerce marketing material for GSH Complex<sup
+                  class="rmk"
+                  >&reg;</sup
+                >
+                — the full presentation Scholars and Ambassadors use to explain
+                the product, ready to share.
+              </p>
+            </div>
+            <a
+              class="btn btn--ghost"
+              href="https://yourcym.com/files/GSHComplexPresentation_en.pdf"
+              target="_blank"
+              rel="noopener"
+              >View document <svg><use href="#i-ext" /></svg
+            ></a>
+          </div>
+
+          <p class="docs__note">
+            Documents open on yourcym.com in a new tab. Information on this page
+            is for educational purposes and is not intended to diagnose, treat,
+            cure or prevent any disease.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 14 · FINAL CTA ══════════════════ -->
       <section class="sec sec--ink final">
         <div class="tex" aria-hidden="true">
           <svg
@@ -4777,6 +5173,10 @@
             <ul>
               <li><a href="#">About Us</a></li>
               <li><a href="#faq">FAQ</a></li>
+              <li><a href="#documentation">Documentation</a></li>
+              <li>
+                <a href="#marketing-material">eCommerce Marketing Material</a>
+              </li>
               <li><a href="#reviews">Testimonials</a></li>
               <li><a href="#">Compensation Plan</a></li>
               <li><a href="#">YourCYM Jingle</a></li>
@@ -5028,6 +5428,28 @@
               toast.classList.remove("is-on");
             }, 2600);
           });
+        });
+
+        /* — video facades: nothing reaches YouTube until a play is pressed — */
+        $$("[data-yt]").forEach(function (b) {
+          b.addEventListener(
+            "click",
+            function () {
+              var f = document.createElement("iframe");
+              f.src =
+                "https://www.youtube-nocookie.com/embed/" +
+                b.dataset.yt +
+                "?autoplay=1&rel=0";
+              f.title = b.getAttribute("aria-label") || "Video";
+              f.allow =
+                "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
+              f.allowFullscreen = true;
+              b.innerHTML = "";
+              b.appendChild(f);
+              b.style.cursor = "default";
+            },
+            { once: true },
+          );
         });
 
         /* — reveal on scroll — */

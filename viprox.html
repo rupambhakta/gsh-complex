@@ -2485,6 +2485,235 @@
         }
       }
 
+      /* ══════════════════ DOCUMENTATION & ECOMMERCE MARKETING MATERIAL ══════════════════ */
+      .docs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--s5);
+        margin-top: var(--s6);
+      }
+      .dtabs {
+        display: flex;
+        gap: var(--s7);
+        margin-top: var(--s6);
+        border-bottom: 1px solid var(--line);
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .dtabs::-webkit-scrollbar {
+        display: none;
+      }
+      .dtab {
+        appearance: none;
+        background: none;
+        border: 0;
+        padding: 0 0 13px;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: var(--sans);
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--tx-mute);
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        transition:
+          color 0.3s var(--ease),
+          border-color 0.3s var(--ease);
+      }
+      .dtab:hover {
+        color: var(--botanical);
+      }
+      .dtab.is-on {
+        color: var(--forest);
+        border-bottom-color: var(--teal);
+      }
+      .dtab i {
+        font-style: normal;
+        letter-spacing: 0.06em;
+        color: var(--tx-mute);
+        font-weight: 400;
+      }
+      .dtab.is-on i {
+        color: var(--sage);
+      }
+      .docs__group[hidden] {
+        display: none;
+      }
+      @media (max-width: 640px) {
+        .dtabs {
+          gap: var(--s5);
+        }
+        .dtab i {
+          display: none;
+        }
+      }
+      .doc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: var(--s5);
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--r-md);
+        transition:
+          transform 0.45s var(--ease),
+          border-color 0.45s var(--ease),
+          box-shadow 0.45s var(--ease);
+      }
+      .doc:hover {
+        transform: translateY(-3px);
+        border-color: var(--sage);
+        box-shadow: var(--e2);
+      }
+      .doc__ic {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--sage-3);
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .doc__ic svg {
+        width: 17px;
+        height: 17px;
+        color: var(--botanical);
+      }
+      .doc__t {
+        font-size: 1.02rem;
+        line-height: 1.28;
+        margin-top: 2px;
+      }
+      .doc__d {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--tx-soft);
+        flex: 1 1 auto;
+      }
+      .doc__a {
+        margin-top: 4px;
+        font-size: 0.78rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .doc__a svg {
+        width: 11px;
+        height: 11px;
+      }
+      .doc--vid {
+        gap: 12px;
+      }
+      .doc__vid {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: var(--r-sm);
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+        background: var(--forest);
+        cursor: pointer;
+      }
+      .doc__vid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s var(--ease);
+      }
+      .doc__vid:hover img {
+        transform: scale(1.05);
+      }
+      .doc__play {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: rgba(252, 250, 245, 0.94);
+        display: grid;
+        place-items: center;
+        transition:
+          transform 0.45s var(--ease),
+          background 0.35s var(--ease);
+      }
+      .doc__play svg {
+        width: 16px;
+        height: 16px;
+        margin-left: 2px;
+        color: var(--forest);
+        fill: var(--forest);
+      }
+      .doc__vid:hover .doc__play {
+        transform: scale(1.1);
+        background: var(--white);
+      }
+      .doc__vid iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+      .docs__note {
+        margin-top: var(--s5);
+        font-size: 0.82rem;
+        color: var(--tx-mute);
+      }
+      .mkt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--s6);
+        flex-wrap: wrap;
+        margin-top: var(--s6);
+        padding: var(--s6);
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: var(--r-lg);
+      }
+      .mkt__txt {
+        max-width: 64ch;
+      }
+      .mkt__eyebrow {
+        display: block;
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--tx-mute);
+        margin-bottom: 8px;
+      }
+      .mkt__d {
+        font-size: 0.92rem;
+        color: var(--tx-soft);
+        line-height: 1.6;
+        margin-top: 8px;
+      }
+      .mkt__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--s4) var(--s6);
+        margin-top: var(--s4);
+      }
+      @media (max-width: 1000px) {
+        .docs {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .docs {
+          grid-template-columns: 1fr;
+        }
+        .mkt {
+          padding: var(--s5);
+          gap: var(--s5);
+        }
+      }
+
       /* ══════════════════ CLOSE ══════════════════ */
       .close {
         text-align: center;
@@ -3131,7 +3360,7 @@
             <a href="index.html">Products</a>
             <a href="#">About Us</a>
             <a href="#">Privacy Policy</a>
-            <a href="#proof">Reference Materials</a>
+            <a href="#documentation">Reference Materials</a>
             <a href="#buy" class="nav__hot">Pre-Launch Offer</a>
             <a href="#">My Account</a>
           </nav>
@@ -3203,7 +3432,7 @@
           <a href="index.html" data-drawer-close>Products</a>
           <a href="#" data-drawer-close>About Us</a>
           <a href="#" data-drawer-close>Privacy Policy</a>
-          <a href="#proof" data-drawer-close>Reference Materials</a>
+          <a href="#documentation" data-drawer-close>Reference Materials</a>
           <a href="#buy" data-drawer-close>Pre-Launch Offer</a>
           <a href="#" data-drawer-close>My Account</a>
         </nav>
@@ -3928,7 +4157,353 @@
         </div>
       </section>
 
-      <!-- ══════════════════ 11 · CLOSE ══════════════════ -->
+      <!-- ══════════════════ 11 · DOCUMENTATION ══════════════════ -->
+      <section class="sec sec--cream sec--snug" id="documentation">
+        <div class="container">
+          <h2 class="d2 rv">Read it for <em>yourself</em></h2>
+          <p class="lead rv rv--1" style="margin-top: 14px; max-width: 70ch">
+            VIPROX<sup class="rmk">&reg;</sup> is three products, so the
+            paperwork is three sets. Below are the official CYM documents for
+            each formula — labels, technical profiles and the published clinical
+            material, unedited.
+          </p>
+
+          <div class="dtabs rv rv--1" role="tablist" aria-label="Documentation by formula">
+            <button
+              class="dtab is-on"
+              type="button"
+              role="tab"
+              id="dtab-gsh"
+              aria-controls="docs-gsh"
+              aria-selected="true"
+              data-doctab="docs-gsh"
+            >
+              GSH Complex<sup class="rmk">&reg;</sup> <i>NPN 800021489</i>
+            </button>
+            <button
+              class="dtab"
+              type="button"
+              role="tab"
+              id="dtab-trio"
+              aria-controls="docs-trio"
+              aria-selected="false"
+              tabindex="-1"
+              data-doctab="docs-trio"
+            >
+              Triozyme<sup class="rmk">&reg;</sup> Complex
+            </button>
+            <button
+              class="dtab"
+              type="button"
+              role="tab"
+              id="dtab-unevie"
+              aria-controls="docs-unevie"
+              aria-selected="false"
+              tabindex="-1"
+              data-doctab="docs-unevie"
+            >
+              Une Vie<sup class="rmk">&trade;</sup> <i>NPN 80094773</i>
+            </button>
+          </div>
+
+          <div
+            class="docs__group"
+            id="docs-gsh"
+            role="tabpanel"
+            aria-labelledby="dtab-gsh"
+          >
+            <ul class="docs">
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+                <h3 class="doc__t">
+                  GSH Complex<sup class="rmk">&reg;</sup> live brochure
+                </h3>
+                <p class="doc__d">
+                  The full live brochure for GSH Complex<sup class="rmk"
+                    >&reg;</sup
+                  >.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://yourcym.com/files/Booklet-GSHE-9avril_en.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View brochure <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+                <h3 class="doc__t">
+                  GSH Complex<sup class="rmk">&reg;</sup> label
+                </h3>
+                <p class="doc__d">
+                  The official label for all nutrition facts, method of use and
+                  benefits.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://yourcym.com/labels/EN/GSHCOMPLEX-BACK-CAN_en.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View label <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-flask" /></svg></span>
+                <h3 class="doc__t">
+                  Product profile (nutrition &amp; enzymes)
+                </h3>
+                <p class="doc__d">
+                  The technical sheet, with the basic nutritional facts and the
+                  active enzymes.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://yourcym.com/labels/EN/112222-011-RV0418-USAback_en.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View profile <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-flask" /></svg></span>
+                <h3 class="doc__t">
+                  Product profile (vitamins &amp; minerals)
+                </h3>
+                <p class="doc__d">
+                  The technical sheet listing every vitamin, mineral and trace
+                  element in the product.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://yourcym.com/files/profiles/EN/GSHComplexAminoAcid_en.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View profile <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+              <li class="doc doc--vid">
+                <button
+                  class="doc__vid"
+                  type="button"
+                  data-yt="5r-RyeiHG-I"
+                  aria-label="Play video: Webinar: clinical applications"
+                >
+                  <img
+                    src="assets/site/yt-5r-RyeiHG-I.jpg"
+                    width="640"
+                    height="360"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="doc__play"
+                    ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+                  ></span>
+                </button>
+                <h3 class="doc__t">Webinar: clinical applications</h3>
+                <p class="doc__d">
+                  Medical experts discuss and share their clinical experience
+                  with GSH Complex<sup class="rmk">&reg;</sup>.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://youtu.be/5r-RyeiHG-I"
+                  target="_blank"
+                  rel="noopener"
+                  >Watch on YouTube <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+                <h3 class="doc__t">Give Yourself A Fighting Chance</h3>
+                <p class="doc__d">
+                  A publication by our former medical advisor,
+                  <b>Robert I. Bender, M.D., FAAFP</b>, on glutathione and its
+                  importance in maintaining optimal health.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://yourcym.com/labels/EN/Give-Yourself-A-Fighting-Chance_en.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >Read more <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="docs__group"
+            id="docs-trio"
+            role="tabpanel"
+            aria-labelledby="dtab-trio"
+            hidden
+          >
+            <ul class="docs">
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+                <h3 class="doc__t">
+                  Triozyme<sup class="rmk">&reg;</sup> label
+                </h3>
+                <p class="doc__d">
+                  The official label for its nutrition facts, method of use and
+                  benefits.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://cymcorp.us/labels/123866-001-RV0418-Triozyme.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View label <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-flask" /></svg></span>
+                <h3 class="doc__t">Product profile</h3>
+                <p class="doc__d">
+                  The technical sheet: basic nutritional facts, active enzymes,
+                  vitamins, minerals and trace elements.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://cymcorp.us/labels/123866-001-RV0418-Triozyme.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View profile <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="docs__group"
+            id="docs-unevie"
+            role="tabpanel"
+            aria-labelledby="dtab-unevie"
+            hidden
+          >
+            <ul class="docs">
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+                <h3 class="doc__t">
+                  Une Vie<sup class="rmk">&trade;</sup> label
+                </h3>
+                <p class="doc__d">
+                  The official label for all nutrition facts, method of use and
+                  benefits.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://yourcym.com/labels/EN/127771-001-RV0418-UNEVIE_en.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View label <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+              <li class="doc">
+                <span class="doc__ic"><svg><use href="#i-flask" /></svg></span>
+                <h3 class="doc__t">
+                  Scientific opinion by Dr. A. Michrowski
+                </h3>
+                <p class="doc__d">
+                  A report assembling the rationale behind observations
+                  associated with cellular health — hydration, transferring
+                  agents, detoxification and co-factor behaviour in delivery
+                  systems such as GSH Complex<sup class="rmk">&reg;</sup>.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://yourcym.com/files/Dr.Michrowski-scientific-opinion2.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >Read more <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+              <li class="doc doc--vid">
+                <button
+                  class="doc__vid"
+                  type="button"
+                  data-yt="Xx1rwqzxG7c"
+                  aria-label="Play video: My Une Vie&trade; experience"
+                >
+                  <img
+                    src="assets/site/yt-Xx1rwqzxG7c.jpg"
+                    width="640"
+                    height="360"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="doc__play"
+                    ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+                  ></span>
+                </button>
+                <h3 class="doc__t">
+                  My Une Vie<sup class="rmk">&trade;</sup> experience
+                </h3>
+                <p class="doc__d">
+                  Julien Lacroix, rock climber, on what Une Vie<sup class="rmk"
+                    >&trade;</sup
+                  >
+                  has done for him.
+                </p>
+                <a
+                  class="link-u doc__a"
+                  href="https://www.youtube.com/watch?v=Xx1rwqzxG7c"
+                  target="_blank"
+                  rel="noopener"
+                  >Watch on YouTube <svg><use href="#i-ext" /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ─── eCommerce marketing material ─── -->
+          <div class="mkt rv" id="marketing-material">
+            <div class="mkt__txt">
+              <span class="mkt__eyebrow">eCommerce marketing material</span>
+              <h3 class="d4">The presentation decks</h3>
+              <p class="mkt__d">
+                The eCommerce marketing material for each formula in
+                VIPROX<sup class="rmk">&reg;</sup> — the full presentations
+                Scholars and Ambassadors use to explain the products, ready to
+                share.
+              </p>
+              <div class="mkt__links">
+                <a
+                  class="link-u doc__a"
+                  href="https://yourcym.com/files/GSHComplexPresentation_en.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >GSH Complex deck <svg><use href="#i-ext" /></svg
+                ></a>
+                <a
+                  class="link-u doc__a"
+                  href="https://cymcorp.us/files/Triozyme-Presentation.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >Triozyme deck <svg><use href="#i-ext" /></svg
+                ></a>
+                <a
+                  class="link-u doc__a"
+                  href="https://cymcorp.us/files/EN/Une-Vie-Presentation.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >Une Vie deck <svg><use href="#i-ext" /></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <p class="docs__note">
+            Documents open in a new tab on yourcym.com or cymcorp.us. The full
+            clinical study report is available to health professionals on
+            request. Information here is for educational purposes and is not
+            intended to diagnose, treat, cure or prevent any disease.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 12 · CLOSE ══════════════════ -->
       <section class="sec sec--dark sec--snug close">
         <div class="container container--narrow">
           <div class="rv">
@@ -4029,6 +4604,10 @@
             <ul>
               <li><a href="#">About Us</a></li>
               <li><a href="#faq">FAQ</a></li>
+              <li><a href="#documentation">Documentation</a></li>
+              <li>
+                <a href="#marketing-material">eCommerce Marketing Material</a>
+              </li>
               <li><a href="#reviews">Testimonials</a></li>
               <li><a href="#">Compensation Plan</a></li>
               <li><a href="#">YourCYM Jingle</a></li>
@@ -4240,6 +4819,33 @@
           });
         });
 
+        /* — documentation tabs — */
+        var dtabs = $$("[data-doctab]");
+        var showDoc = function (tab) {
+          dtabs.forEach(function (t) {
+            var on = t === tab;
+            t.classList.toggle("is-on", on);
+            t.setAttribute("aria-selected", on ? "true" : "false");
+            t.tabIndex = on ? 0 : -1;
+            var panel = document.getElementById(t.getAttribute("data-doctab"));
+            if (panel) panel.hidden = !on;
+          });
+        };
+        dtabs.forEach(function (tab, i) {
+          tab.addEventListener("click", function () {
+            showDoc(tab);
+          });
+          tab.addEventListener("keydown", function (e) {
+            var step =
+              e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+            if (!step) return;
+            e.preventDefault();
+            var next = dtabs[(i + step + dtabs.length) % dtabs.length];
+            showDoc(next);
+            next.focus();
+          });
+        });
+
         /* — quantity stepper — */
         var qtyInput = $("[data-qty-input]");
         $$("[data-qty]").forEach(function (b) {
@@ -4274,6 +4880,28 @@
               toast.classList.remove("is-on");
             }, 2600);
           });
+        });
+
+        /* — video facades: nothing reaches YouTube until a play is pressed — */
+        $$("[data-yt]").forEach(function (b) {
+          b.addEventListener(
+            "click",
+            function () {
+              var f = document.createElement("iframe");
+              f.src =
+                "https://www.youtube-nocookie.com/embed/" +
+                b.dataset.yt +
+                "?autoplay=1&rel=0";
+              f.title = b.getAttribute("aria-label") || "Video";
+              f.allow =
+                "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
+              f.allowFullscreen = true;
+              b.innerHTML = "";
+              b.appendChild(f);
+              b.style.cursor = "default";
+            },
+            { once: true },
+          );
         });
 
         /* — reveal on scroll — */

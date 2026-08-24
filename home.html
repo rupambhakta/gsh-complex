@@ -1,0 +1,5317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>
+      YourCYM &#183; Energy, Immunity, Balance | Natural Life Products
+    </title>
+    <meta
+      name="description"
+      content="Vitality and immune support, made easy with YourCYM. GSH Complex, Triozyme, Une-Vie and PREZERV Derma, plus holistic packages, all covered by a 45-day money-back guarantee."
+    />
+    <meta name="theme-color" content="#0E1F18" />
+    <style>
+      /* Self-hosted variable fonts — no external requests, identical rendering offline */
+      @font-face {
+        font-family: "Vollkorn";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("fonts/Vollkorn-normal-500.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Vollkorn";
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url("fonts/Vollkorn-italic-400.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 300 700;
+        font-display: swap;
+        src: url("fonts/DMSans-normal-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "DM Sans";
+        font-style: italic;
+        font-weight: 300 500;
+        font-display: swap;
+        src: url("fonts/DMSans-italic-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <style>
+      /* ============================================================
+   YOURCYM — HOME  ·  shared design system (tokens, type, buttons)
+   ============================================================ */
+      :root {
+        --ink: #0c1b15;
+        --forest: #16332882;
+        --forest: #163328;
+        --forest-2: #1f4835;
+        --botanical: #33654d;
+        --ivory: #fcfaf5;
+        --cream: #f4eee3;
+        --beige: #eae1d1;
+        --sand: #ded2bd;
+        --sage: #8da893;
+        --sage-2: #c3d2c2;
+        --sage-3: #e5ece3;
+        --teal: #14706a;
+        --teal-2: #2a8b84;
+        --teal-soft: #dfeeec;
+        --gold: #a8853c;
+        --gold-2: #d3b77e;
+        --gold-soft: #f1e7d2;
+        --olive: #6c7748;
+        --tx: #14261d;
+        --tx-soft: #46574d;
+        --tx-mute: #788879;
+        --tx-inv: #f5f2ea;
+        --tx-inv-soft: #c3d0c4;
+        --line: #e2daca;
+        --line-2: #cdc3ae;
+        --line-dark: rgba(245, 242, 234, 0.16);
+        --white: #fff;
+
+        --serif:
+          "Vollkorn", "Iowan Old Style", Georgia, "Times New Roman", serif;
+        --sans:
+          "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif;
+
+        --s1: 4px;
+        --s2: 8px;
+        --s3: 12px;
+        --s4: 16px;
+        --s5: 24px;
+        --s6: 32px;
+        --s7: 40px;
+        --s8: 48px;
+        --s9: 64px;
+        --s10: 80px;
+        --s11: 88px;
+        --s12: 104px;
+        --s13: 120px;
+
+        --r-sm: 8px;
+        --r-md: 16px;
+        --r-lg: 24px;
+        --r-xl: 40px;
+        --r-pill: 999px;
+        --e1:
+          0 1px 2px rgba(22, 51, 40, 0.05), 0 2px 8px rgba(22, 51, 40, 0.04);
+        --e2:
+          0 2px 6px rgba(22, 51, 40, 0.06), 0 12px 32px rgba(22, 51, 40, 0.07);
+        --e3:
+          0 6px 18px rgba(22, 51, 40, 0.08), 0 34px 80px rgba(22, 51, 40, 0.13);
+
+        --container: 1280px;
+        --gutter: 28px;
+        --header-h: 74px;
+        --util-h: 36px;
+        --util2-h: 58px;
+        --topbars-h: calc(
+          var(--util-h) + var(--util2-h) + var(--header-h) + 1px
+        );
+        --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+      body {
+        margin: 0;
+        background: var(--ivory);
+        color: var(--tx);
+        font-family: var(--sans);
+        font-size: 17px;
+        line-height: 1.68;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-optical-sizing: auto;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      button,
+      input {
+        font: inherit;
+        color: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        font-family: var(--serif);
+        font-weight: 500;
+        letter-spacing: -0.008em;
+        color: var(--forest);
+      }
+      p {
+        margin: 0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      figure,
+      blockquote,
+      dl,
+      dd,
+      figcaption {
+        margin: 0;
+      }
+      :focus-visible {
+        outline: 2px solid var(--teal);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      ::selection {
+        background: var(--sage-2);
+        color: var(--forest);
+      }
+
+      .container {
+        width: min(var(--container), 100% - (var(--gutter) * 2));
+        margin-inline: auto;
+      }
+      .container--narrow {
+        width: min(860px, 100% - (var(--gutter) * 2));
+        margin-inline: auto;
+      }
+      .sr {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* ── Type scale: wider range, lighter weights, more contrast ── */
+      .d0 {
+        font-size: clamp(3rem, 1.7rem + 4.6vw, 5.3rem);
+        line-height: 1;
+        font-weight: 500;
+        letter-spacing: -0.014em;
+      }
+      .d1 {
+        font-size: clamp(2.5rem, 1.5rem + 3.4vw, 4.5rem);
+        line-height: 1.04;
+        font-weight: 500;
+        letter-spacing: -0.012em;
+      }
+      .d2 {
+        font-size: clamp(2.05rem, 1.35rem + 2.4vw, 3.15rem);
+        line-height: 1.08;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+      }
+      .d3 {
+        font-size: clamp(1.55rem, 1.2rem + 1.3vw, 2.2rem);
+        line-height: 1.18;
+        font-weight: 500;
+      }
+      .d4 {
+        font-size: clamp(1.12rem, 1.04rem + 0.35vw, 1.3rem);
+        line-height: 1.34;
+        font-weight: 500;
+      }
+      .d0 em,
+      .d1 em,
+      .d2 em,
+      .d3 em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--botanical);
+      }
+      .sec--dark .d0 em,
+      .sec--dark .d1 em,
+      .sec--dark .d2 em,
+      .sec--dark .d3 em,
+      .sec--ink .d0 em,
+      .sec--ink .d1 em,
+      .sec--ink .d2 em,
+      .sec--ink .d3 em {
+        color: var(--sage-2);
+      }
+
+      .eyebrow {
+        font-size: 0.685rem;
+        font-weight: 500;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--olive);
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background: var(--gold-2);
+      }
+      .eyebrow--center::after {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background: var(--gold-2);
+      }
+      .eyebrow--plain::before {
+        display: none;
+      }
+      .lead {
+        font-size: 1.19rem;
+        line-height: 1.72;
+        color: var(--tx-soft);
+        max-width: 54ch;
+        font-weight: 300;
+      }
+      .body {
+        font-size: 0.98rem;
+        line-height: 1.55;
+        color: var(--tx-soft);
+        font-weight: 400;
+      }
+      .small {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        color: var(--tx-mute);
+      }
+      .tiny {
+        font-size: 0.73rem;
+        line-height: 1.55;
+        color: var(--tx-mute);
+      }
+      .center {
+        text-align: center;
+      }
+      .center .eyebrow {
+        justify-content: center;
+      }
+
+      /* ── Buttons ── */
+      .btn {
+        --btn-bg: var(--forest);
+        --btn-fg: var(--tx-inv);
+        --btn-bd: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 11px;
+        padding: 17px 30px;
+        min-height: 56px;
+        border-radius: var(--r-sm);
+        background: var(--btn-bg);
+        color: var(--btn-fg);
+        border: 1px solid var(--btn-bd);
+        font-size: 0.94rem;
+        font-weight: 500;
+        letter-spacing: 0.012em;
+        cursor: pointer;
+        text-align: center;
+        transition:
+          background 0.35s var(--ease),
+          color 0.35s var(--ease),
+          border-color 0.35s var(--ease),
+          transform 0.35s var(--ease),
+          box-shadow 0.35s var(--ease);
+      }
+      .btn svg {
+        width: 16px;
+        height: 16px;
+        flex: none;
+        transition: transform 0.35s var(--ease);
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      .btn:hover svg {
+        transform: translateX(3px);
+      }
+      .btn--primary {
+        box-shadow: var(--e1);
+      }
+      .btn--primary:hover {
+        --btn-bg: var(--forest-2);
+        box-shadow: var(--e2);
+      }
+      .btn--ghost {
+        --btn-bg: transparent;
+        --btn-fg: var(--forest);
+        --btn-bd: var(--line-2);
+      }
+      .btn--ghost:hover {
+        --btn-bd: var(--botanical);
+        --btn-bg: rgba(51, 101, 77, 0.05);
+      }
+      .btn--gold {
+        --btn-bg: var(--gold);
+        --btn-fg: #1a1303;
+      }
+      .btn--gold:hover {
+        --btn-bg: var(--gold-2);
+      }
+      .btn--light {
+        --btn-bg: var(--ivory);
+        --btn-fg: var(--forest);
+      }
+      .btn--light:hover {
+        --btn-bg: var(--white);
+      }
+      .btn--onDark.btn--ghost {
+        --btn-fg: var(--tx-inv);
+        --btn-bd: var(--line-dark);
+      }
+      .btn--onDark.btn--ghost:hover {
+        --btn-bd: var(--sage);
+        --btn-bg: rgba(255, 255, 255, 0.07);
+      }
+      .btn--block {
+        width: 100%;
+      }
+      .btn--sm {
+        min-height: 44px;
+        padding: 11px 20px;
+        font-size: 0.87rem;
+      }
+      .btn--lg {
+        min-height: 62px;
+        padding: 20px 36px;
+        font-size: 1rem;
+      }
+      .link-u {
+        align-self: flex-start;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--botanical);
+        padding-bottom: 3px;
+        background-image: linear-gradient(var(--botanical), var(--botanical));
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        transition:
+          background-size 0.4s var(--ease),
+          color 0.3s var(--ease);
+      }
+      .link-u:hover {
+        background-size: 0% 1px;
+        color: var(--teal);
+      }
+
+      /* ── Section shell: markedly more air ── */
+      .sec {
+        padding-block: var(--s9);
+        position: relative;
+      }
+      .sec--tight {
+        padding-block: var(--s7);
+      }
+      .sec--cream {
+        background: var(--cream);
+      }
+      .sec--sage {
+        background: var(--sage-3);
+      }
+      .sec--dark {
+        background: var(--forest);
+        color: var(--tx-inv);
+      }
+      .sec--ink {
+        background: var(--ink);
+        color: var(--tx-inv);
+      }
+      .sec--dark h2,
+      .sec--dark h3,
+      .sec--ink h2,
+      .sec--ink h3 {
+        color: var(--ivory);
+      }
+      .sec--dark .lead,
+      .sec--ink .lead,
+      .sec--dark .body,
+      .sec--ink .body {
+        color: var(--tx-inv-soft);
+      }
+      .sec--dark .eyebrow,
+      .sec--ink .eyebrow {
+        color: var(--gold-2);
+      }
+      .sec--dark .eyebrow::before,
+      .sec--ink .eyebrow::before,
+      .sec--dark .eyebrow--center::after,
+      .sec--ink .eyebrow--center::after {
+        background: rgba(211, 183, 126, 0.5);
+      }
+      .sec__head {
+        display: flex;
+        flex-direction: column;
+        gap: var(--s4);
+        max-width: 700px;
+      }
+      .sec__head.center {
+        align-items: center;
+        margin-inline: auto;
+        text-align: center;
+      }
+      @media (max-width: 1100px) {
+        .sec {
+          padding-block: var(--s8);
+        }
+        .sec--tight {
+          padding-block: var(--s6);
+        }
+      }
+      @media (max-width: 680px) {
+        .sec {
+          padding-block: var(--s7);
+        }
+        :root {
+          --gutter: 20px;
+        }
+      }
+
+      .rv {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 1s var(--ease),
+          transform 1s var(--ease);
+      }
+      .rv.is-in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .rv {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      /* ============================================================
+   Utility bars + header + drawer  — structure per yourcym.com
+   ============================================================ */
+      .util {
+        background: var(--ink);
+        color: rgba(195, 208, 196, 0.9);
+        font-size: 0.735rem;
+        letter-spacing: 0.02em;
+      }
+      .util__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: var(--util-h);
+      }
+      .util__c {
+        color: var(--tx-inv);
+        text-align: center;
+        font-size: 0.78rem;
+        font-weight: 400;
+      }
+
+      .util2 {
+        background: var(--ink);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .util2__row {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: var(--s5);
+        min-height: var(--util2-h);
+      }
+      .util2__l {
+        display: flex;
+        align-items: center;
+        gap: var(--s4);
+        min-width: 0;
+      }
+      .util2__l::after {
+        content: "";
+        width: 1px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.18);
+      }
+      .util2__tel {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 0.82rem;
+        color: var(--tx-inv);
+        font-weight: 500;
+        white-space: nowrap;
+      }
+      .util2__tel svg {
+        width: 14px;
+        height: 14px;
+        color: var(--sage);
+      }
+      .util2__tel:hover {
+        color: var(--sage-2);
+      }
+      .util2__stats {
+        justify-self: center;
+        text-align: center;
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.9);
+        white-space: nowrap;
+      }
+      .util2__stats b {
+        color: var(--tx-inv);
+        font-weight: 700;
+      }
+      .util2__r {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+        min-width: 0;
+      }
+      .util2__r-top {
+        display: flex;
+        align-items: center;
+        gap: var(--s5);
+      }
+      .util2__shop {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .util2__shop-label {
+        font-size: 0.68rem;
+        color: rgba(255, 255, 255, 0.82);
+      }
+      .util2__shop-id {
+        background: var(--teal-soft);
+        color: var(--teal);
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 5px;
+        font-size: 0.72rem;
+        white-space: nowrap;
+      }
+      .util2__links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.7rem;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--tx-inv);
+        white-space: nowrap;
+      }
+      .util2__links a {
+        color: var(--tx-inv);
+        transition: color 0.3s var(--ease);
+      }
+      .util2__links a:hover {
+        color: var(--sage-2);
+      }
+      .util2__links span {
+        color: rgba(255, 255, 255, 0.4);
+      }
+      .util2__globe {
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.85);
+        cursor: pointer;
+        width: 26px;
+        height: 26px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transition:
+          background 0.3s var(--ease),
+          color 0.3s var(--ease);
+      }
+      .util2__globe:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--tx-inv);
+      }
+      .util2__globe svg {
+        width: 16px;
+        height: 16px;
+      }
+      .soc {
+        display: flex;
+        gap: 9px;
+      }
+      .soc a {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid var(--line-dark);
+        display: grid;
+        place-items: center;
+        transition:
+          border-color 0.3s var(--ease),
+          background 0.3s var(--ease);
+      }
+      .soc a:hover {
+        border-color: var(--sage);
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .soc svg {
+        width: 14px;
+        height: 14px;
+      }
+      .soc--sm a {
+        width: 28px;
+        height: 28px;
+        border-color: rgba(255, 255, 255, 0.22);
+        color: var(--tx-inv);
+      }
+      .soc--sm a:hover {
+        border-color: var(--sage);
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--tx-inv);
+      }
+      .soc--sm svg {
+        width: 12px;
+        height: 12px;
+      }
+
+      .hdr {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: rgba(252, 250, 245, 0.9);
+        backdrop-filter: blur(16px) saturate(1.3);
+        -webkit-backdrop-filter: blur(16px) saturate(1.3);
+        border-bottom: 1px solid var(--line);
+        transition: box-shadow 0.4s var(--ease);
+      }
+      .hdr.is-stuck {
+        box-shadow: 0 2px 26px rgba(22, 51, 40, 0.07);
+      }
+      .hdr__inner {
+        display: flex;
+        align-items: center;
+        gap: var(--s6);
+        min-height: var(--header-h);
+      }
+      .brand {
+        flex: none;
+        display: block;
+      }
+      .brand img {
+        width: 52px;
+        height: auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: var(--s6);
+        margin-inline: auto;
+      }
+      .nav a {
+        font-size: 0.885rem;
+        color: var(--tx-soft);
+        position: relative;
+        padding: 6px 0;
+        transition: color 0.3s var(--ease);
+        white-space: nowrap;
+      }
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background: var(--botanical);
+        transition: width 0.38s var(--ease);
+      }
+      .nav a:hover {
+        color: var(--forest);
+      }
+      .nav a:hover::after {
+        width: 100%;
+      }
+      .nav a.nav__hot {
+        color: var(--botanical);
+        font-weight: 700;
+      }
+      .nav a.nav__hot:hover {
+        color: var(--forest);
+      }
+      .hdr__act {
+        display: flex;
+        align-items: center;
+        gap: var(--s3);
+        flex: none;
+      }
+      .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: none;
+        background: transparent;
+        border-radius: var(--r-pill);
+        color: var(--forest);
+        cursor: pointer;
+        position: relative;
+        transition: background 0.3s var(--ease);
+      }
+      .icon-btn:hover {
+        background: var(--sage-3);
+      }
+      .icon-btn svg {
+        width: 21px;
+        height: 21px;
+      }
+      .cart-dot {
+        position: absolute;
+        top: 6px;
+        right: 5px;
+        min-width: 17px;
+        height: 17px;
+        padding: 0 4px;
+        border-radius: var(--r-pill);
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.62rem;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+        line-height: 1;
+      }
+      .lang button {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 0.83rem;
+        color: var(--tx-soft);
+        padding: 8px 6px;
+        transition: color 0.3s var(--ease);
+      }
+      .lang button:hover {
+        color: var(--forest);
+      }
+      .lang svg {
+        width: 14px;
+        height: 14px;
+      }
+      .hdr .btn--primary {
+        --btn-bg: #000;
+        border-radius: var(--r-pill);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+      }
+      .hdr .btn--primary:hover {
+        --btn-bg: #181818;
+      }
+      .burger {
+        display: none;
+      }
+      @media (max-width: 1180px) {
+        .nav {
+          display: none;
+        }
+        .burger {
+          display: inline-flex;
+        }
+        .hdr__inner {
+          gap: var(--s4);
+        }
+        .hdr__act {
+          margin-left: auto;
+        }
+        .hdr .btn--sm,
+        .lang {
+          display: none;
+        }
+      }
+      @media (max-width: 1340px) {
+        .util2__stats {
+          display: none;
+        }
+        .util2__row {
+          grid-template-columns: auto auto;
+        }
+      }
+      @media (max-width: 900px) {
+        .util2__shop {
+          display: none;
+        }
+        .util__c {
+          font-size: 0.68rem;
+          letter-spacing: 0.03em;
+        }
+      }
+      @media (max-width: 560px) {
+        .util2__links a:first-child,
+        .util2__links span,
+        .soc--sm {
+          display: none;
+        }
+        .util2__row {
+          min-height: 34px;
+        }
+        .util2__tel {
+          font-size: 0.74rem;
+        }
+      }
+      .drawer {
+        position: fixed;
+        inset: 0;
+        z-index: 80;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .drawer__scrim {
+        position: absolute;
+        inset: 0;
+        background: rgba(12, 27, 21, 0.44);
+        opacity: 0;
+        transition: opacity 0.45s var(--ease);
+      }
+      .drawer__panel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: min(390px, 90vw);
+        background: var(--ivory);
+        transform: translateX(100%);
+        transition: transform 0.5s var(--ease);
+        padding: var(--s5) var(--s5) var(--s8);
+        display: flex;
+        flex-direction: column;
+        gap: var(--s5);
+        overflow-y: auto;
+        box-shadow: var(--e3);
+      }
+      .drawer.is-open {
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .drawer.is-open .drawer__scrim {
+        opacity: 1;
+      }
+      .drawer.is-open .drawer__panel {
+        transform: none;
+      }
+      .drawer__nav {
+        display: flex;
+        flex-direction: column;
+      }
+      .drawer__nav a {
+        font-family: var(--serif);
+        font-size: 1.3rem;
+        color: var(--forest);
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .drawer__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .trustrow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--s5);
+      }
+      .trustrow li {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 0.8rem;
+        color: var(--tx-mute);
+      }
+      .trustrow svg {
+        width: 16px;
+        height: 16px;
+        color: var(--botanical);
+        flex: none;
+      }
+      /* ============================================================
+   HOME · new section system  ·  "The Index"
+   Distinct from the GSH and VIPROX product pages: dark cinematic
+   stage, marquee ribbon, sticky product deck, goal switcher.
+   ============================================================ */
+
+      /* ── shared home helpers ── */
+      .num {
+        font-family: var(--serif);
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        color: var(--gold);
+        font-variant-numeric: tabular-nums;
+      }
+      .rule {
+        height: 1px;
+        background: var(--line);
+        border: 0;
+        margin: 0;
+      }
+      .sec--ivory {
+        background: var(--ivory);
+      }
+      .rv--1 {
+        transition-delay: 0.09s;
+      }
+      .rv--2 {
+        transition-delay: 0.18s;
+      }
+      .rv--3 {
+        transition-delay: 0.27s;
+      }
+      .rv--4 {
+        transition-delay: 0.36s;
+      }
+
+      /* ============================================================
+   1 · STAGE — full-height dark opening, type led, products on an arc
+   ============================================================ */
+      .stage {
+        position: relative;
+        background: var(--forest);
+        color: var(--tx-inv);
+        overflow: hidden;
+        isolation: isolate;
+        padding-top: clamp(52px, 6vw, 88px);
+        padding-bottom: 0;
+      }
+      .stage::before {
+        /* botanical light pool */
+        content: "";
+        position: absolute;
+        inset: -30% -10% auto;
+        height: 130%;
+        background:
+          radial-gradient(
+            58% 46% at 50% 34%,
+            rgba(51, 101, 77, 0.72),
+            transparent 68%
+          ),
+          radial-gradient(
+            40% 34% at 78% 74%,
+            rgba(20, 112, 106, 0.4),
+            transparent 70%
+          ),
+          radial-gradient(
+            36% 30% at 16% 78%,
+            rgba(168, 133, 60, 0.22),
+            transparent 72%
+          );
+        z-index: -2;
+        pointer-events: none;
+      }
+      .stage::after {
+        /* fine grain so the flat dark never bands */
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.5;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/><feColorMatrix type='saturate' values='0'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='0.055'/></svg>");
+      }
+      .stage__in {
+        position: relative;
+        text-align: center;
+        padding-bottom: clamp(28px, 4vw, 56px);
+      }
+      .stage__kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--gold-2);
+        padding: 9px 18px;
+        border: 1px solid rgba(211, 183, 126, 0.34);
+        border-radius: var(--r-pill);
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(6px);
+      }
+      .stage__kicker svg {
+        width: 14px;
+        height: 14px;
+      }
+      .stage h1 {
+        color: var(--ivory);
+        margin-top: var(--s5);
+        font-size: clamp(2.9rem, 1.1rem + 6.4vw, 6.6rem);
+        line-height: 0.98;
+        letter-spacing: -0.022em;
+      }
+      .stage h1 span {
+        display: block;
+        overflow: hidden;
+      }
+      .stage h1 b {
+        display: block;
+        font-weight: 500;
+        transform: translateY(105%);
+        transition: transform 1.15s var(--ease);
+      }
+      .stage h1 span:nth-child(2) b {
+        transition-delay: 0.11s;
+      }
+      .stage h1 span:nth-child(3) b {
+        transition-delay: 0.22s;
+      }
+      .stage.is-lit h1 b {
+        transform: none;
+      }
+      .stage h1 em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--sage-2);
+      }
+      .stage__lead {
+        margin: var(--s5) auto 0;
+        max-width: 46ch;
+        font-size: clamp(1.02rem, 0.94rem + 0.4vw, 1.22rem);
+        line-height: 1.7;
+        font-weight: 300;
+        color: var(--tx-inv-soft);
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.9s var(--ease) 0.42s,
+          transform 0.9s var(--ease) 0.42s;
+      }
+      .stage__cta {
+        margin-top: var(--s7);
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.9s var(--ease) 0.54s,
+          transform 0.9s var(--ease) 0.54s;
+      }
+      .stage.is-lit .stage__lead,
+      .stage.is-lit .stage__cta {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* product arc */
+      .arc {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: end;
+        gap: clamp(6px, 2vw, 34px);
+        max-width: 1020px;
+        margin: clamp(4px, 2vw, 24px) auto 0;
+        padding-inline: var(--gutter);
+      }
+      .arc::after {
+        /* soft ground shadow tying the line-up together */
+        content: "";
+        position: absolute;
+        left: 4%;
+        right: 4%;
+        bottom: 2px;
+        height: 78px;
+        background: radial-gradient(
+          50% 50% at 50% 100%,
+          rgba(0, 0, 0, 0.42),
+          transparent 72%
+        );
+        filter: blur(6px);
+        pointer-events: none;
+      }
+      .arc__i {
+        position: relative;
+        display: block;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(38px);
+        transition:
+          opacity 1s var(--ease),
+          transform 1.1s var(--ease);
+      }
+      .stage.is-lit .arc__i {
+        opacity: 1;
+        transform: none;
+      }
+      .arc__i:nth-child(1) {
+        transition-delay: 0.62s;
+      }
+      .arc__i:nth-child(2) {
+        transition-delay: 0.72s;
+      }
+      .arc__i:nth-child(3) {
+        transition-delay: 0.82s;
+      }
+      .arc__i:nth-child(4) {
+        transition-delay: 0.92s;
+      }
+      .arc__i img {
+        margin-inline: auto;
+        width: auto;
+        filter: drop-shadow(0 26px 34px rgba(0, 0, 0, 0.42));
+        transition: transform 0.7s var(--ease);
+        will-change: transform;
+      }
+      .arc__i:hover img {
+        transform: translateY(-10px);
+      }
+      .arc__i--a img {
+        height: clamp(130px, 19vw, 236px);
+      }
+      .arc__i--b img {
+        height: clamp(112px, 16vw, 200px);
+      }
+      .arc__i--c img {
+        height: clamp(124px, 18vw, 222px);
+      }
+      .arc__i--d img {
+        height: clamp(118px, 17vw, 212px);
+      }
+      .arc__n {
+        display: block;
+        margin-top: 14px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--tx-inv-soft);
+        transition: color 0.3s var(--ease);
+      }
+      .arc__i:hover .arc__n {
+        color: var(--gold-2);
+      }
+      @media (max-width: 760px) {
+        .arc {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 4px;
+        }
+        .arc__n {
+          font-size: 0.56rem;
+          letter-spacing: 0.08em;
+        }
+        .arc::after {
+          height: 46px;
+        }
+      }
+
+      /* ============================================================
+   2 · RIBBON — continuous attribute marquee on ink
+   ============================================================ */
+      .ribbon {
+        background: var(--ink);
+        color: var(--tx-inv);
+        padding-block: 20px;
+        overflow: hidden;
+        border-block: 1px solid rgba(211, 183, 126, 0.16);
+      }
+      .ribbon__track {
+        display: flex;
+        width: max-content;
+        animation: slide 38s linear infinite;
+      }
+      .ribbon__track span {
+        display: inline-flex;
+        align-items: center;
+        gap: 26px;
+        padding-inline: 13px;
+        font-size: 0.73rem;
+        font-weight: 500;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--tx-inv-soft);
+        white-space: nowrap;
+      }
+      .ribbon__track span::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--gold);
+        flex: none;
+      }
+      @keyframes slide {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .ribbon:hover .ribbon__track {
+        animation-play-state: paused;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ribbon__track {
+          animation: none;
+        }
+      }
+
+      /* ============================================================
+   3 · PRESS — featured in
+   ============================================================ */
+      .press {
+        background: var(--ivory);
+        padding-block: var(--s7);
+      }
+      .press__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(24px, 5vw, 64px);
+        flex-wrap: wrap;
+      }
+      .press__lab {
+        font-size: 0.66rem;
+        font-weight: 500;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--tx-mute);
+        flex: none;
+      }
+      .press__row img {
+        height: clamp(19px, 2.2vw, 27px);
+        width: auto;
+        opacity: 0.42;
+        filter: grayscale(1);
+        transition:
+          opacity 0.4s var(--ease),
+          filter 0.4s var(--ease);
+      }
+      .press__row img:hover {
+        opacity: 0.8;
+        filter: grayscale(0.4);
+      }
+
+      /* ============================================================
+   4 · CREED — the belief statement, set as a plate
+   ============================================================ */
+      .creed {
+        background: var(--cream);
+        position: relative;
+      }
+      .creed__plate {
+        max-width: 1000px;
+        margin-inline: auto;
+        text-align: center;
+        padding: clamp(40px, 6vw, 78px) clamp(20px, 5vw, 74px);
+        border: 1px solid var(--line);
+        border-radius: var(--r-lg);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.72),
+          rgba(255, 255, 255, 0.24)
+        );
+        position: relative;
+      }
+      .creed__plate::before,
+      .creed__plate::after {
+        content: "";
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--gold-2);
+      }
+      .creed__plate::before {
+        top: -1px;
+        left: -1px;
+        border-right: 0;
+        border-bottom: 0;
+        border-top-left-radius: var(--r-lg);
+      }
+      .creed__plate::after {
+        bottom: -1px;
+        right: -1px;
+        border-left: 0;
+        border-top: 0;
+        border-bottom-right-radius: var(--r-lg);
+      }
+      .creed q {
+        display: block;
+        margin-top: var(--s5);
+        font-family: var(--serif);
+        font-size: clamp(1.75rem, 1rem + 2.6vw, 3.25rem);
+        line-height: 1.16;
+        letter-spacing: -0.012em;
+        color: var(--forest);
+        quotes: none;
+      }
+      .creed q em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--botanical);
+      }
+      .creed__sig {
+        margin-top: var(--s6);
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--tx-mute);
+      }
+      .creed__stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--s5);
+        max-width: 1000px;
+        margin: var(--s8) auto 0;
+      }
+      .creed__stat {
+        text-align: center;
+        padding-inline: var(--s3);
+      }
+      .creed__stat b {
+        display: block;
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(1.9rem, 1.2rem + 2.1vw, 2.9rem);
+        line-height: 1;
+        color: var(--forest);
+        font-variant-numeric: tabular-nums;
+      }
+      .creed__stat span {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.79rem;
+        line-height: 1.5;
+        color: var(--tx-soft);
+      }
+      @media (max-width: 680px) {
+        .creed__stats {
+          grid-template-columns: 1fr;
+          gap: var(--s6);
+        }
+      }
+
+      /* ============================================================
+   5 · GOALS — pick a goal, the page answers
+   ============================================================ */
+      .goals {
+        background: var(--forest);
+        color: var(--tx-inv);
+        overflow: hidden;
+      }
+      .goals__grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: clamp(32px, 5vw, 80px);
+        align-items: center;
+        margin-top: var(--s8);
+      }
+      .goals__list {
+        display: flex;
+        flex-direction: column;
+      }
+      .goal {
+        display: grid;
+        grid-template-columns: 46px 1fr auto;
+        align-items: center;
+        gap: var(--s4);
+        width: 100%;
+        text-align: left;
+        padding: clamp(16px, 2vw, 24px) 0;
+        background: none;
+        border: 0;
+        border-top: 1px solid var(--line-dark);
+        color: inherit;
+        cursor: pointer;
+        position: relative;
+      }
+      .goal:last-child {
+        border-bottom: 1px solid var(--line-dark);
+      }
+      .goal::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        height: 1px;
+        width: 0;
+        background: var(--gold-2);
+        transition: width 0.6s var(--ease);
+      }
+      .goal.is-on::before {
+        width: 100%;
+      }
+      .goal__n {
+        font-family: var(--serif);
+        font-size: 0.82rem;
+        color: var(--gold-2);
+        opacity: 0.6;
+        font-variant-numeric: tabular-nums;
+        transition: opacity 0.35s var(--ease);
+      }
+      .goal__t {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(1.32rem, 0.95rem + 1.35vw, 2.1rem);
+        line-height: 1.16;
+        color: var(--tx-inv-soft);
+        transition:
+          color 0.35s var(--ease),
+          transform 0.5s var(--ease);
+      }
+      .goal__go {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid var(--line-dark);
+        display: grid;
+        place-items: center;
+        flex: none;
+        opacity: 0;
+        transform: translateX(-8px);
+        transition:
+          opacity 0.4s var(--ease),
+          transform 0.4s var(--ease),
+          background 0.4s var(--ease);
+      }
+      .goal__go svg {
+        width: 14px;
+        height: 14px;
+      }
+      .goal.is-on .goal__n {
+        opacity: 1;
+      }
+      .goal.is-on .goal__t {
+        color: var(--ivory);
+        transform: translateX(6px);
+      }
+      .goal.is-on .goal__go {
+        opacity: 1;
+        transform: none;
+        background: rgba(211, 183, 126, 0.16);
+      }
+      .goal:hover .goal__t {
+        color: var(--ivory);
+      }
+
+      .goals__view {
+        position: relative;
+      }
+      .goals__stack {
+        position: relative;
+        aspect-ratio: 326 / 447;
+        max-height: 520px;
+        margin-inline: auto;
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        box-shadow: var(--e3);
+      }
+      .goals__stack img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transform: scale(1.06);
+        transition:
+          opacity 0.75s var(--ease),
+          transform 1.4s var(--ease);
+      }
+      .goals__stack img.is-on {
+        opacity: 1;
+        transform: none;
+      }
+      .goals__card {
+        margin-top: calc(var(--s5) * -1);
+        position: relative;
+        z-index: 2;
+        width: min(340px, 100%);
+        margin-inline: auto;
+        background: var(--ivory);
+        color: var(--tx);
+        border-radius: var(--r-md);
+        padding: var(--s5);
+        box-shadow: var(--e2);
+      }
+      .goals__card h3 {
+        font-size: 1.06rem;
+      }
+      .goals__card p {
+        margin-top: 8px;
+        font-size: 0.88rem;
+        line-height: 1.58;
+        color: var(--tx-soft);
+        min-height: 2.9em;
+      }
+      .goals__card .link-u {
+        margin-top: var(--s4);
+      }
+      @media (max-width: 900px) {
+        .goals__grid {
+          grid-template-columns: 1fr;
+          gap: var(--s7);
+        }
+        .goals__stack {
+          max-height: 380px;
+          aspect-ratio: 4 / 3;
+        }
+      }
+
+      /* ============================================================
+   6 · DECK — sticky statement, scrolling product cards
+   ============================================================ */
+      .deck {
+        background: var(--ivory);
+      }
+      .deck__grid {
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: clamp(34px, 5vw, 84px);
+        align-items: start;
+      }
+      .deck__aside {
+        position: sticky;
+        top: 120px;
+      }
+      .deck__aside .d2 {
+        margin-top: var(--s4);
+      }
+      .deck__aside .lead {
+        margin-top: var(--s4);
+      }
+      .deck__meta {
+        margin-top: var(--s6);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .deck__meta li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--tx-soft);
+      }
+      .deck__meta svg {
+        width: 17px;
+        height: 17px;
+        flex: none;
+        margin-top: 3px;
+        color: var(--botanical);
+      }
+      .deck__list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--s5);
+      }
+      .pcard {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: var(--s5);
+        align-items: center;
+        padding: var(--s5);
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--r-lg);
+        transition:
+          border-color 0.45s var(--ease),
+          box-shadow 0.45s var(--ease),
+          transform 0.45s var(--ease);
+      }
+      .pcard:hover {
+        border-color: var(--sand);
+        box-shadow: var(--e2);
+        transform: translateY(-3px);
+      }
+      .pcard__fig {
+        position: relative;
+        border-radius: var(--r-md);
+        background: linear-gradient(158deg, var(--sage-3), var(--cream));
+        display: grid;
+        place-items: center;
+        padding: var(--s4);
+        aspect-ratio: 1;
+      }
+      .pcard__fig img {
+        max-height: 100%;
+        width: auto;
+        filter: drop-shadow(0 12px 18px rgba(22, 51, 40, 0.16));
+        transition: transform 0.6s var(--ease);
+      }
+      .pcard:hover .pcard__fig img {
+        transform: scale(1.05) translateY(-4px);
+      }
+      .pcard__tag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 0.6rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border-radius: var(--r-pill);
+        background: var(--forest);
+        color: var(--tx-inv);
+      }
+      .pcard__b {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .pcard__k {
+        font-size: 0.66rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--olive);
+      }
+      .pcard h3 {
+        font-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.62rem);
+      }
+      .pcard__d {
+        font-size: 0.91rem;
+        line-height: 1.6;
+        color: var(--tx-soft);
+      }
+      .pcard__foot {
+        display: flex;
+        align-items: center;
+        gap: var(--s4);
+        flex-wrap: wrap;
+        margin-top: 6px;
+      }
+      .pcard__price {
+        font-family: var(--serif);
+        font-size: 1.42rem;
+        font-weight: 500;
+        color: var(--forest);
+      }
+      .pcard__acts {
+        display: flex;
+        gap: 10px;
+        margin-left: auto;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 1000px) {
+        .deck__grid {
+          grid-template-columns: 1fr;
+          gap: var(--s7);
+        }
+        .deck__aside {
+          position: static;
+        }
+      }
+      @media (max-width: 620px) {
+        .pcard {
+          grid-template-columns: 1fr;
+          padding: var(--s4);
+        }
+        .pcard__fig {
+          aspect-ratio: 4 / 3;
+        }
+        .pcard__acts {
+          margin-left: 0;
+          width: 100%;
+        }
+        .pcard__acts .btn {
+          flex: 1;
+        }
+      }
+
+      /* ============================================================
+   7 · PACKS — the three holistic packages, on ink
+   ============================================================ */
+      .packs {
+        background: var(--ink);
+        color: var(--tx-inv);
+      }
+      .packs__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--s5);
+        margin-top: var(--s8);
+      }
+      .pk {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line-dark);
+        border-radius: var(--r-lg);
+        padding: var(--s6) var(--s5) var(--s5);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.055),
+          rgba(255, 255, 255, 0.015)
+        );
+        position: relative;
+        transition:
+          border-color 0.45s var(--ease),
+          transform 0.45s var(--ease),
+          background 0.45s var(--ease);
+      }
+      .pk:hover {
+        border-color: rgba(211, 183, 126, 0.45);
+        transform: translateY(-4px);
+      }
+      .pk--hero {
+        border-color: rgba(211, 183, 126, 0.5);
+        background: linear-gradient(
+          180deg,
+          rgba(168, 133, 60, 0.14),
+          rgba(255, 255, 255, 0.02)
+        );
+      }
+      .pk__flag {
+        position: absolute;
+        top: -11px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.62rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: var(--r-pill);
+        background: var(--gold);
+        color: #1a1303;
+        white-space: nowrap;
+      }
+      .pk__fig {
+        height: 168px;
+        display: grid;
+        place-items: center;
+        margin-bottom: var(--s5);
+      }
+      .pk__fig img {
+        max-height: 100%;
+        width: auto;
+        filter: drop-shadow(0 22px 30px rgba(0, 0, 0, 0.5));
+        transition: transform 0.6s var(--ease);
+      }
+      .pk:hover .pk__fig img {
+        transform: translateY(-6px) rotate(-1.5deg);
+      }
+      .pk h3 {
+        color: var(--ivory);
+        font-size: 1.4rem;
+      }
+      .pk__d {
+        margin-top: 10px;
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--tx-inv-soft);
+      }
+      .pk__has {
+        margin-top: var(--s5);
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        padding-top: var(--s4);
+        border-top: 1px solid var(--line-dark);
+      }
+      .pk__has li {
+        display: flex;
+        gap: 10px;
+        font-size: 0.85rem;
+        color: var(--tx-inv-soft);
+      }
+      .pk__has svg {
+        width: 15px;
+        height: 15px;
+        flex: none;
+        margin-top: 4px;
+        color: var(--gold-2);
+      }
+      .pk__price {
+        margin-top: auto;
+        padding-top: var(--s5);
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      .pk__price b {
+        font-family: var(--serif);
+        font-size: 1.85rem;
+        font-weight: 500;
+        color: var(--ivory);
+      }
+      .pk__price s {
+        font-size: 0.92rem;
+        color: var(--tx-inv-soft);
+        opacity: 0.6;
+      }
+      .pk__price i {
+        font-style: normal;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold-2);
+        margin-left: auto;
+      }
+      .pk .btn {
+        margin-top: var(--s4);
+      }
+      @media (max-width: 920px) {
+        .packs__grid {
+          grid-template-columns: 1fr;
+          max-width: 460px;
+          margin-inline: auto;
+        }
+      }
+
+      /* ============================================================
+   8 · PAIR — GSH + Une Vie, natural weight management
+   ============================================================ */
+      .pair {
+        background: var(--sage-3);
+        overflow: hidden;
+      }
+      .pair__grid {
+        display: grid;
+        grid-template-columns: 0.86fr 1.14fr;
+        gap: clamp(32px, 5vw, 76px);
+        align-items: center;
+      }
+      .pair__fig {
+        position: relative;
+        border-radius: var(--r-xl) var(--r-xl) var(--r-sm) var(--r-xl);
+        overflow: hidden;
+        box-shadow: var(--e3);
+      }
+      .pair__fig img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 4 / 5;
+      }
+      .pair__note {
+        position: absolute;
+        left: var(--s4);
+        right: var(--s4);
+        bottom: var(--s4);
+        background: rgba(252, 250, 245, 0.94);
+        backdrop-filter: blur(8px);
+        border-radius: var(--r-md);
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.82rem;
+        color: var(--tx-soft);
+      }
+      .pair__note svg {
+        width: 18px;
+        height: 18px;
+        color: var(--botanical);
+        flex: none;
+      }
+      .pair__pts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--s5) var(--s6);
+        margin-top: var(--s7);
+      }
+      .pair__pt {
+        padding-top: var(--s4);
+        border-top: 1px solid var(--sage-2);
+      }
+      .pair__pt h3 {
+        font-size: 1.06rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .pair__pt h3 svg {
+        width: 19px;
+        height: 19px;
+        color: var(--botanical);
+        flex: none;
+      }
+      .pair__pt p {
+        margin-top: 8px;
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--tx-soft);
+      }
+      @media (max-width: 900px) {
+        .pair__grid {
+          grid-template-columns: 1fr;
+        }
+        .pair__pts {
+          grid-template-columns: 1fr;
+          gap: var(--s5);
+        }
+      }
+
+      /* ============================================================
+   9 · EXPERTS — one large quote, portrait rail below
+   ============================================================ */
+      .experts {
+        background: var(--cream);
+      }
+      .experts__stage {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: clamp(28px, 4vw, 64px);
+        align-items: center;
+        margin-top: var(--s8);
+      }
+      .experts__figs {
+        position: relative;
+        aspect-ratio: 636 / 494;
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        box-shadow: var(--e3);
+      }
+      .experts__figs img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transform: scale(1.05);
+        transition:
+          opacity 0.7s var(--ease),
+          transform 1.3s var(--ease);
+      }
+      .experts__figs img.is-on {
+        opacity: 1;
+        transform: none;
+      }
+      .experts__q {
+        position: relative;
+      }
+      .experts__q > svg {
+        width: 40px;
+        height: 30px;
+        color: var(--gold-2);
+      }
+      .experts__panel {
+        display: none;
+      }
+      .experts__panel.is-on {
+        display: block;
+        animation: fadeUp 0.6s var(--ease) both;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+      }
+      .experts__panel blockquote {
+        margin: var(--s4) 0 0;
+        font-family: var(--serif);
+        font-size: clamp(1.12rem, 0.95rem + 0.75vw, 1.55rem);
+        line-height: 1.48;
+        color: var(--forest);
+      }
+      .experts__who {
+        margin-top: var(--s5);
+      }
+      .experts__who b {
+        display: block;
+        font-family: var(--serif);
+        font-size: 1.14rem;
+        font-weight: 500;
+        color: var(--forest);
+      }
+      .experts__who span {
+        display: block;
+        margin-top: 4px;
+        font-size: 0.83rem;
+        color: var(--tx-mute);
+        line-height: 1.5;
+      }
+      .experts__rail {
+        display: flex;
+        gap: 12px;
+        margin-top: var(--s6);
+        padding-top: var(--s5);
+        border-top: 1px solid var(--line);
+      }
+      .experts__rail button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: 0;
+        border: 2px solid transparent;
+        background: none;
+        cursor: pointer;
+        opacity: 0.5;
+        transition:
+          opacity 0.35s var(--ease),
+          border-color 0.35s var(--ease);
+      }
+      .experts__rail button img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .experts__rail button.is-on,
+      .experts__rail button:hover {
+        opacity: 1;
+        border-color: var(--gold-2);
+      }
+      @media (max-width: 860px) {
+        .experts__stage {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ============================================================
+   10 · VWALL — customer video reviews, click to load
+   ============================================================ */
+      .vwall {
+        background: var(--ivory);
+      }
+      .vwall__grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: var(--s4);
+        margin-top: var(--s8);
+      }
+      .vw {
+        grid-column: span 2;
+        position: relative;
+        border-radius: var(--r-md);
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+        background: var(--forest);
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+      }
+      .vw:nth-child(1),
+      .vw:nth-child(2) {
+        grid-column: span 3;
+      }
+      .vw img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          transform 0.8s var(--ease),
+          filter 0.5s var(--ease);
+      }
+      .vw::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(12, 27, 21, 0.12),
+          rgba(12, 27, 21, 0.5)
+        );
+        transition: opacity 0.4s var(--ease);
+      }
+      .vw:hover img {
+        transform: scale(1.05);
+      }
+      .vw__play {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: rgba(252, 250, 245, 0.94);
+        display: grid;
+        place-items: center;
+        z-index: 2;
+        transition:
+          transform 0.45s var(--ease),
+          background 0.35s var(--ease);
+      }
+      .vw__play svg {
+        width: 20px;
+        height: 20px;
+        margin-left: 3px;
+        color: var(--forest);
+        fill: var(--forest);
+      }
+      .vw:hover .vw__play {
+        transform: scale(1.1);
+        background: var(--white);
+      }
+      .vw__cap {
+        position: absolute;
+        left: 16px;
+        bottom: 14px;
+        z-index: 2;
+        font-size: 0.76rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: var(--tx-inv);
+      }
+      .vw iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .vwall__note {
+        margin-top: var(--s5);
+        text-align: center;
+      }
+      @media (max-width: 900px) {
+        .vwall__grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .vw,
+        .vw:nth-child(1),
+        .vw:nth-child(2) {
+          grid-column: span 1;
+        }
+      }
+      @media (max-width: 560px) {
+        .vwall__grid {
+          grid-template-columns: 1fr;
+        }
+        .vw__play {
+          width: 52px;
+          height: 52px;
+        }
+      }
+
+      /* ============================================================
+   11 · PROMISE — 45-day guarantee close
+   ============================================================ */
+      .promise {
+        background: var(--forest);
+        color: var(--tx-inv);
+        position: relative;
+        overflow: hidden;
+      }
+      .promise::before {
+        content: "";
+        position: absolute;
+        inset: auto -20% -60% ;
+        height: 120%;
+        background: radial-gradient(
+          46% 50% at 50% 100%,
+          rgba(168, 133, 60, 0.22),
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .promise__in {
+        position: relative;
+        text-align: center;
+        max-width: 780px;
+        margin-inline: auto;
+      }
+      .promise__seal {
+        width: 128px;
+        height: 128px;
+        margin: 0 auto var(--s6);
+        border-radius: 50%;
+        border: 1px solid rgba(211, 183, 126, 0.42);
+        display: grid;
+        place-items: center;
+        position: relative;
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .promise__seal::after {
+        content: "";
+        position: absolute;
+        inset: 9px;
+        border-radius: 50%;
+        border: 1px dashed rgba(211, 183, 126, 0.3);
+      }
+      .promise__seal b {
+        font-family: var(--serif);
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 1;
+        color: var(--gold-2);
+      }
+      .promise__seal span {
+        display: block;
+        font-size: 0.6rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--tx-inv-soft);
+        margin-top: 3px;
+      }
+      .promise h2 {
+        color: var(--ivory);
+      }
+      .promise__lead {
+        margin: var(--s5) auto 0;
+        max-width: 54ch;
+        font-size: 1.12rem;
+        line-height: 1.72;
+        font-weight: 300;
+        color: var(--tx-inv-soft);
+      }
+      .promise__cta {
+        margin-top: var(--s7);
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .promise__fine {
+        margin-top: var(--s6);
+        font-size: 0.78rem;
+        color: var(--tx-inv-soft);
+        opacity: 0.72;
+      }
+
+      .gpanel {
+        display: none;
+      }
+      .gpanel.is-on {
+        display: block;
+        animation: fadeUp 0.5s var(--ease) both;
+      }
+      .gpanel h3 {
+        font-size: 1.06rem;
+      }
+      .gpanel p {
+        margin-top: 8px;
+        font-size: 0.88rem;
+        line-height: 1.58;
+        color: var(--tx-soft);
+      }
+      .gpanel__p {
+        margin-top: var(--s4);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--s4);
+      }
+      .gpanel__p b {
+        font-family: var(--serif);
+        font-size: 1.22rem;
+        font-weight: 500;
+        color: var(--forest);
+      }
+
+      /* ── motion off: nothing on this page depends on an entrance ── */
+      @media (prefers-reduced-motion: reduce) {
+        .stage h1 b,
+        .stage__lead,
+        .stage__cta,
+        .arc__i,
+        .goals__stack img,
+        .experts__figs img {
+          transition: none !important;
+        }
+        .stage h1 b,
+        .arc__i {
+          transform: none !important;
+          opacity: 1 !important;
+        }
+        .stage__lead,
+        .stage__cta {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        .experts__panel.is-on,
+        .gpanel.is-on {
+          animation: none !important;
+        }
+      }
+
+      /* ============================================================
+   HOME · corrections after visual review
+   ============================================================ */
+
+      /* stage: keep the product labels off the ribbon */
+      .stage {
+        padding-bottom: clamp(26px, 3.4vw, 52px);
+      }
+
+      /* creed: the counted number must match its unit */
+      .creed__stat b {
+        white-space: nowrap;
+      }
+      .creed__stat b span {
+        font: inherit;
+        color: inherit;
+        letter-spacing: inherit;
+      }
+
+      /* underlined links need a sized arrow wherever they appear */
+      .link-u svg {
+        width: 14px;
+        height: 14px;
+        flex: none;
+      }
+
+      /* goals: centre the view on its image and let the card breathe */
+      .goals__view {
+        max-width: 460px;
+        margin-inline: auto;
+      }
+      .goals__stack {
+        max-height: 560px;
+      }
+      .goals__card {
+        width: min(390px, 100%);
+      }
+      .gpanel__p {
+        flex-wrap: wrap;
+        row-gap: 10px;
+      }
+      .gpanel__p .link-u {
+        white-space: nowrap;
+      }
+
+      /* packs: box art must sit inside its frame, not over the copy */
+      .pk__fig {
+        height: 176px;
+        overflow: visible;
+      }
+      .pk__fig img {
+        height: 100%;
+        width: 100%;
+        max-height: none;
+        object-fit: contain;
+      }
+
+      /* video wall: the reviews were filmed upright, so frame them upright */
+      .vwall__grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: var(--s3);
+      }
+      .vw,
+      .vw:nth-child(1),
+      .vw:nth-child(2) {
+        grid-column: span 1;
+        aspect-ratio: 3 / 5;
+      }
+      .vw::after {
+        background: linear-gradient(
+          180deg,
+          rgba(12, 27, 21, 0) 42%,
+          rgba(12, 27, 21, 0.62)
+        );
+      }
+      .vw__play {
+        width: 54px;
+        height: 54px;
+      }
+      .vw__cap {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 0.72rem;
+      }
+      @media (max-width: 1000px) {
+        .vwall__grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 620px) {
+        .vwall__grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .vw__play {
+          width: 46px;
+          height: 46px;
+        }
+      }
+
+      /* A percentage height cannot resolve against an auto-sized grid row,
+         so both product figures use flex with an explicit height instead. */
+      .pk__fig {
+        --figh: 176px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: var(--figh);
+      }
+      .pk__fig img {
+        height: var(--figh);
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+        object-fit: contain;
+      }
+      .pcard__fig {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pcard__fig img {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+
+      /* The names are already printed in the video artwork, so the overlay
+         caption only doubled up. Keep it for screen readers, not on screen. */
+      .vw__cap {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+      }
+      .vw::after {
+        background: linear-gradient(
+          180deg,
+          rgba(12, 27, 21, 0.14),
+          rgba(12, 27, 21, 0.24)
+        );
+      }
+      .vw:hover::after {
+        opacity: 0.4;
+      }
+
+      /* give the package boxes a little more presence */
+      .pk__fig {
+        --figh: 200px;
+      }
+
+      /* The goal card is a light panel sitting inside a dark section, so it
+         has to opt back out of the inherited dark-section heading colour. */
+      .goals__card {
+        color: var(--tx);
+      }
+      .goals .goals__card h3,
+      .goals .gpanel h3 {
+        color: var(--forest);
+      }
+      .goals .gpanel p {
+        color: var(--tx-soft);
+      }
+      .goals .gpanel__p b {
+        color: var(--forest);
+      }
+
+      /* A centred eyebrow that wraps leaves its trailing rule stranded on the
+         next line, so drop the rules once the line is likely to break. */
+      @media (max-width: 560px) {
+        .eyebrow::before,
+        .eyebrow--center::after {
+          display: none;
+        }
+        .eyebrow {
+          gap: 0;
+        }
+      }
+
+      /* ============================================================
+   HOME v2 · video stage, line-up band, rebuilt belief section
+   ============================================================ */
+
+      /* ── 1 · STAGE: the brand film, as on the live site ── */
+      .stage {
+        min-height: calc(100svh - var(--topbars-h));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-block: clamp(56px, 8vh, 104px);
+        background: var(--ink);
+      }
+      .stage::before,
+      .stage::after {
+        content: none;
+      }
+      .stage__media {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        overflow: hidden;
+        background: var(--forest) url("assets/site/hero-poster.jpg") center /
+          cover no-repeat;
+      }
+      .stage__vid {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      /* the scrim has to carry white type over moving footage, so it is
+         weighted rather than evenly darkened */
+      .stage__media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(12, 27, 21, 0.62),
+            rgba(12, 27, 21, 0.3) 32%,
+            rgba(12, 27, 21, 0.46) 70%,
+            rgba(12, 27, 21, 0.88)
+          ),
+          radial-gradient(
+            64% 60% at 50% 46%,
+            rgba(22, 51, 40, 0.26),
+            rgba(12, 27, 21, 0.6) 80%
+          );
+      }
+      .stage__in {
+        padding-bottom: 0;
+      }
+      .stage h1 {
+        text-shadow: 0 2px 34px rgba(0, 0, 0, 0.42);
+      }
+      .stage__lead {
+        color: rgba(240, 245, 240, 0.9);
+        text-shadow: 0 1px 16px rgba(0, 0, 0, 0.44);
+      }
+      .stage__cue {
+        position: absolute;
+        left: 50%;
+        bottom: 26px;
+        transform: translateX(-50%);
+        width: 26px;
+        height: 42px;
+        border: 1px solid rgba(211, 183, 126, 0.5);
+        border-radius: var(--r-pill);
+        display: grid;
+        place-items: start center;
+        padding-top: 8px;
+        z-index: 2;
+      }
+      .stage__cue span {
+        width: 3px;
+        height: 7px;
+        border-radius: 2px;
+        background: var(--gold-2);
+        animation: cue 1.9s var(--ease) infinite;
+      }
+      @keyframes cue {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        60% {
+          transform: translateY(14px);
+          opacity: 0;
+        }
+      }
+      @media (max-width: 680px) {
+        .stage {
+          padding-block: clamp(48px, 7vh, 80px);
+        }
+        .stage__cue {
+          display: none;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .stage__cue span {
+          animation: none;
+        }
+      }
+
+      /* ── 3 · LINE-UP: the four formulas, on their own band ── */
+      .lineup {
+        background: var(--forest);
+        color: var(--tx-inv);
+        padding-block: var(--s8);
+        position: relative;
+        overflow: hidden;
+      }
+      .lineup::before {
+        content: "";
+        position: absolute;
+        inset: -40% -10% auto;
+        height: 120%;
+        background: radial-gradient(
+          46% 40% at 50% 42%,
+          rgba(51, 101, 77, 0.62),
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .lineup .arc {
+        margin-top: 0;
+        max-width: 100%;
+        padding-inline: 0;
+        align-items: end;
+      }
+      .lineup .arc::after {
+        bottom: 58px;
+        height: 60px;
+      }
+      .arc__i {
+        opacity: 0;
+        transform: translateY(26px);
+      }
+      .arc__i.is-in {
+        opacity: 1;
+        transform: none;
+      }
+      .arc__i--a img {
+        height: clamp(112px, 15vw, 208px);
+      }
+      .arc__i--b img {
+        height: clamp(96px, 12.8vw, 178px);
+      }
+      .arc__i--c img {
+        height: clamp(106px, 14.2vw, 196px);
+      }
+      .arc__i--d img {
+        height: clamp(102px, 13.5vw, 188px);
+      }
+      .arc__n {
+        margin-top: 18px;
+        color: var(--ivory);
+      }
+      .arc__p {
+        display: block;
+        margin-top: 5px;
+        font-family: var(--serif);
+        font-size: 1.02rem;
+        color: var(--gold-2);
+        font-variant-numeric: tabular-nums;
+      }
+      @media (max-width: 760px) {
+        .lineup {
+          padding-block: var(--s7);
+        }
+        .lineup .arc {
+          grid-template-columns: repeat(2, 1fr);
+          gap: var(--s6) var(--s4);
+        }
+        .lineup .arc::after {
+          display: none;
+        }
+        .arc__n {
+          font-size: 0.68rem;
+          letter-spacing: 0.1em;
+          margin-top: 12px;
+        }
+        .arc__p {
+          font-size: 0.95rem;
+        }
+      }
+
+      /* ── 4 · CREED: rebuilt as an editorial band, not a lone plate ── */
+      .creed__grid {
+        display: grid;
+        grid-template-columns: 1.06fr 0.94fr;
+        gap: clamp(32px, 5vw, 78px);
+        align-items: center;
+      }
+      .creed__q {
+        font-size: clamp(1.72rem, 1rem + 2.5vw, 3.05rem);
+        line-height: 1.14;
+        letter-spacing: -0.014em;
+      }
+      .creed__q em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--botanical);
+      }
+      .creed__lab {
+        margin-top: var(--s5);
+        padding-top: var(--s4);
+        border-top: 1px solid var(--line-2);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--olive);
+      }
+      .creed__body {
+        margin-top: var(--s4);
+        font-size: 1.04rem;
+        line-height: 1.72;
+        font-weight: 300;
+        color: var(--tx-soft);
+        max-width: 48ch;
+      }
+      .creed__say .btn {
+        margin-top: var(--s6);
+      }
+      .creed__fig {
+        border-radius: var(--r-xl) var(--r-sm) var(--r-xl) var(--r-xl);
+        overflow: hidden;
+        box-shadow: var(--e3);
+      }
+      .creed__fig img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 5 / 4;
+      }
+      .creed__band {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: var(--s9);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .creed__band .creed__stat {
+        text-align: center;
+        padding: var(--s6) var(--s4);
+        border-left: 1px solid var(--line);
+      }
+      .creed__band .creed__stat:first-child {
+        border-left: 0;
+      }
+      .creed__press {
+        margin-top: var(--s7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(20px, 4vw, 52px);
+        flex-wrap: wrap;
+      }
+      .creed__logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(20px, 4vw, 52px);
+        flex-wrap: wrap;
+      }
+      .creed__logos img {
+        height: clamp(18px, 2vw, 26px);
+        width: auto;
+        opacity: 0.4;
+        filter: grayscale(1);
+        transition:
+          opacity 0.4s var(--ease),
+          filter 0.4s var(--ease);
+      }
+      .creed__logos img:hover {
+        opacity: 0.78;
+        filter: grayscale(0.35);
+      }
+      @media (max-width: 900px) {
+        .creed__grid {
+          grid-template-columns: 1fr;
+        }
+        .creed__fig {
+          order: -1;
+        }
+        .creed__band {
+          grid-template-columns: 1fr;
+        }
+        .creed__band .creed__stat {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+          padding-block: var(--s5);
+        }
+        .creed__band .creed__stat:first-child {
+          border-top: 0;
+        }
+      }
+
+      /* ── 5 · GOALS: a full screen of its own, as asked ── */
+      .goals {
+        min-height: calc(100svh - var(--header-h));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .goals__grid {
+        margin-top: var(--s7);
+      }
+      @media (max-width: 900px) {
+        .goals {
+          min-height: 0;
+          display: block;
+        }
+      }
+
+      /* the section headings now stand alone, so give them their own air */
+      .deck__aside .d2,
+      .sec__head .d2 {
+        margin-top: 0;
+      }
+
+      /* ── goals: hold the whole thing to one screen ── */
+      .goals {
+        padding-block: clamp(30px, 5vh, 62px);
+      }
+      .goals__grid {
+        margin-top: clamp(20px, 3vh, 40px);
+        align-items: stretch;
+      }
+      .goals__list {
+        justify-content: space-between;
+      }
+      .goal {
+        padding-block: clamp(12px, 1.6vh, 22px);
+      }
+      .goals__stack {
+        max-height: min(44svh, 420px);
+      }
+      .goals__card {
+        margin-top: calc(var(--s5) * -1);
+        padding: var(--s4) var(--s5) var(--s5);
+      }
+      @media (max-width: 900px) {
+        .goals {
+          padding-block: var(--s7);
+        }
+        .goals__grid {
+          align-items: center;
+        }
+        .goals__stack {
+          max-height: 380px;
+        }
+      }
+
+      /* ── hero: the whole block has to clear one screen, so its type and
+            rhythm are tied to viewport HEIGHT as well as width ── */
+      .stage {
+        padding-block: clamp(22px, 3.4vh, 62px);
+      }
+      .stage h1 {
+        margin-top: clamp(10px, 2.1vh, 24px);
+        font-size: clamp(2.5rem, min(6.2vw, 9.4vh), 6.2rem);
+      }
+      .stage__lead {
+        margin-top: clamp(12px, 2.3vh, 24px);
+        max-width: 56ch;
+        font-size: clamp(0.98rem, 0.9rem + 0.34vw, 1.16rem);
+      }
+      .stage__cta {
+        margin-top: clamp(18px, 3.2vh, 40px);
+      }
+      .stage__kicker {
+        font-size: clamp(0.6rem, 0.56rem + 0.15vw, 0.68rem);
+        padding: 8px 16px;
+      }
+      @media (max-height: 720px) {
+        .stage__lead {
+          display: none;
+        }
+      }
+
+      sup.rmk {
+        font-size: 0.62em;
+        vertical-align: super;
+        line-height: 0;
+        font-weight: inherit;
+        letter-spacing: 0;
+      }
+      .btn sup.rmk {
+        font-size: 0.72em;
+        vertical-align: 0.3em;
+        line-height: 0;
+      }
+
+/* ============================================================
+   Footer — structure per yourcym.com
+   ============================================================ */
+      .ft {
+        background: var(--white);
+        color: var(--tx-soft);
+        padding-block: var(--s10) 0;
+      }
+      .ft__top {
+        display: grid;
+        grid-template-columns: 1.35fr 0.85fr 1fr 0.95fr;
+        gap: var(--s9);
+        padding-bottom: var(--s8);
+      }
+      .ft__logo {
+        width: 60px;
+        height: auto;
+        margin-bottom: var(--s5);
+      }
+      .ft__blurb {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-top: var(--s2);
+        max-width: 34ch;
+        font-weight: 400;
+      }
+      .ft h4 {
+        font-family: var(--sans);
+        font-size: 1.05rem;
+        letter-spacing: 0;
+        text-transform: none;
+        color: var(--tx);
+        font-weight: 700;
+        margin-bottom: var(--s4);
+      }
+      .ft ul {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+      }
+      .ft ul a {
+        font-size: 0.885rem;
+        font-weight: 400;
+        color: var(--tx-soft);
+        transition: color 0.3s var(--ease);
+      }
+      .ft ul a:hover {
+        color: var(--forest);
+      }
+      .news form {
+        margin-top: var(--s4);
+      }
+      .news__field {
+        position: relative;
+      }
+      .news input[type="email"] {
+        width: 100%;
+        padding: 13px 46px 13px 15px;
+        border-radius: var(--r-sm);
+        border: 1px solid var(--line-2);
+        background: var(--white);
+        color: var(--tx);
+        font-size: 0.88rem;
+      }
+      .news input::placeholder {
+        color: var(--tx-mute);
+      }
+      .news__submit {
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        color: var(--tx);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition:
+          background 0.3s var(--ease),
+          color 0.3s var(--ease);
+      }
+      .news__submit svg {
+        width: 16px;
+        height: 16px;
+      }
+      .news__submit:hover {
+        background: var(--sage-3);
+        color: var(--forest);
+      }
+      .news label {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 0.78rem;
+        line-height: 1.5;
+        color: var(--tx-mute);
+        margin-top: var(--s4);
+        font-weight: 400;
+      }
+      .news input[type="checkbox"] {
+        margin-top: 2px;
+        accent-color: var(--forest);
+        flex: none;
+        width: 16px;
+        height: 16px;
+      }
+      .ft__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        font-size: 0.885rem;
+        font-weight: 400;
+        color: var(--tx-soft);
+      }
+      .ft__contact a,
+      .ft__contact > span {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: var(--tx-soft);
+      }
+      .ft__contact svg {
+        width: 15px;
+        height: 15px;
+        color: var(--botanical);
+        flex: none;
+        margin-top: 3px;
+      }
+      .ft__contact a:hover {
+        color: var(--forest);
+      }
+      .ft__soc a {
+        border-color: var(--tx);
+        background: var(--tx);
+        color: var(--white);
+      }
+      .ft__soc a:hover {
+        background: var(--forest);
+        border-color: var(--forest);
+      }
+      .ft__legal {
+        font-size: 0.725rem;
+        line-height: 1.7;
+        color: var(--tx-mute);
+        max-width: 96ch;
+        margin-top: var(--s6);
+        padding-top: var(--s6);
+        padding-bottom: var(--s6);
+        border-top: 1px solid var(--line);
+        font-weight: 400;
+      }
+      .ft__bottom {
+        background: var(--cream);
+        border-top: 1px solid var(--line);
+      }
+      .ft__bottom-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--s5);
+        flex-wrap: wrap;
+        padding-block: var(--s4);
+      }
+      .ft__bottom .tiny {
+        color: var(--tx-mute);
+      }
+      .ft__bottom a:hover {
+        color: var(--forest);
+      }
+      .ft__cards {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .ft__cards svg {
+        display: block;
+        width: 42px;
+        height: 26px;
+        border-radius: 4px;
+        box-shadow: 0 0 0 1px var(--line-2);
+      }
+      @media (max-width: 1000px) {
+        .ft__top {
+          grid-template-columns: 1fr 1fr;
+          gap: var(--s7);
+        }
+      }
+      @media (max-width: 600px) {
+        .ft__top {
+          grid-template-columns: 1fr;
+        }
+        .ft__bottom-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: var(--s2);
+        }
+      }
+
+      /* ============================================================
+   Sticky mobile purchase bar + toast
+   ============================================================ */
+      .mbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 70;
+        display: none;
+        gap: var(--s4);
+        align-items: center;
+        padding: 11px var(--gutter) calc(11px + env(safe-area-inset-bottom));
+        background: rgba(252, 250, 245, 0.96);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid var(--line);
+        transform: translateY(110%);
+        transition: transform 0.45s var(--ease);
+        box-shadow: 0 -4px 26px rgba(22, 51, 40, 0.09);
+      }
+      .mbar.is-on {
+        transform: none;
+      }
+      .mbar__i {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+      .mbar__i img {
+        width: 46px;
+        height: 46px;
+        border-radius: var(--r-sm);
+        object-fit: cover;
+        flex: none;
+      }
+      .mbar__t {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--forest);
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .mbar__p {
+        font-size: 0.77rem;
+        color: var(--tx-mute);
+      }
+      .mbar .btn {
+        margin-left: auto;
+        flex: none;
+      }
+      @media (max-width: 1199px) {
+        .mbar {
+          display: flex;
+        }
+      }
+      .toast {
+        position: fixed;
+        left: 50%;
+        bottom: 24px;
+        transform: translate(-50%, 140%);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 90;
+        background: var(--forest);
+        color: var(--tx-inv);
+        padding: 13px 22px;
+        border-radius: var(--r-pill);
+        font-size: 0.86rem;
+        box-shadow: var(--e3);
+        transition:
+          transform 0.5s var(--ease),
+          opacity 0.35s var(--ease),
+          visibility 0.35s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .toast.is-on {
+        transform: translate(-50%, 0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .toast svg {
+        width: 16px;
+        height: 16px;
+        color: var(--gold-2);
+      }
+      @media (max-width: 1199px) {
+        .toast {
+          bottom: 96px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg style="display: none" aria-hidden="true">
+      <defs>
+        <g
+          id="s"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+      </defs>
+      <symbol
+        id="i-immune"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M12 21c4.4-2 7-5.4 7-9.6V5.6L12 3 5 5.6v5.8C5 15.6 7.6 19 12 21Z"
+        />
+        <path d="M12 14.6c0-2.2 1.5-3.7 3.4-3.9-.1 2.2-1.5 3.7-3.4 3.9Z" />
+        <path d="M12 14.6c0-2.2-1.5-3.7-3.4-3.9.1 2.2 1.5 3.7 3.4 3.9Z" />
+        <path d="M12 14.6V17" />
+      </symbol>
+      <symbol
+        id="i-antiox"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="3.3" />
+        <path d="M12 3.2v2.1M12 18.7v2.1M3.2 12h2.1M18.7 12h2.1" />
+        <path
+          d="M5.9 5.9 7.4 7.4M16.6 16.6l1.5 1.5M18.1 5.9l-1.5 1.5M7.4 16.6l-1.5 1.5"
+          opacity=".6"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="8.4"
+          opacity=".35"
+          stroke-dasharray="2.2 3.4"
+        />
+      </symbol>
+      <symbol
+        id="i-skin"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M12 20.5c4-1.6 6.3-4.8 6.3-8.6 0-4.4-2.9-7.6-6.3-8.9C8.6 4.3 5.7 7.5 5.7 11.9c0 3.8 2.3 7 6.3 8.6Z"
+        />
+        <path d="M12 20.5V8.8" />
+        <path
+          d="M12 13.1c1.2-.6 2-1.6 2.3-2.9M12 15.8c-1.2-.6-2-1.6-2.3-2.9"
+          opacity=".65"
+        />
+      </symbol>
+      <symbol
+        id="i-aging"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M7 3.5h10M7 20.5h10" />
+        <path
+          d="M8 3.5v2.2c0 2.5 4 3.9 4 6.3 0 2.4-4 3.8-4 6.3v2.2M16 3.5v2.2c0 2.5-4 3.9-4 6.3 0 2.4 4 3.8 4 6.3v2.2"
+        />
+        <path
+          d="M12 12c1.5-.8 2.4-2 2.6-3.6-1.6.2-2.6 1.3-2.6 3.6Z"
+          opacity=".7"
+        />
+      </symbol>
+      <symbol
+        id="i-check"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m4.5 12.5 4.8 4.8L19.5 7" />
+      </symbol>
+      <symbol
+        id="i-check-c"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="9" />
+        <path d="m8.2 12.3 2.5 2.5 5.1-5.4" />
+      </symbol>
+      <symbol
+        id="i-plus"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.7"
+        stroke-linecap="round"
+      >
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol
+        id="i-minus"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.7"
+        stroke-linecap="round"
+      >
+        <path d="M5 12h14" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="m12 2.9 2.7 5.9 6.4.7-4.8 4.3 1.3 6.3L12 16.9 6.4 20.1l1.3-6.3-4.8-4.3 6.4-.7Z"
+        />
+      </symbol>
+      <symbol
+        id="i-lock"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="4.5" y="10.5" width="15" height="10" rx="2.2" />
+        <path d="M8.2 10.5V7.8a3.8 3.8 0 0 1 7.6 0v2.7" />
+      </symbol>
+      <symbol
+        id="i-shield"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M12 21c4.4-2 7-5.4 7-9.6V5.6L12 3 5 5.6v5.8C5 15.6 7.6 19 12 21Z"
+        />
+        <path d="m8.8 11.8 2.3 2.3 4.1-4.4" />
+      </symbol>
+      <symbol
+        id="i-leaf"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4.6 19.4C3 14.5 6.2 5.9 19.6 4.4c1 10.6-6.2 15.5-12.4 13.9" />
+        <path d="M7.2 18.3C9 13.6 12.4 10 16.6 8" />
+      </symbol>
+      <symbol
+        id="i-flask"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M10 3.2h4M10.6 3.2v6L5.4 17.7A2 2 0 0 0 7.1 20.8h9.8a2 2 0 0 0 1.7-3.1l-5.2-8.5v-6"
+        />
+        <path d="M7.9 14.4h8.2" />
+      </symbol>
+      <symbol
+        id="i-doc"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M14 3.2H7.2A1.7 1.7 0 0 0 5.5 4.9v14.2a1.7 1.7 0 0 0 1.7 1.7h9.6a1.7 1.7 0 0 0 1.7-1.7V7.6Z"
+        />
+        <path d="M14 3.2v4.4h4.5M8.8 12.4h6.4M8.8 16h4.6" />
+      </symbol>
+      <symbol
+        id="i-arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4.8 12h14M13.2 6.4 18.8 12l-5.6 5.6" />
+      </symbol>
+      <symbol
+        id="i-cart"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M3 4h2.1l2.2 10.6a1.9 1.9 0 0 0 1.9 1.5h7.8a1.9 1.9 0 0 0 1.9-1.5L20.5 7.4H6"
+        />
+        <circle cx="9.6" cy="19.6" r="1.3" />
+        <circle cx="17.4" cy="19.6" r="1.3" />
+      </symbol>
+      <symbol
+        id="i-menu"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+      >
+        <path d="M4 7h16M4 12h16M4 17h11" />
+      </symbol>
+      <symbol
+        id="i-close"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+      >
+        <path d="M6 6l12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-quote" viewBox="0 0 34 26" fill="currentColor">
+        <path
+          d="M0 26V13.4C0 6 4.5 1 12 0l1.4 3.6C9.4 5 7.2 7.4 7.2 10.6H13V26H0Zm20.6 0V13.4C20.6 6 25.1 1 32.6 0L34 3.6c-4 1.4-6.2 3.8-6.2 7h5.8V26H20.6Z"
+        />
+      </symbol>
+      <symbol
+        id="i-refresh"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M20.2 11.3A8.3 8.3 0 0 0 6.1 6.6L3.8 8.8" />
+        <path d="M3.8 4.4v4.4h4.4M3.8 12.7a8.3 8.3 0 0 0 14.1 4.7l2.3-2.2" />
+        <path d="M20.2 19.6v-4.4h-4.4" />
+      </symbol>
+      <symbol
+        id="i-badge"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="m12 2.8 2.4 1.8 3-.2.9 2.8 2.4 1.7-1.1 2.8 1.1 2.8-2.4 1.7-.9 2.8-3-.2L12 21.2l-2.4-1.8-3 .2-.9-2.8-2.4-1.7L4.4 12 3.3 9.2l2.4-1.7.9-2.8 3 .2Z"
+        />
+        <path d="m9.2 12.2 1.9 1.9 3.7-4" />
+      </symbol>
+      <symbol
+        id="i-ext"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M13.5 4.5h6v6M19.5 4.5 10 14" />
+        <path
+          d="M17 13.6v4.9a1.9 1.9 0 0 1-1.9 1.9H5.5a1.9 1.9 0 0 1-1.9-1.9V8.9A1.9 1.9 0 0 1 5.5 7h4.9"
+        />
+      </symbol>
+      <symbol
+        id="i-phone"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M20.5 16.9v2.5a1.7 1.7 0 0 1-1.9 1.7 16.7 16.7 0 0 1-7.3-2.6 16.4 16.4 0 0 1-5-5A16.7 16.7 0 0 1 3.7 6.1a1.7 1.7 0 0 1 1.7-1.9h2.5a1.7 1.7 0 0 1 1.7 1.5c.1.8.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-1 1a13.5 13.5 0 0 0 5 5l1-1a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.7Z"
+        />
+      </symbol>
+      <symbol
+        id="i-pin"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M19.2 10.4c0 5.6-7.2 10.4-7.2 10.4s-7.2-4.8-7.2-10.4a7.2 7.2 0 1 1 14.4 0Z"
+        />
+        <circle cx="12" cy="10.2" r="2.6" />
+      </symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6A21 21 0 0 0 14.5 3C12 3 10.3 4.5 10.3 7.5v2.4H7.6V13h2.7v8h3.2Z"
+        />
+      </symbol>
+      <symbol
+        id="i-ig"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <rect x="3.5" y="3.5" width="17" height="17" rx="4.6" />
+        <circle cx="12" cy="12" r="3.7" />
+        <circle cx="16.9" cy="7.1" r="1" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M21.6 7.6a2.5 2.5 0 0 0-1.8-1.8C18.2 5.4 12 5.4 12 5.4s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.6 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.4 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.4ZM10.2 15V9l5.2 3-5.2 3Z"
+        />
+      </symbol>
+      <symbol
+        id="i-globe"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18" />
+        <path
+          d="M12 3c2.6 2.5 4 5.6 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.6-4-9s1.4-6.5 4-9Z"
+        />
+      </symbol>
+      <symbol
+        id="i-drop"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 3.2c3.2 3.6 5.4 6.6 5.4 9.4a5.4 5.4 0 0 1-10.8 0c0-2.8 2.2-5.8 5.4-9.4Z" />
+        <path d="M9.6 13.4a2.6 2.6 0 0 0 2.6 2.6" opacity=".55" />
+      </symbol>
+    </svg>
+
+    <!-- ══════════════════ SITE HEADER — structure carried over from yourcym.com ══════════════════ -->
+    <div class="util">
+      <div class="container util__row">
+        <p class="util__c">Special shipping price for Autoship orders</p>
+      </div>
+    </div>
+
+    <div class="util2">
+      <div class="container util2__row">
+        <div class="util2__l">
+          <a class="util2__tel" href="tel:+18889683592"
+            ><svg><use href="#i-phone" /></svg>1-888-968-3592</a
+          >
+          <div class="soc soc--sm">
+            <a href="#" aria-label="Facebook"
+              ><svg><use href="#i-fb" /></svg
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><svg><use href="#i-ig" /></svg
+            ></a>
+          </div>
+        </div>
+
+        <p class="util2__stats">
+          More Than 20 Years In Business With <b>652,035</b> Satisfied Customers
+          With An Average Rating Of <b>4.56</b>
+        </p>
+
+        <div class="util2__r">
+          <div class="util2__r-top">
+            <div class="util2__shop">
+              <span class="util2__shop-label">You are shopping with</span>
+              <span class="util2__shop-id"
+                >YourCYM International, ID:100000</span
+              >
+            </div>
+            <div class="util2__links">
+              <a href="#">Join Our Team</a>
+              <span aria-hidden="true">|</span>
+              <a href="#shop">Shop Now</a>
+            </div>
+          </div>
+          <button class="util2__globe" type="button" aria-label="Select region">
+            <svg><use href="#i-globe" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="hdr" id="top">
+      <div class="container">
+        <div class="hdr__inner">
+          <a class="brand" href="#top" aria-label="YourCYM — home">
+            <img
+              src="assets/logo-light.png"
+              srcset="
+                assets/logo-light@210.png 184w,
+                assets/logo-light.png     368w
+              "
+              sizes="52px"
+              width="368"
+              height="420"
+              alt="YourCYM"
+            />
+          </a>
+
+          <nav class="nav" aria-label="Primary">
+            <a href="#shop">Products</a>
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#about">Reference Materials</a>
+            <a href="#shop" class="nav__hot">Pre-Launch Offer</a>
+            <a href="#">My Account</a>
+          </nav>
+
+          <div class="hdr__act">
+            <button
+              class="icon-btn"
+              type="button"
+              aria-label="Cart, 0 items"
+              data-cart
+            >
+              <svg><use href="#i-cart" /></svg
+              ><span class="cart-dot" data-cart-count>0</span>
+            </button>
+            <div class="lang">
+              <button type="button" aria-label="Language: English">
+                En
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <path d="m7 10 5 5 5-5" />
+                </svg>
+              </button>
+            </div>
+            <a class="btn btn--primary btn--sm" href="#">Login</a>
+            <button
+              class="icon-btn burger"
+              type="button"
+              aria-label="Open menu"
+              aria-expanded="false"
+              data-drawer-open
+            >
+              <svg><use href="#i-menu" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer__scrim" data-drawer-close></div>
+      <div
+        class="drawer__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
+      >
+        <div class="drawer__top">
+          <img
+            src="assets/logo-light@210.png"
+            width="184"
+            height="210"
+            alt="YourCYM"
+            style="width: 44px; height: auto"
+          />
+          <button
+            class="icon-btn"
+            type="button"
+            aria-label="Close menu"
+            data-drawer-close
+          >
+            <svg><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <nav class="drawer__nav" aria-label="Mobile">
+          <a href="#shop" data-drawer-close>Products</a>
+          <a href="#" data-drawer-close>About Us</a>
+          <a href="#" data-drawer-close>Privacy Policy</a>
+          <a href="#about" data-drawer-close>Reference Materials</a>
+          <a href="#shop" data-drawer-close>Pre-Launch Offer</a>
+          <a href="#" data-drawer-close>My Account</a>
+        </nav>
+        <a class="btn btn--primary btn--block" href="#shop" data-drawer-close
+          >Shop Best Sellers <svg><use href="#i-arrow" /></svg
+        ></a>
+        <a class="btn btn--ghost btn--block" href="#" data-drawer-close
+          >Login</a
+        >
+        <ul class="trustrow" style="flex-direction: column; gap: 12px">
+          <li>
+            <svg><use href="#i-phone" /></svg>1-888-968-3592
+          </li>
+          <li>
+            <svg><use href="#i-shield" /></svg>45-day money-back guarantee
+          </li>
+          <li>
+            <svg><use href="#i-doc" /></svg>Natural Product Number 80021489
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ══════════════════ 3 · HERO ══════════════════ -->
+    <main>
+      <!-- ══════════════════ 1 · STAGE ══════════════════ -->
+      <section class="stage" id="stage">
+        <div class="stage__media">
+          <video
+            class="stage__vid"
+            poster="assets/site/hero-poster.jpg"
+            data-lg="assets/site/hero-web.mp4"
+            data-sm="assets/site/hero-sm.mp4"
+            preload="none"
+            muted
+            loop
+            playsinline
+            disablepictureinpicture
+            aria-hidden="true"
+            tabindex="-1"
+          ></video>
+        </div>
+
+        <div class="container stage__in">
+          <p class="stage__kicker">
+            <svg><use href="#i-shield" /></svg>45-day money-back guarantee
+          </p>
+
+          <h1>
+            <span><b>Energy.</b></span>
+            <span><b>Immunity.</b></span>
+            <span><b><em>Balance.</em></b></span>
+          </h1>
+
+          <p class="stage__lead">
+            Vitality and immune support, made easy with YourCYM. Four everyday
+            formulas and three holistic packages, developed by an experienced
+            team and backed by 26+ years of scientific and medical knowledge.
+          </p>
+
+          <div class="stage__cta">
+            <a class="btn btn--gold btn--lg" href="#shop"
+              >Shop Best Sellers <svg><use href="#i-arrow" /></svg
+            ></a>
+            <a class="btn btn--ghost btn--onDark btn--lg" href="#goals"
+              >Find your goal</a
+            >
+          </div>
+        </div>
+
+        <a class="stage__cue" href="#lineup" aria-label="Skip to the range">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ══════════════════ 2 · RIBBON ══════════════════ -->
+      <div class="ribbon" aria-hidden="true">
+        <div class="ribbon__track" id="ribbon">
+          <span>Sugar free</span><span>Gluten free</span><span>Non GMO</span
+          ><span>Science backed</span><span>45-day money-back guarantee</span>
+        </div>
+      </div>
+      <p class="sr">
+        Our products are sugar free, gluten free, non GMO, science backed and
+        covered by a 45-day money-back guarantee.
+      </p>
+
+      <!-- ══════════════════ 3 · LINE-UP ══════════════════ -->
+      <section class="lineup" id="lineup" aria-label="The range">
+        <div class="container">
+          <div class="arc" data-tilt>
+            <a class="arc__i arc__i--a rv" href="index.html">
+              <img
+                src="assets/site/product1.png"
+                width="556"
+                height="620"
+                alt="GSH Complex whey protein isolate pouch"
+              />
+              <span class="arc__n">GSH Complex</span>
+              <span class="arc__p">$85.95</span>
+            </a>
+            <a class="arc__i arc__i--c rv rv--1" href="#shop">
+              <img
+                src="assets/site/product3.png"
+                width="556"
+                height="620"
+                alt="Triozyme Complex, 180 chewable tablets"
+              />
+              <span class="arc__n">Triozyme</span>
+              <span class="arc__p">$59.95</span>
+            </a>
+            <a class="arc__i arc__i--d rv rv--2" href="#shop">
+              <img
+                src="assets/site/product4.png"
+                width="556"
+                height="620"
+                alt="Une Vie Solution bottle"
+              />
+              <span class="arc__n">Une&#8209;Vie</span>
+              <span class="arc__p">$35.35</span>
+            </a>
+            <a class="arc__i arc__i--b rv rv--3" href="#shop">
+              <img
+                src="assets/site/product2.png"
+                width="367"
+                height="406"
+                alt="PREZERV Derma day and night skin treatment formula"
+              />
+              <span class="arc__n">Prezerv Derma</span>
+              <span class="arc__p">$54.50</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 4 · CREED ══════════════════ -->
+      <section class="sec creed" id="about">
+        <div class="container">
+          <div class="creed__grid">
+            <div class="creed__say rv">
+              <h2 class="creed__q">
+                At YourCYM, we believe that good health is a fundamental human
+                right, <em>not a privilege.</em>
+              </h2>
+              <p class="creed__lab">Supplier of quality life products</p>
+              <p class="creed__body">
+                We have been in business more than 20 years, and our products
+                are developed by an experienced team backed by 26+ years of
+                scientific and medical knowledge. Every order is covered by the
+                same 45-day money-back guarantee.
+              </p>
+              <a class="btn btn--ghost" href="#shop"
+                >See what we make <svg><use href="#i-arrow" /></svg
+              ></a>
+            </div>
+
+            <figure class="creed__fig rv rv--1">
+              <img
+                src="assets/science-graded.jpg"
+                srcset="
+                  assets/science-graded@900.jpg  900w,
+                  assets/science-graded.jpg     1400w
+                "
+                sizes="(max-width:900px) 92vw, 44vw"
+                width="1400"
+                height="1120"
+                alt="A researcher at work in the laboratory"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <div class="creed__band">
+            <div class="creed__stat rv">
+              <b data-count="20" data-suffix="+">20+</b>
+              <span>Years in business</span>
+            </div>
+            <div class="creed__stat rv rv--1">
+              <b data-count="652035">652,035</b>
+              <span>Satisfied customers</span>
+            </div>
+            <div class="creed__stat rv rv--2">
+              <b data-count="4.56">4.56</b>
+              <span>Average customer rating</span>
+            </div>
+          </div>
+
+          <div class="creed__press rv">
+            <p class="press__lab">Featured in</p>
+            <div class="creed__logos">
+              <img
+                src="assets/site/times.png"
+                width="215"
+                height="34"
+                alt="Times Square"
+                loading="lazy"
+              />
+              <img
+                src="assets/site/abnew.png"
+                width="200"
+                height="49"
+                alt="ABNewswire"
+                loading="lazy"
+              />
+              <img
+                src="assets/site/izona.png"
+                width="200"
+                height="38"
+                alt="iZona News Online"
+                loading="lazy"
+              />
+              <img
+                src="assets/site/trinity.png"
+                width="182"
+                height="69"
+                alt="Trinity Digest"
+                loading="lazy"
+              />
+              <img
+                src="assets/site/thechronicle.png"
+                width="301"
+                height="55"
+                alt="The Chronicle Journal"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 5 · GOALS ══════════════════ -->
+      <section class="sec sec--dark goals" id="goals">
+        <div class="container">
+          <div class="sec__head rv">
+            <h2 class="d2">
+              We can help you reach <em>your health goals.</em>
+            </h2>
+          </div>
+
+          <div class="goals__grid">
+            <div class="goals__list rv" role="tablist" aria-label="Health goals">
+              <button
+                class="goal is-on"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-goal="0"
+              >
+                <span class="goal__n">01</span>
+                <span class="goal__t">Holistic wellness</span>
+                <span class="goal__go"
+                  ><svg><use href="#i-arrow" /></svg
+                ></span>
+              </button>
+              <button
+                class="goal"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-goal="1"
+              >
+                <span class="goal__n">02</span>
+                <span class="goal__t">Gut health</span>
+                <span class="goal__go"
+                  ><svg><use href="#i-arrow" /></svg
+                ></span>
+              </button>
+              <button
+                class="goal"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-goal="2"
+              >
+                <span class="goal__n">03</span>
+                <span class="goal__t">Immune support</span>
+                <span class="goal__go"
+                  ><svg><use href="#i-arrow" /></svg
+                ></span>
+              </button>
+              <button
+                class="goal"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-goal="3"
+              >
+                <span class="goal__n">04</span>
+                <span class="goal__t">Hydration</span>
+                <span class="goal__go"
+                  ><svg><use href="#i-arrow" /></svg
+                ></span>
+              </button>
+              <button
+                class="goal"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-goal="4"
+              >
+                <span class="goal__n">05</span>
+                <span class="goal__t">Skin health</span>
+                <span class="goal__go"
+                  ><svg><use href="#i-arrow" /></svg
+                ></span>
+              </button>
+            </div>
+
+            <div class="goals__view rv rv--1">
+              <div class="goals__stack">
+                <img
+                  class="is-on"
+                  src="assets/site/help-img1.jpg"
+                  width="326"
+                  height="447"
+                  alt="Three people stretching together outdoors"
+                  data-fig="0"
+                  loading="lazy"
+                />
+                <img
+                  src="assets/site/help-img2.jpg"
+                  width="326"
+                  height="447"
+                  alt="Woman resting a hand on her stomach in a kitchen"
+                  data-fig="1"
+                  loading="lazy"
+                />
+                <img
+                  src="assets/site/help-img3.jpg"
+                  width="326"
+                  height="447"
+                  alt="Woman stretching outdoors on an autumn morning"
+                  data-fig="2"
+                  loading="lazy"
+                />
+                <img
+                  src="assets/site/help-img4.jpg"
+                  width="326"
+                  height="447"
+                  alt="Woman drinking a glass of water"
+                  data-fig="3"
+                  loading="lazy"
+                />
+                <img
+                  src="assets/site/help-img5.jpg"
+                  width="326"
+                  height="447"
+                  alt="Woman with her hand resting on her shoulder"
+                  data-fig="4"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="goals__card">
+                <div class="gpanel is-on" data-panel="0">
+                  <h3>Holistic packages</h3>
+                  <p>
+                    Three curated packages that bring several formulas together
+                    into one routine.
+                  </p>
+                  <div class="gpanel__p">
+                    <b>From $115.24</b>
+                    <a class="link-u" href="#packages"
+                      >See packages <svg><use href="#i-arrow" /></svg
+                    ></a>
+                  </div>
+                </div>
+                <div class="gpanel" data-panel="1">
+                  <h3>Triozyme Chewables</h3>
+                  <p>
+                    Naturally occurring enzymes from organic certified grains,
+                    in a 180 tablet jar.
+                  </p>
+                  <div class="gpanel__p">
+                    <b>$59.95</b>
+                    <a class="link-u" href="#shop"
+                      >View product <svg><use href="#i-arrow" /></svg
+                    ></a>
+                  </div>
+                </div>
+                <div class="gpanel" data-panel="2">
+                  <h3>GSH Complex</h3>
+                  <p>
+                    Glutathione precursors to support your body&rsquo;s own
+                    production of glutathione, the master antioxidant.
+                  </p>
+                  <div class="gpanel__p">
+                    <b>$85.95</b>
+                    <a class="link-u" href="index.html"
+                      >View product <svg><use href="#i-arrow" /></svg
+                    ></a>
+                  </div>
+                </div>
+                <div class="gpanel" data-panel="3">
+                  <h3>Une&#8209;Vie</h3>
+                  <p>
+                    Structured water that acts as a delivery system, helping
+                    transport vital nutrients into your cells.
+                  </p>
+                  <div class="gpanel__p">
+                    <b>$35.35</b>
+                    <a class="link-u" href="#shop"
+                      >View product <svg><use href="#i-arrow" /></svg
+                    ></a>
+                  </div>
+                </div>
+                <div class="gpanel" data-panel="4">
+                  <h3>PREZERV Derma</h3>
+                  <p>
+                    A day-and-night cream made from GSH Complex and UNE VIE,
+                    working in unison to revitalize your skin.
+                  </p>
+                  <div class="gpanel__p">
+                    <b>$54.50</b>
+                    <a class="link-u" href="#shop"
+                      >View product <svg><use href="#i-arrow" /></svg
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 6 · DECK ══════════════════ -->
+      <section class="sec deck" id="shop">
+        <div class="container deck__grid">
+          <aside class="deck__aside rv">
+            <h2 class="d2">Shop our <em>best sellers.</em></h2>
+            <p class="lead">
+              Our products are developed by an experienced team at YourCYM and
+              backed by 26+ years of scientific and medical knowledge.
+            </p>
+            <ul class="deck__meta">
+              <li>
+                <svg><use href="#i-shield" /></svg>
+                <span
+                  >45-day money-back guarantee on every order. No questions
+                  asked.</span
+                >
+              </li>
+              <li>
+                <svg><use href="#i-doc" /></svg>
+                <span
+                  >GSH Complex is licensed as a natural health product under NPN
+                  80021489.</span
+                >
+              </li>
+              <li>
+                <svg><use href="#i-badge" /></svg>
+                <span
+                  >Volume discounts apply to one-time purchases and are not
+                  eligible for AutoShip.</span
+                >
+              </li>
+            </ul>
+            <a class="btn btn--ghost" href="#packages" style="margin-top: 32px"
+              >Compare the packages <svg><use href="#i-arrow" /></svg
+            ></a>
+          </aside>
+
+          <div class="deck__list">
+            <article class="pcard rv">
+              <div class="pcard__fig">
+                <img
+                  src="assets/site/product1.png"
+                  width="556"
+                  height="620"
+                  alt="GSH Complex pouch"
+                  loading="lazy"
+                />
+              </div>
+              <div class="pcard__b">
+                <p class="pcard__k">Immune support</p>
+                <h3>GSH Complex</h3>
+                <p class="pcard__d">
+                  A whey protein isolate formula supplying glutathione
+                  precursors, so your body can produce more of its own master
+                  antioxidant.
+                </p>
+                <div class="pcard__foot">
+                  <span class="pcard__price">$85.95</span>
+                  <span class="pcard__acts">
+                    <a class="btn btn--ghost btn--sm" href="index.html"
+                      >Details</a
+                    >
+                    <button
+                      class="btn btn--primary btn--sm"
+                      type="button"
+                      data-add
+                      data-name="GSH Complex"
+                    >
+                      Add to Cart
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard rv">
+              <div class="pcard__fig">
+                <img
+                  src="assets/site/product3.png"
+                  width="556"
+                  height="620"
+                  alt="Triozyme Complex jar"
+                  loading="lazy"
+                />
+              </div>
+              <div class="pcard__b">
+                <p class="pcard__k">Gut health</p>
+                <h3>Triozyme Chewables</h3>
+                <p class="pcard__d">
+                  Naturally occurring enzymes from organic certified grains,
+                  taken with meals. 180 chewable tablets.
+                </p>
+                <div class="pcard__foot">
+                  <span class="pcard__price">$59.95</span>
+                  <span class="pcard__acts">
+                    <a class="btn btn--ghost btn--sm" href="#">Details</a>
+                    <button
+                      class="btn btn--primary btn--sm"
+                      type="button"
+                      data-add
+                      data-name="Triozyme Chewables"
+                    >
+                      Add to Cart
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard rv">
+              <div class="pcard__fig">
+                <img
+                  src="assets/site/product4.png"
+                  width="556"
+                  height="620"
+                  alt="Une Vie Solution bottle"
+                  loading="lazy"
+                />
+              </div>
+              <div class="pcard__b">
+                <p class="pcard__k">Hydration</p>
+                <h3>Une&#8209;Vie</h3>
+                <p class="pcard__d">
+                  Structured water that acts as an efficient delivery system,
+                  helping transport vital nutrients directly into your cells.
+                </p>
+                <div class="pcard__foot">
+                  <span class="pcard__price">$35.35</span>
+                  <span class="pcard__acts">
+                    <a class="btn btn--ghost btn--sm" href="#">Details</a>
+                    <button
+                      class="btn btn--primary btn--sm"
+                      type="button"
+                      data-add
+                      data-name="Une-Vie"
+                    >
+                      Add to Cart
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard rv">
+              <div class="pcard__fig">
+                <img
+                  src="assets/site/product2.png"
+                  width="367"
+                  height="406"
+                  alt="PREZERV Derma roller and box"
+                  loading="lazy"
+                />
+              </div>
+              <div class="pcard__b">
+                <p class="pcard__k">Skin health</p>
+                <h3>PREZERV Derma</h3>
+                <p class="pcard__d">
+                  A day-and-night cream made from GSH Complex and UNE VIE. They
+                  work in unison to revitalize your skin and reduce the signs of
+                  aging.
+                </p>
+                <div class="pcard__foot">
+                  <span class="pcard__price">$54.50</span>
+                  <span class="pcard__acts">
+                    <a class="btn btn--ghost btn--sm" href="#">Details</a>
+                    <button
+                      class="btn btn--primary btn--sm"
+                      type="button"
+                      data-add
+                      data-name="PREZERV Derma"
+                    >
+                      Add to Cart
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 7 · PACKS ══════════════════ -->
+      <section class="sec sec--ink packs" id="packages">
+        <div class="container">
+          <div class="sec__head center rv">
+            <h2 class="d2">
+              Holistic packages for your <em>health and wellness.</em>
+            </h2>
+            <p class="lead" style="max-width: 60ch">
+              Each package brings formulas together that are meant to be taken
+              alongside one another, at a price below buying them separately.
+            </p>
+          </div>
+
+          <div class="packs__grid">
+            <article class="pk rv rv--1">
+              <div class="pk__fig">
+                <img
+                  src="assets/site/pack1.png"
+                  width="405"
+                  height="450"
+                  alt="Wellness Starter Pack box"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Wellness Starter Pack</h3>
+              <p class="pk__d">
+                GSH Complex and UNE VIE together: cellular defense, hydration
+                and renewal, in the simplest pairing we make.
+              </p>
+              <ul class="pk__has">
+                <li>
+                  <svg><use href="#i-check-c" /></svg><span>GSH Complex</span>
+                </li>
+                <li>
+                  <svg><use href="#i-check-c" /></svg><span>UNE VIE</span>
+                </li>
+              </ul>
+              <div class="pk__price">
+                <b>$115.24</b><s>$121.30</s>
+              </div>
+              <button class="btn btn--ghost btn--onDark btn--block" type="button" data-add data-name="Wellness Starter Pack">
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="pk pk--hero rv rv--2">
+              <span class="pk__flag">The complete system</span>
+              <div class="pk__fig">
+                <img
+                  src="assets/site/pack3.png"
+                  width="405"
+                  height="450"
+                  alt="VIPROX box"
+                  loading="lazy"
+                />
+              </div>
+              <h3>VIPROX<sup class="rmk">&reg;</sup></h3>
+              <p class="pk__d">
+                Three formulas taken in a set order at every meal. The one
+                package built to be a whole daily protocol rather than a
+                shortlist.
+              </p>
+              <ul class="pk__has">
+                <li>
+                  <svg><use href="#i-check-c" /></svg
+                  ><span>2 &times; GSH Complex</span>
+                </li>
+                <li>
+                  <svg><use href="#i-check-c" /></svg
+                  ><span>Triozyme Complex</span>
+                </li>
+                <li>
+                  <svg><use href="#i-check-c" /></svg><span>Une Vie Solution</span>
+                </li>
+                <li>
+                  <svg><use href="#i-check-c" /></svg
+                  ><span>Your personal shaker</span>
+                </li>
+              </ul>
+              <div class="pk__price">
+                <b>$250</b><s>$267.20</s><i>Best value</i>
+              </div>
+              <a class="btn btn--gold btn--block" href="viprox.html"
+                ><span>See VIPROX<sup class="rmk">&reg;</sup></span> <svg><use href="#i-arrow" /></svg
+              ></a>
+            </article>
+
+            <article class="pk rv rv--3">
+              <div class="pk__fig">
+                <img
+                  src="assets/site/pack2.png"
+                  width="405"
+                  height="450"
+                  alt="Prezerv Gold box"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Prezerv Gold</h3>
+              <p class="pk__d">
+                Our skin and aging package: an all-in-one daily wellness
+                selection built around how you look as well as how you feel.
+              </p>
+              <ul class="pk__has">
+                <li>
+                  <svg><use href="#i-check-c" /></svg
+                  ><span>Supports youthful, glowing skin</span>
+                </li>
+                <li>
+                  <svg><use href="#i-check-c" /></svg
+                  ><span>Promotes healthy aging from within</span>
+                </li>
+                <li>
+                  <svg><use href="#i-check-c" /></svg
+                  ><span>Enhances overall cellular wellness</span>
+                </li>
+              </ul>
+              <div class="pk__price">
+                <b>$305.62</b><s>$321.70</s>
+              </div>
+              <button class="btn btn--ghost btn--onDark btn--block" type="button" data-add data-name="Prezerv Gold">
+                Add to Cart
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 8 · PAIR ══════════════════ -->
+      <section class="sec pair" id="weight">
+        <div class="container pair__grid">
+          <figure class="pair__fig rv">
+            <img
+              src="assets/site/newbg1.jpg"
+              width="784"
+              height="900"
+              alt="Woman stretching outdoors among autumn leaves"
+              loading="lazy"
+            />
+            <figcaption class="pair__note">
+              <svg><use href="#i-leaf" /></svg>
+              <span>Individual results vary. Not a weight-loss drug.</span>
+            </figcaption>
+          </figure>
+
+          <div class="rv rv--1">
+            <h2 class="d2">
+              Support natural <em>weight management.</em>
+            </h2>
+            <p class="lead" style="margin-top: 20px">
+              Emerging research suggests that maintaining a healthy immune
+              system and staying well-hydrated may support your body&rsquo;s
+              natural weight management processes.
+            </p>
+
+            <div class="pair__pts">
+              <div class="pair__pt">
+                <h3>
+                  <svg><use href="#i-immune" /></svg>Supports immune health
+                </h3>
+                <p>
+                  GSH Complex helps maintain immune function, which is essential
+                  to overall well-being and a balanced lifestyle.
+                </p>
+              </div>
+              <div class="pair__pt">
+                <h3>
+                  <svg><use href="#i-drop" /></svg>Promotes cellular hydration
+                </h3>
+                <p>
+                  UneVie Structured Water supports hydration, a key component in
+                  physical performance and metabolism.
+                </p>
+              </div>
+              <div class="pair__pt">
+                <h3>
+                  <svg><use href="#i-refresh" /></svg>Encourages natural
+                  cleansing
+                </h3>
+                <p>
+                  This combination may help support your body&rsquo;s natural
+                  cleansing and elimination functions.
+                </p>
+              </div>
+              <div class="pair__pt">
+                <h3>
+                  <svg><use href="#i-leaf" /></svg>Supports a balanced lifestyle
+                </h3>
+                <p>
+                  Together, GSH Complex and UneVie offer nutritional support to
+                  help you stay on track with your wellness goals.
+                </p>
+              </div>
+            </div>
+
+            <a
+              class="btn btn--primary"
+              href="#packages"
+              style="margin-top: 36px"
+              >Get both in the Starter Pack
+              <svg><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 9 · EXPERTS ══════════════════ -->
+      <section class="sec experts" id="reviews">
+        <div class="container">
+          <div class="sec__head rv">
+            <h2 class="d2">Trusted by <em>experts.</em></h2>
+          </div>
+
+          <div class="experts__stage">
+            <div class="experts__figs rv">
+              <img
+                class="is-on"
+                src="assets/site/testimonial1.jpg"
+                width="636"
+                height="494"
+                alt="Kate Hall on the track"
+                data-exfig="0"
+                loading="lazy"
+              />
+              <img
+                src="assets/site/testimonial2.jpg"
+                width="636"
+                height="494"
+                alt="Sean McColl at a competition"
+                data-exfig="1"
+                loading="lazy"
+              />
+              <img
+                src="assets/site/testimonial3.jpg"
+                width="636"
+                height="494"
+                alt="Maggy Dub&eacute;-Laroche on a climbing wall"
+                data-exfig="2"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="experts__q rv rv--1">
+              <svg><use href="#i-quote" /></svg>
+
+              <div class="experts__panel is-on" data-expanel="0">
+                <blockquote>
+                  As an elite athlete and new mom, staying hydrated has never
+                  been more important. During my pregnancy and postpartum
+                  recovery, Une Vie Structured Water was a game-changer. It
+                  helped me bounce back faster, feel more energized, and stay on
+                  top of my performance, even through the toughest days. I truly
+                  felt the difference.
+                </blockquote>
+                <div class="experts__who">
+                  <b>Kate Hall</b>
+                  <span
+                    >ASICS Long Jumper<br />Two-Time NCAA D1 Champion</span
+                  >
+                </div>
+              </div>
+
+              <div class="experts__panel" data-expanel="1">
+                <blockquote>
+                  Une-Vie is the product I take every morning alongside my GSH
+                  Whey Protein. It hydrates me every day and promotes better
+                  nutrient absorption. I recently came back from a French Cup in
+                  Valence and I felt like everything clicked at the competition.
+                  I felt like I had extra energy, I had trained well and I can
+                  only think of the supplements I&rsquo;ve been taking. I think
+                  my body is really liking it.
+                </blockquote>
+                <div class="experts__who">
+                  <b>Sean McColl, Canada</b>
+                  <span
+                    >Professional Rock Climber<br />8 times world champion</span
+                  >
+                </div>
+              </div>
+
+              <div class="experts__panel" data-expanel="2">
+                <blockquote>
+                  Since adding the GSH Complex immunity supplement and Une Vie
+                  Hydrating solution to my routine, I&rsquo;ve noticed a huge
+                  difference. I feel more energized during workouts, recover
+                  faster, and haven&rsquo;t had to worry about getting sick as
+                  often.
+                </blockquote>
+                <div class="experts__who">
+                  <b>Maggy Dub&eacute;-Laroche, Canada</b>
+                  <span
+                    >Sport Climber<br />Canadian Champion (Speed
+                    Climbing)</span
+                  >
+                </div>
+              </div>
+
+              <div class="experts__rail" role="tablist" aria-label="Athletes">
+                <button
+                  class="is-on"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-ex="0"
+                  aria-label="Kate Hall"
+                >
+                  <img
+                    src="assets/site/testimonial1.jpg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-ex="1"
+                  aria-label="Sean McColl"
+                >
+                  <img
+                    src="assets/site/testimonial2.jpg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-ex="2"
+                  aria-label="Maggy Dub&eacute;-Laroche"
+                >
+                  <img
+                    src="assets/site/testimonial3.jpg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 10 · VWALL ══════════════════ -->
+      <section class="sec vwall" id="stories">
+        <div class="container">
+          <div class="sec__head center rv">
+            <h2 class="d2">
+              See for yourself what real people are saying about
+              <em>our products.</em>
+            </h2>
+          </div>
+
+          <div class="vwall__grid">
+            <button
+              class="vw rv"
+              type="button"
+              data-yt="Vh98rKreIR0"
+              aria-label="Play video review from Rowela Ancheta"
+            >
+              <img
+                src="assets/site/yt-Vh98rKreIR0.jpg"
+                width="640"
+                height="360"
+                alt=""
+                loading="lazy"
+              />
+              <span class="vw__play"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+              ></span>
+              <span class="vw__cap">Rowela Ancheta</span>
+            </button>
+            <button
+              class="vw rv rv--1"
+              type="button"
+              data-yt="8B4fJZRkeOc"
+              aria-label="Play customer video review 2"
+            >
+              <img
+                src="assets/site/yt-8B4fJZRkeOc.jpg"
+                width="640"
+                height="360"
+                alt=""
+                loading="lazy"
+              />
+              <span class="vw__play"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+              ></span>
+              <span class="vw__cap">Customer review</span>
+            </button>
+            <button
+              class="vw rv"
+              type="button"
+              data-yt="YZ__M7qvPDI"
+              aria-label="Play customer video review 3"
+            >
+              <img
+                src="assets/site/yt-YZ__M7qvPDI.jpg"
+                width="640"
+                height="360"
+                alt=""
+                loading="lazy"
+              />
+              <span class="vw__play"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+              ></span>
+              <span class="vw__cap">Customer review</span>
+            </button>
+            <button
+              class="vw rv rv--1"
+              type="button"
+              data-yt="tsiCFTVemnA"
+              aria-label="Play video review from Kathleen Parks"
+            >
+              <img
+                src="assets/site/yt-tsiCFTVemnA.jpg"
+                width="640"
+                height="360"
+                alt=""
+                loading="lazy"
+              />
+              <span class="vw__play"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+              ></span>
+              <span class="vw__cap">Kathleen Parks</span>
+            </button>
+            <button
+              class="vw rv rv--2"
+              type="button"
+              data-yt="zgvm82FjfbE"
+              aria-label="Play video review from Kathleen Woodington"
+            >
+              <img
+                src="assets/site/yt-zgvm82FjfbE.jpg"
+                width="640"
+                height="360"
+                alt=""
+                loading="lazy"
+              />
+              <span class="vw__play"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+              ></span>
+              <span class="vw__cap">Kathleen Woodington</span>
+            </button>
+          </div>
+
+          <p class="small vwall__note">
+            Videos play from YouTube. Nothing loads from YouTube until you press
+            play.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 11 · PROMISE ══════════════════ -->
+      <section class="sec sec--dark promise" id="guarantee">
+        <div class="container promise__in rv">
+          <div class="promise__seal">
+            <div>
+              <b>45</b>
+              <span>Days</span>
+            </div>
+          </div>
+          <h2 class="d1">
+            Try YourCYM products for <em>45 days.</em>
+          </h2>
+          <p class="promise__lead">
+            If you don&rsquo;t experience a positive difference within 45 days,
+            you will receive a full refund. No questions asked.
+          </p>
+          <div class="promise__cta">
+            <a class="btn btn--gold btn--lg" href="#shop"
+              >Shop the range <svg><use href="#i-arrow" /></svg
+            ></a>
+            <a class="btn btn--ghost btn--onDark btn--lg" href="#packages"
+              >Browse packages</a
+            >
+          </div>
+          <p class="promise__fine">
+            The guarantee applies to your purchase. Call
+            <a href="tel:+18889683592" style="text-decoration: underline"
+              >1-888-968-3592</a
+            >
+            and we will take care of it.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ft">
+      <div class="container">
+        <div class="ft__top">
+          <div class="news">
+            <img
+              class="ft__logo"
+              src="assets/logo-light.png"
+              srcset="
+                assets/logo-light@210.png 184w,
+                assets/logo-light.png     368w
+              "
+              sizes="60px"
+              width="368"
+              height="420"
+              alt="YourCYM"
+            />
+            <h4>Subscribe To Our Newsletter</h4>
+            <p class="ft__blurb">
+              Be the first to know about new collections and exclusive offers.
+            </p>
+            <form onsubmit="return false;">
+              <label class="sr" for="nl">Email address</label>
+              <div class="news__field">
+                <input
+                  id="nl"
+                  type="email"
+                  placeholder="Email Address"
+                  autocomplete="email"
+                />
+                <button class="news__submit" type="submit" aria-label="Subscribe">
+                  <svg><use href="#i-arrow" /></svg>
+                </button>
+              </div>
+              <label
+                ><input type="checkbox" /> I agree to receiving marketing
+                emails and special deals</label
+              >
+            </form>
+          </div>
+
+          <div>
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#guarantee">Guarantee</a></li>
+              <li><a href="#about">Documentation</a></li>
+              <li>
+                <a href="#marketing-material">eCommerce Marketing Material</a>
+              </li>
+              <li><a href="#reviews">Testimonials</a></li>
+              <li><a href="#">Compensation Plan</a></li>
+              <li><a href="#">YourCYM Jingle</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Press Releases</a></li>
+              <li><a href="#">Scholar Toolkit</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Policies and Procedures</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Spam Policy</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">YourCYM Ambassador/Scholar Agreement</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="ft__contact">
+              <span
+                ><svg><use href="#i-pin" /></svg
+                ><span
+                  >19381 County Road #24, Dunvegan, Ontario, Canada,
+                  K0C 1J0</span
+                ></span
+              >
+              <a href="tel:+16135271234"
+                ><svg><use href="#i-phone" /></svg>613-527-1234</a
+              >
+              <a href="tel:+18889683592"
+                ><svg><use href="#i-phone" /></svg>1-888-968-3592
+                <span style="opacity: 0.62">(Toll Free)</span></a
+              >
+            </div>
+            <div class="soc ft__soc" style="margin-top: 20px">
+              <a href="#" aria-label="Facebook"
+                ><svg><use href="#i-fb" /></svg
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><svg><use href="#i-ig" /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <p class="ft__legal">
+          GSH Complex and Triozyme Complex are natural health products licensed
+          under NPN 80021489 and NPN 80094773. Information on this page is
+          provided for general wellness education and is not intended to
+          diagnose, treat, cure or prevent any disease, nor to replace advice
+          from a qualified healthcare practitioner. Individual results vary.
+          Consult your practitioner before use if you are pregnant, nursing,
+          taking medication or managing a health condition. Volume discounts
+          apply to one-time purchases only and are not eligible for AutoShip;
+          Smart Buy requires a minimum six-month AutoShip commitment.
+        </p>
+      </div>
+
+      <div class="ft__bottom">
+        <div class="container ft__bottom-row">
+          <p class="tiny">
+            © 2026 YourCYM, All rights reserved. Call us Tollfree -
+            <a href="tel:+18889683592">1-888-968-3592</a>
+          </p>
+          <div class="ft__cards" aria-hidden="true">
+            <svg viewBox="0 0 42 26" role="img" aria-label="Visa">
+              <rect width="42" height="26" rx="4" fill="#1434CB" />
+              <text
+                x="21"
+                y="17.5"
+                font-family="Arial, Helvetica, sans-serif"
+                font-style="italic"
+                font-weight="800"
+                font-size="11"
+                fill="#fff"
+                text-anchor="middle"
+              >
+                VISA
+              </text>
+            </svg>
+            <svg viewBox="0 0 42 26" role="img" aria-label="Mastercard">
+              <rect width="42" height="26" rx="4" fill="#fff" />
+              <circle cx="17" cy="13" r="7" fill="#eb001b" />
+              <circle cx="25" cy="13" r="7" fill="#f79e1b" />
+              <path
+                d="M21 7.3a7 7 0 0 1 0 11.4 7 7 0 0 1 0-11.4Z"
+                fill="#ff5f00"
+              />
+            </svg>
+            <svg viewBox="0 0 42 26" role="img" aria-label="American Express">
+              <rect width="42" height="26" rx="4" fill="#2557d6" />
+              <text
+                x="21"
+                y="17"
+                font-family="Arial, Helvetica, sans-serif"
+                font-weight="800"
+                font-size="9.5"
+                fill="#fff"
+                text-anchor="middle"
+              >
+                AMEX
+              </text>
+            </svg>
+            <svg viewBox="0 0 42 26" role="img" aria-label="Discover">
+              <rect width="42" height="26" rx="4" fill="#fff" />
+              <text
+                x="3"
+                y="11"
+                font-family="Arial, Helvetica, sans-serif"
+                font-weight="700"
+                font-size="6"
+                fill="#1a1a1a"
+              >
+                DISCOVER
+              </text>
+              <circle cx="35" cy="19" r="4.5" fill="#ff6000" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <svg><use href="#i-check" /></svg
+      ><span id="toast-txt">Added to cart</span>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+        var $ = function (s, c) {
+          return (c || document).querySelector(s);
+        };
+        var $$ = function (s, c) {
+          return Array.prototype.slice.call(
+            (c || document).querySelectorAll(s),
+          );
+        };
+        var reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        /* — sticky header shadow — */
+        var hdr = $(".hdr");
+        var onScroll = function () {
+          if (hdr) hdr.classList.toggle("is-stuck", window.scrollY > 8);
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        /* — mobile drawer — */
+        var drawer = $("#drawer");
+        var opener = $("[data-drawer-open]");
+        var setDrawer = function (open) {
+          drawer.classList.toggle("is-open", open);
+          drawer.setAttribute("aria-hidden", open ? "false" : "true");
+          opener.setAttribute("aria-expanded", open ? "true" : "false");
+          document.body.style.overflow = open ? "hidden" : "";
+        };
+        if (drawer && opener) {
+          opener.addEventListener("click", function () {
+            setDrawer(true);
+          });
+          $$("[data-drawer-close]").forEach(function (el) {
+            el.addEventListener("click", function () {
+              setDrawer(false);
+            });
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") setDrawer(false);
+          });
+        }
+
+        /* — reveal on scroll — */
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (en) {
+                if (en.isIntersecting) {
+                  en.target.classList.add("is-in");
+                  io.unobserve(en.target);
+                }
+              });
+            },
+            { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+          );
+          $$(".rv").forEach(function (el) {
+            io.observe(el);
+          });
+        } else {
+          $$(".rv").forEach(function (el) {
+            el.classList.add("is-in");
+          });
+        }
+
+        /* — stage: light it up once the fonts and hero art are settled — */
+        var stage = $(".stage");
+        var lightStage = function () {
+          if (stage) stage.classList.add("is-lit");
+        };
+        if (reduce) lightStage();
+        else requestAnimationFrame(function () {
+          setTimeout(lightStage, 90);
+        });
+
+        /* — stage: products drift a little with the pointer — */
+        var arc = $("[data-tilt]");
+        if (arc && !reduce && window.matchMedia("(pointer:fine)").matches) {
+          var items = $$(".arc__i img", arc);
+          var raf = 0,
+            tx = 0,
+            ty = 0;
+          stage.addEventListener(
+            "pointermove",
+            function (e) {
+              var r = stage.getBoundingClientRect();
+              tx = (e.clientX - r.left) / r.width - 0.5;
+              ty = (e.clientY - r.top) / r.height - 0.5;
+              if (!raf)
+                raf = requestAnimationFrame(function () {
+                  raf = 0;
+                  items.forEach(function (img, i) {
+                    var d = 5 + i * 2.5;
+                    img.style.transform =
+                      "translate3d(" +
+                      (tx * d).toFixed(2) +
+                      "px," +
+                      (ty * d * 0.6).toFixed(2) +
+                      "px,0)";
+                  });
+                });
+            },
+            { passive: true },
+          );
+          stage.addEventListener("pointerleave", function () {
+            items.forEach(function (img) {
+              img.style.transform = "";
+            });
+          });
+        }
+
+        /* — hero film: pick the right cut, and only fetch it when the
+             connection and the viewer's motion preference both allow it — */
+        var vid = $(".stage__vid");
+        if (vid) {
+          var conn = navigator.connection || {};
+          var thin = conn.saveData === true || /^([23]g|slow-2g)$/.test(conn.effectiveType || "");
+          if (!reduce && !thin) {
+            vid.src = window.matchMedia("(max-width:760px)").matches
+              ? vid.dataset.sm
+              : vid.dataset.lg;
+            vid.load();
+            var play = function () {
+              var p = vid.play();
+              if (p && p.catch) p.catch(function () {});
+            };
+            if (vid.readyState >= 2) play();
+            else vid.addEventListener("canplay", play, { once: true });
+            /* stop decoding while the film is off screen */
+            if ("IntersectionObserver" in window) {
+              new IntersectionObserver(function (es) {
+                es.forEach(function (en) {
+                  if (en.isIntersecting) play();
+                  else vid.pause();
+                });
+              }, { threshold: 0.05 }).observe(vid);
+            }
+          }
+        }
+
+        /* — ribbon: duplicate the run so the -50% loop is seamless — */
+        var ribbon = $("#ribbon");
+        if (ribbon) ribbon.innerHTML += ribbon.innerHTML;
+
+        /* — count-up statistics — */
+        var fmt = function (n, dec) {
+          return dec
+            ? n.toFixed(dec)
+            : Math.round(n)
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        };
+        var runCount = function (el) {
+          var target = parseFloat(el.dataset.count);
+          var dec = (el.dataset.count.split(".")[1] || "").length;
+          var suf = el.dataset.suffix || "";
+          if (reduce) {
+            el.textContent = fmt(target, dec) + suf;
+            return;
+          }
+          var t0 = null,
+            dur = 1500;
+          var step = function (t) {
+            if (!t0) t0 = t;
+            var p = Math.min(1, (t - t0) / dur);
+            var e = 1 - Math.pow(1 - p, 3);
+            el.textContent = fmt(target * e, dec) + suf;
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        };
+        if ("IntersectionObserver" in window) {
+          var cio = new IntersectionObserver(
+            function (es) {
+              es.forEach(function (en) {
+                if (en.isIntersecting) {
+                  runCount(en.target);
+                  cio.unobserve(en.target);
+                }
+              });
+            },
+            { threshold: 0.6 },
+          );
+          $$("[data-count]").forEach(function (el) {
+            cio.observe(el);
+          });
+        }
+
+        /* — goal switcher — */
+        var goals = $$(".goal");
+        var figs = $$("[data-fig]");
+        var panels = $$("[data-panel]");
+        var setGoal = function (i) {
+          goals.forEach(function (g) {
+            var on = g.dataset.goal === String(i);
+            g.classList.toggle("is-on", on);
+            g.setAttribute("aria-selected", on ? "true" : "false");
+          });
+          figs.forEach(function (f) {
+            f.classList.toggle("is-on", f.dataset.fig === String(i));
+          });
+          panels.forEach(function (p) {
+            p.classList.toggle("is-on", p.dataset.panel === String(i));
+          });
+        };
+        goals.forEach(function (g) {
+          g.addEventListener("click", function () {
+            setGoal(g.dataset.goal);
+          });
+          g.addEventListener("mouseenter", function () {
+            if (window.matchMedia("(pointer:fine)").matches)
+              setGoal(g.dataset.goal);
+          });
+        });
+
+        /* — expert switcher — */
+        var exBtns = $$("[data-ex]");
+        var exFigs = $$("[data-exfig]");
+        var exPanels = $$("[data-expanel]");
+        exBtns.forEach(function (b) {
+          b.addEventListener("click", function () {
+            var i = b.dataset.ex;
+            exBtns.forEach(function (o) {
+              var on = o.dataset.ex === i;
+              o.classList.toggle("is-on", on);
+              o.setAttribute("aria-selected", on ? "true" : "false");
+            });
+            exFigs.forEach(function (f) {
+              f.classList.toggle("is-on", f.dataset.exfig === i);
+            });
+            exPanels.forEach(function (p) {
+              p.classList.toggle("is-on", p.dataset.expanel === i);
+            });
+          });
+        });
+
+        /* — video facades: nothing reaches YouTube until a play is pressed — */
+        $$("[data-yt]").forEach(function (b) {
+          b.addEventListener(
+            "click",
+            function () {
+              var f = document.createElement("iframe");
+              f.src =
+                "https://www.youtube-nocookie.com/embed/" +
+                b.dataset.yt +
+                "?autoplay=1&rel=0";
+              f.title = "Customer video review";
+              f.allow =
+                "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
+              f.allowFullscreen = true;
+              b.innerHTML = "";
+              b.appendChild(f);
+              b.style.cursor = "default";
+            },
+            { once: true },
+          );
+        });
+
+        /* — add to cart (demo behaviour) — */
+        var count = 0,
+          toast = $("#toast"),
+          toastTxt = $("#toast-txt"),
+          timer;
+        $$("[data-add]").forEach(function (b) {
+          b.addEventListener("click", function () {
+            count += 1;
+            $("[data-cart-count]").textContent = count;
+            $("[data-cart]").setAttribute(
+              "aria-label",
+              "Cart, " + count + " items",
+            );
+            toastTxt.textContent = (b.dataset.name || "Item") + " added to cart";
+            toast.classList.add("is-on");
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+              toast.classList.remove("is-on");
+            }, 2600);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
