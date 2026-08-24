@@ -2924,9 +2924,275 @@
         font-size: clamp(0.6rem, 0.56rem + 0.15vw, 0.68rem);
         padding: 8px 16px;
       }
-      @media (max-height: 720px) {
+
+      /* ============================================================
+   HOME v3 · asymmetric hero, colour press logos, larger goal image
+   ============================================================ */
+
+      /* ── hero: left-weighted, and it now carries the product marks along
+            its foot so the frame reads full instead of hollow ── */
+      .stage {
+        min-height: calc(100svh - var(--header-h));
+        justify-content: center;
+        padding-block: clamp(28px, 4vh, 70px) clamp(16px, 2vh, 26px);
+      }
+      .stage__in {
+        text-align: left;
+        max-width: none;
+      }
+      .stage h1 {
+        font-size: clamp(2.6rem, min(7vw, 11vh), 7.4rem);
+        letter-spacing: -0.026em;
+      }
+      .stage h1 span {
+        display: inline-block;
+      }
+      .stage h1 b {
+        display: inline-block;
+      }
+      .stage__lead {
+        margin-inline: 0;
+        max-width: 46ch;
+      }
+      .stage__cta {
+        justify-content: flex-start;
+      }
+      .stage__kicker {
+        text-transform: none;
+        letter-spacing: 0.16em;
+        font-size: clamp(0.62rem, 0.58rem + 0.16vw, 0.72rem);
+      }
+
+      .stage__rail {
+        margin-top: auto;
+        padding-top: clamp(16px, 2.4vh, 30px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--s5);
+        border-top: 1px solid rgba(245, 242, 234, 0.18);
+        position: relative;
+        z-index: 2;
+      }
+      .stage__marks {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: clamp(16px, 3vw, 44px);
+      }
+      .stage__marks li {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-size: clamp(0.6rem, 0.55rem + 0.2vw, 0.72rem);
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(240, 245, 240, 0.82);
+        white-space: nowrap;
+      }
+      .stage__marks li::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--gold-2);
+        flex: none;
+      }
+      .stage__cue {
+        position: static;
+        transform: none;
+        flex: none;
+      }
+      @media (max-width: 900px) {
+        .stage__rail {
+          justify-content: center;
+        }
+        .stage__marks {
+          justify-content: center;
+          gap: 12px 22px;
+        }
+      }
+      @media (max-width: 680px) {
+        .stage h1 {
+          font-size: clamp(2.4rem, min(11.5vw, 9vh), 4rem);
+        }
+        .stage__marks li {
+          font-size: 0.58rem;
+          letter-spacing: 0.14em;
+          gap: 8px;
+        }
+      }
+
+      /* ── press: the mastheads are the point, so run them at full colour ── */
+      .creed__press {
+        margin-top: var(--s8);
+        gap: clamp(18px, 3vw, 40px);
+      }
+      .creed__logos {
+        gap: clamp(22px, 3.4vw, 48px);
+      }
+      .creed__logos img {
+        height: clamp(26px, 2.9vw, 38px);
+        opacity: 1;
+        filter: none;
+      }
+      .creed__logos img:hover {
+        opacity: 1;
+        filter: none;
+      }
+      .press__lab {
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--tx-mute);
+        flex: none;
+      }
+
+      /* ── goals: a much larger picture, with the product panel laid over its
+            foot so the section still clears one screen ── */
+      .goals__view {
+        position: relative;
+        max-width: 520px;
+      }
+      .goals__stack {
+        max-height: min(62svh, 560px);
+        aspect-ratio: 326 / 400;
+      }
+      .goals__card {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        width: auto;
+        margin: 0;
+        background: rgba(252, 250, 245, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      @media (max-width: 900px) {
+        .goals__view {
+          max-width: 460px;
+        }
+        .goals__stack {
+          max-height: 420px;
+          aspect-ratio: 4 / 3;
+        }
+        .goals__card {
+          position: static;
+          width: min(390px, 100%);
+          margin: calc(var(--s5) * -1) auto 0;
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+          background: var(--ivory);
+        }
+      }
+
+      /* the hero has to finish exactly at the fold, utility bars included,
+         or its foot rail is never seen */
+      .stage {
+        min-height: calc(100svh - var(--topbars-h));
+      }
+      .stage h1 span {
+        display: block;
+        overflow: hidden;
+      }
+      .stage h1 b {
+        display: block;
+      }
+      .stage h1 {
+        font-size: clamp(2.3rem, min(5.6vw, 9.6vh), 5.6rem);
+        line-height: 1.02;
+      }
+      @media (max-width: 680px) {
+        .stage h1 {
+          font-size: clamp(2rem, min(9vw, 7.4vh), 3.1rem);
+        }
+      }
+
+      /* Lifting the card out of flow left this grid item with nothing to size
+         against, so it needs an explicit width of its own. */
+      .goals__view {
+        width: 100%;
+        max-width: 520px;
+        margin-inline: auto;
+      }
+      .goals__stack {
+        max-height: min(58svh, 520px);
+      }
+      @media (max-width: 900px) {
+        .goals__view {
+          max-width: 460px;
+        }
+        .goals__stack {
+          max-height: 420px;
+        }
+      }
+
+      /* The picture drives the panel's width, so it gets a real box rather
+         than one derived from an aspect ratio that no longer matches. */
+      .goals__view {
+        max-width: 470px;
+      }
+      .goals__stack {
+        width: 100%;
+        aspect-ratio: auto;
+        height: min(58svh, 520px);
+        max-height: none;
+      }
+      @media (max-width: 900px) {
+        .goals__view {
+          max-width: 470px;
+        }
+        .goals__stack {
+          height: 400px;
+        }
+      }
+
+      /* four marks on one line do not fit a phone, and 3 + 1 reads broken,
+         so pair them off instead */
+      @media (max-width: 680px) {
+        .stage__marks {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px 14px;
+          width: 100%;
+        }
+        .stage__marks li {
+          justify-content: flex-start;
+        }
+      }
+
+      /* Short laptop screens: shrink the hero to fit, never hide its copy.
+         (An earlier revision dropped the lead paragraph under 720px tall,
+         which took the brand line off most 1080p laptops.) */
+      @media (max-height: 800px) {
+        .stage {
+          padding-block: clamp(18px, 2.4vh, 40px);
+        }
+        .stage h1 {
+          font-size: clamp(2rem, min(4.4vw, 8.2vh), 3.5rem);
+        }
         .stage__lead {
-          display: none;
+          margin-top: 14px;
+          font-size: 0.95rem;
+          line-height: 1.62;
+          max-width: 58ch;
+        }
+        .stage__cta {
+          margin-top: 20px;
+        }
+        .stage__cta .btn {
+          min-height: 52px;
+          padding: 14px 26px;
+          font-size: 0.92rem;
+        }
+        .stage__kicker {
+          padding: 7px 14px;
+        }
+        .stage__rail {
+          padding-top: 14px;
         }
       }
 
@@ -3801,12 +4067,11 @@
 
         <div class="container stage__in">
           <p class="stage__kicker">
-            <svg><use href="#i-shield" /></svg>45-day money-back guarantee
+            <svg><use href="#i-leaf" /></svg>Supplier of natural life products
           </p>
 
           <h1>
-            <span><b>Energy.</b></span>
-            <span><b>Immunity.</b></span>
+            <span><b>Energy. Immunity.</b></span>
             <span><b><em>Balance.</em></b></span>
           </h1>
 
@@ -3826,68 +4091,16 @@
           </div>
         </div>
 
-        <a class="stage__cue" href="#lineup" aria-label="Skip to the range">
-          <span></span>
-        </a>
-      </section>
-
-      <!-- ══════════════════ 2 · RIBBON ══════════════════ -->
-      <div class="ribbon" aria-hidden="true">
-        <div class="ribbon__track" id="ribbon">
-          <span>Sugar free</span><span>Gluten free</span><span>Non GMO</span
-          ><span>Science backed</span><span>45-day money-back guarantee</span>
-        </div>
-      </div>
-      <p class="sr">
-        Our products are sugar free, gluten free, non GMO, science backed and
-        covered by a 45-day money-back guarantee.
-      </p>
-
-      <!-- ══════════════════ 3 · LINE-UP ══════════════════ -->
-      <section class="lineup" id="lineup" aria-label="The range">
-        <div class="container">
-          <div class="arc" data-tilt>
-            <a class="arc__i arc__i--a rv" href="index.html">
-              <img
-                src="assets/site/product1.png"
-                width="556"
-                height="620"
-                alt="GSH Complex whey protein isolate pouch"
-              />
-              <span class="arc__n">GSH Complex</span>
-              <span class="arc__p">$85.95</span>
-            </a>
-            <a class="arc__i arc__i--c rv rv--1" href="#shop">
-              <img
-                src="assets/site/product3.png"
-                width="556"
-                height="620"
-                alt="Triozyme Complex, 180 chewable tablets"
-              />
-              <span class="arc__n">Triozyme</span>
-              <span class="arc__p">$59.95</span>
-            </a>
-            <a class="arc__i arc__i--d rv rv--2" href="#shop">
-              <img
-                src="assets/site/product4.png"
-                width="556"
-                height="620"
-                alt="Une Vie Solution bottle"
-              />
-              <span class="arc__n">Une&#8209;Vie</span>
-              <span class="arc__p">$35.35</span>
-            </a>
-            <a class="arc__i arc__i--b rv rv--3" href="#shop">
-              <img
-                src="assets/site/product2.png"
-                width="367"
-                height="406"
-                alt="PREZERV Derma day and night skin treatment formula"
-              />
-              <span class="arc__n">Prezerv Derma</span>
-              <span class="arc__p">$54.50</span>
-            </a>
-          </div>
+        <div class="container stage__rail">
+          <ul class="stage__marks">
+            <li>Sugar free</li>
+            <li>Gluten free</li>
+            <li>Non GMO</li>
+            <li>Science backed</li>
+          </ul>
+          <a class="stage__cue" href="#about" aria-label="Skip to what we do">
+            <span></span>
+          </a>
         </div>
       </section>
 
