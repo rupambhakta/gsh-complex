@@ -3230,6 +3230,9 @@
       .uvhero {
         position: relative;
         overflow: hidden;
+        min-height: calc(100vh - var(--topbars-h));
+        display: flex;
+        align-items: stretch;
         background:
           radial-gradient(
             62% 78% at 76% 46%,
@@ -3237,27 +3240,36 @@
             rgba(186, 214, 230, 0) 64%
           ),
           linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
-        padding-block: clamp(32px, 3.6vw, 62px) clamp(34px, 3.6vw, 60px);
+        padding-block: clamp(13px, 1.44vw, 25px) clamp(34px, 3.6vw, 60px);
+      }
+      .uvhero > .container {
+        width: min(var(--container), 100% - (var(--gutter) * 2));
+        display: flex;
       }
       .uvhero__grid {
         display: grid;
         grid-template-columns: 1.06fr 0.94fr;
         gap: clamp(24px, 3.4vw, 64px);
-        align-items: center;
+        align-items: stretch;
+        flex: 1;
+        min-width: 0;
       }
       .uvhero__copy {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--s4);
+        justify-content: flex-start;
+        padding-top: clamp(34px, 6vh, 88px);
+        gap: clamp(16px, 2.6vh, 32px);
       }
       .uvhero h1 {
-        font-size: clamp(2.5rem, 1.2rem + 3.3vw, 4.35rem);
+        font-size: clamp(2.5rem, 1.05rem + 2.5vw + 1.2vh, 5.1rem);
         line-height: 1.02;
         max-width: 15ch;
       }
       .uvhero .lead {
         max-width: 46ch;
+        font-size: clamp(1.1rem, 1rem + 0.55vh, 1.36rem);
         color: var(--tx);
         font-weight: 400;
       }
@@ -3285,10 +3297,17 @@
         color: var(--teal);
         flex: none;
       }
+      .uvhero__foot {
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(20px, 3vh, 38px);
+        padding-bottom: clamp(0px, 2vh, 26px);
+      }
       .uvstats {
         display: flex;
         width: 100%;
-        margin-top: var(--s2);
         padding-top: var(--s5);
         border-top: 1px solid var(--line);
       }
@@ -3322,12 +3341,12 @@
         position: relative;
         display: grid;
         place-items: center;
-        min-height: min(54vw, 540px);
+        min-height: min(47vw, 440px);
       }
       .uvstage::before {
         content: "";
         position: absolute;
-        width: min(94%, 452px);
+        width: min(96%, clamp(400px, 56vh, 560px));
         aspect-ratio: 1;
         border-radius: 50%;
         background:
@@ -3352,7 +3371,7 @@
       .uvstage img {
         position: relative;
         z-index: 1;
-        width: min(100%, 360px);
+        width: min(100%, clamp(300px, 42vh, 430px));
         filter: drop-shadow(0 32px 46px rgba(18, 58, 80, 0.28));
       }
       .uvtag {
@@ -3403,9 +3422,25 @@
       }
 
       @media (max-width: 1000px) {
+        .uvhero {
+          min-height: 0;
+          display: block;
+        }
+        .uvhero > .container {
+          display: block;
+        }
         .uvhero__grid {
           grid-template-columns: 1fr;
           gap: var(--s8);
+          align-items: center;
+        }
+        .uvhero__copy {
+          padding-top: 0;
+        }
+        .uvhero__foot {
+          margin-top: 0;
+          gap: var(--s5);
+          align-items: center;
         }
         .uvhero__copy {
           align-items: center;
@@ -3417,6 +3452,7 @@
         }
         .uvhero .lead {
           max-width: 52ch;
+          font-size: 1.12rem;
         }
         .uvchips {
           justify-content: center;
@@ -5016,14 +5052,14 @@
         <div class="container">
           <div class="uvhero__grid">
             <div class="uvhero__copy rv">
-              <span class="eyebrow">Cellular hydrating solution</span>
               <h1 class="d1">Water your cells can <em>actually</em> drink.</h1>
               <p class="lead">
                 One capful turns an ordinary jug into structured water: a
                 delivery system that hydrates the inside of your cells up to ten
                 times more deeply than the glass you drank this morning.
               </p>
-              <ul class="uvchips">
+              <div class="uvhero__foot">
+                <ul class="uvchips">
                 <li class="uvchip">
                   <svg><use href="#i-refresh" /></svg>Cellular hydration
                 </li>
@@ -5033,11 +5069,11 @@
                 <li class="uvchip">
                   <svg><use href="#i-aging" /></svg>Healthier aging
                 </li>
-                <li class="uvchip">
-                  <svg><use href="#i-skin" /></svg>Skin health
-                </li>
-              </ul>
-              <div class="uvstats">
+                  <li class="uvchip">
+                    <svg><use href="#i-skin" /></svg>Skin health
+                  </li>
+                </ul>
+                <div class="uvstats">
                 <div>
                   <b>10&times;</b>
                   <span>Deeper cellular hydration than plain water</span>
@@ -5046,9 +5082,10 @@
                   <b>300</b>
                   <span>Servings from one 500 ml bottle</span>
                 </div>
-                <div>
-                  <b>1</b>
-                  <span>Ingredient on the label, and it is water</span>
+                  <div>
+                    <b>1</b>
+                    <span>Ingredient on the label, and it is water</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -5220,7 +5257,6 @@
         </div>
         <div class="container">
           <div class="sec__head rv">
-            <span class="eyebrow">What properly hydrated cells do</span>
             <h2 class="d2">Four things change <em>from the inside out.</em></h2>
           </div>
 
@@ -5270,8 +5306,7 @@
         <div class="container">
           <div class="headrow rv">
             <div>
-              <span class="eyebrow">Directions for use</span>
-              <h2 class="d2" style="margin-top: 12px; max-width: 16ch">
+              <h2 class="d2" style="max-width: 16ch">
                 Three ratios. <em>That is the whole method.</em>
               </h2>
             </div>
@@ -5337,9 +5372,6 @@
       <section class="sec" id="ingredients">
         <div class="container container--narrow">
           <div class="ingr rv">
-            <span class="eyebrow eyebrow--center eyebrow--plain"
-              >The whole ingredient list</span
-            >
             <p class="ingr__word">Purified <em>Water</em></p>
             <p class="ingr__sub">Cellular hydrating solution</p>
 
@@ -5408,8 +5440,7 @@
         <div class="container">
           <div class="tech__grid">
             <div class="rv">
-              <span class="eyebrow">The technology</span>
-              <h2 class="d2" style="margin-top: 12px">
+              <h2 class="d2">
                 A delivery system, <em>not a beverage.</em>
               </h2>
               <p class="lead" style="margin-top: 14px">
@@ -5982,8 +6013,7 @@
         <div class="container">
           <div class="faqgrid">
             <div class="faqgrid__side rv">
-              <span class="eyebrow">Good questions</span>
-              <h2 class="d2" style="margin-top: 12px; max-width: 12ch">
+              <h2 class="d2" style="max-width: 12ch">
                 Everything worth <em>asking first.</em>
               </h2>
               <p class="small" style="margin-top: 14px; max-width: 34ch">
