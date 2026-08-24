@@ -3196,6 +3196,97 @@
         }
       }
 
+      /* ── hero column spans the frame: kicker at the top, headline in the
+            middle, lead and buttons sitting just above the foot rail, so the
+            dead band under the buttons is gone ── */
+      .stage__in {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: var(--s5);
+      }
+      .stage__kicker {
+        align-self: flex-start;
+      }
+      .stage h1 {
+        margin-top: 0;
+      }
+      .stage__foot {
+        display: flex;
+        flex-direction: column;
+      }
+      .stage__lead {
+        margin-top: 0;
+      }
+      .stage__cta {
+        margin-top: clamp(18px, 2.8vh, 34px);
+      }
+      @media (max-height: 800px) {
+        .stage__in {
+          gap: var(--s4);
+        }
+        .stage__lead {
+          margin-top: 0;
+        }
+      }
+
+      /* ── the hero block is ONE unit: keep it together, centre it in the
+            frame, and scale it up to take the room. (A previous revision used
+            space-between, which pulled the kicker, headline and lead apart.) ── */
+      .stage__in {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+      }
+      .stage__kicker {
+        align-self: flex-start;
+      }
+      .stage h1 {
+        margin-top: clamp(16px, 2.6vh, 30px);
+        font-size: clamp(2.6rem, min(6.6vw, 10.4vh), 6.4rem);
+        line-height: 1.01;
+      }
+      .stage__foot {
+        margin-top: clamp(20px, 3.2vh, 38px);
+      }
+      .stage__lead {
+        margin-top: 0;
+        max-width: 50ch;
+        font-size: clamp(1.02rem, 0.9rem + 0.42vw, 1.24rem);
+        line-height: 1.66;
+      }
+      .stage__cta {
+        margin-top: clamp(20px, 3.2vh, 38px);
+      }
+      @media (max-height: 800px) {
+        .stage h1 {
+          margin-top: clamp(10px, 1.8vh, 20px);
+          font-size: clamp(2.1rem, min(5vw, 9.2vh), 4rem);
+        }
+        .stage__foot {
+          margin-top: clamp(14px, 2.4vh, 24px);
+        }
+        .stage__lead {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 58ch;
+        }
+        .stage__cta {
+          margin-top: clamp(14px, 2.4vh, 24px);
+        }
+      }
+      @media (max-width: 680px) {
+        .stage h1 {
+          font-size: clamp(2.1rem, min(9.6vw, 7.6vh), 3.2rem);
+        }
+        .stage__lead {
+          font-size: 1rem;
+        }
+      }
+
       sup.rmk {
         font-size: 0.62em;
         vertical-align: super;
@@ -4075,19 +4166,21 @@
             <span><b><em>Balance.</em></b></span>
           </h1>
 
-          <p class="stage__lead">
-            Vitality and immune support, made easy with YourCYM. Four everyday
-            formulas and three holistic packages, developed by an experienced
-            team and backed by 26+ years of scientific and medical knowledge.
-          </p>
+          <div class="stage__foot">
+            <p class="stage__lead">
+              Vitality and immune support, made easy with YourCYM. Four everyday
+              formulas and three holistic packages, developed by an experienced
+              team and backed by 26+ years of scientific and medical knowledge.
+            </p>
 
-          <div class="stage__cta">
-            <a class="btn btn--gold btn--lg" href="#shop"
-              >Shop Best Sellers <svg><use href="#i-arrow" /></svg
-            ></a>
-            <a class="btn btn--ghost btn--onDark btn--lg" href="#goals"
-              >Find your goal</a
-            >
+            <div class="stage__cta">
+              <a class="btn btn--gold btn--lg" href="#shop"
+                >Shop Best Sellers <svg><use href="#i-arrow" /></svg
+              ></a>
+              <a class="btn btn--ghost btn--onDark btn--lg" href="#goals"
+                >Find your goal</a
+              >
+            </div>
           </div>
         </div>
 
