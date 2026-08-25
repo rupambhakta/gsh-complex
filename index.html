@@ -2606,49 +2606,9 @@
         color: rgba(240, 245, 240, 0.9);
         text-shadow: 0 1px 16px rgba(0, 0, 0, 0.44);
       }
-      .stage__cue {
-        position: absolute;
-        left: 50%;
-        bottom: 26px;
-        transform: translateX(-50%);
-        width: 26px;
-        height: 42px;
-        border: 1px solid rgba(211, 183, 126, 0.5);
-        border-radius: var(--r-pill);
-        display: grid;
-        place-items: start center;
-        padding-top: 8px;
-        z-index: 2;
-      }
-      .stage__cue span {
-        width: 3px;
-        height: 7px;
-        border-radius: 2px;
-        background: var(--gold-2);
-        animation: cue 1.9s var(--ease) infinite;
-      }
-      @keyframes cue {
-        0%,
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        60% {
-          transform: translateY(14px);
-          opacity: 0;
-        }
-      }
       @media (max-width: 680px) {
         .stage {
           padding-block: clamp(48px, 7vh, 80px);
-        }
-        .stage__cue {
-          display: none;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .stage__cue span {
-          animation: none;
         }
       }
 
@@ -2997,11 +2957,6 @@
         height: 5px;
         border-radius: 50%;
         background: var(--gold-2);
-        flex: none;
-      }
-      .stage__cue {
-        position: static;
-        transform: none;
         flex: none;
       }
       @media (max-width: 900px) {
@@ -3598,6 +3553,324 @@
           bottom: 96px;
         }
       }
+
+      /* ============================================================
+   HOME v4 · centred hero, press band under the banner, packages
+   restyled to match the shape used on yourcym.com
+   ============================================================ */
+
+      /* ── hero: the whole block sits in the middle of the frame, both axes ── */
+      .stage__in {
+        text-align: center;
+        align-items: center;
+      }
+      .stage__kicker {
+        align-self: center;
+      }
+      .stage h1 span {
+        display: block;
+      }
+      .stage__foot {
+        align-items: center;
+        width: 100%;
+      }
+      .stage__lead {
+        margin-inline: auto;
+        max-width: 54ch;
+      }
+      .stage__cta {
+        justify-content: center;
+      }
+      /* centred type sits over the middle of the footage, so the scrim is
+         re-weighted to hold the centre rather than the left */
+      .stage__media::after {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(12, 27, 21, 0.6),
+            rgba(12, 27, 21, 0.34) 30%,
+            rgba(12, 27, 21, 0.5) 70%,
+            rgba(12, 27, 21, 0.88)
+          ),
+          radial-gradient(
+            58% 54% at 50% 44%,
+            rgba(12, 27, 21, 0.58),
+            rgba(12, 27, 21, 0.24) 72%
+          );
+      }
+      @media (max-width: 900px) {
+        .stage__lead {
+          max-width: 46ch;
+        }
+      }
+
+      /* the marks strip follows the centred column */
+      .stage__rail {
+        justify-content: center;
+      }
+      .stage__marks {
+        justify-content: center;
+      }
+
+      /* ── press band: the mastheads run directly under the banner ── */
+      .pressband {
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+        padding-block: clamp(20px, 2.6vw, 34px);
+      }
+      .pressband__in {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: clamp(16px, 2.6vw, 38px);
+      }
+      .pressband .creed__logos {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(20px, 3.2vw, 46px);
+      }
+      .pressband .creed__logos img {
+        height: clamp(24px, 2.7vw, 36px);
+        width: auto;
+        opacity: 1;
+        filter: none;
+      }
+      @media (max-width: 680px) {
+        .pressband__in {
+          gap: 14px;
+        }
+        .pressband .creed__logos {
+          gap: 18px 26px;
+        }
+        .pressband .creed__logos img {
+          height: 22px;
+        }
+      }
+
+      /* ── packages: image, name, price. The shape the live site uses,
+            on the ivory ground rather than the ink one ── */
+      .packs {
+        background: var(--ivory);
+        color: var(--tx);
+      }
+      .packs .sec__head .d2 {
+        color: var(--forest);
+      }
+      .packs__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(16px, 2.6vw, 40px);
+        margin-top: var(--s7);
+      }
+      .pk {
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        background: none;
+        text-align: center;
+        align-items: center;
+        gap: 0;
+      }
+      .pk:hover {
+        border-color: transparent;
+        transform: none;
+      }
+      .pk__fig {
+        --figh: clamp(190px, 21vw, 280px);
+        height: var(--figh);
+        width: 100%;
+        margin-bottom: var(--s5);
+        border-radius: var(--r-lg);
+        background: var(--cream);
+        overflow: hidden;
+      }
+      .pk__fig img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        padding: clamp(10px, 1.6vw, 22px);
+        filter: none;
+        transition: transform 0.6s var(--ease);
+      }
+      .pk:hover .pk__fig img {
+        transform: scale(1.035) rotate(0deg);
+      }
+      .pk h3 {
+        color: var(--forest);
+        font-family: var(--sans);
+        font-size: clamp(0.82rem, 0.76rem + 0.24vw, 0.95rem);
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        line-height: 1.4;
+        /* grows into the leftover height so price and action line up across
+           the row even when one name wraps to two lines */
+        flex: 1 0 auto;
+      }
+      .pk__price {
+        margin-top: 10px;
+        padding-top: 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 10px;
+        font-variant-numeric: lining-nums;
+        font-feature-settings: "lnum" 1;
+      }
+      .pk__price s {
+        order: 0;
+        font-size: 0.98rem;
+        color: var(--tx-mute);
+        opacity: 1;
+      }
+      .pk__price b {
+        order: 1;
+        font-family: var(--sans);
+        font-size: 1.12rem;
+        font-weight: 600;
+        color: var(--forest);
+      }
+      .pk__act {
+        margin-top: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 0;
+        background: none;
+        padding: 0;
+        font-family: var(--sans);
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--tx-soft);
+        cursor: pointer;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 4px;
+        transition:
+          color 0.35s var(--ease),
+          border-color 0.35s var(--ease);
+      }
+      .pk__act:hover,
+      .pk__act:focus-visible {
+        color: var(--forest);
+        border-color: var(--gold);
+      }
+      @media (max-width: 920px) {
+        .packs__grid {
+          grid-template-columns: repeat(3, 1fr);
+          max-width: none;
+          margin-inline: 0;
+        }
+        .pk h3 {
+          letter-spacing: 0.08em;
+        }
+      }
+      @media (max-width: 620px) {
+        .packs__grid {
+          grid-template-columns: 1fr 1fr;
+          gap: var(--s5) var(--s4);
+        }
+        .pk:last-child {
+          grid-column: 1 / -1;
+          max-width: 300px;
+          margin-inline: auto;
+        }
+      }
+
+
+      /* ── creed: the stats moved inside the text column, so the column now
+            fills the frame beside the photograph instead of running out
+            halfway down it ── */
+      .creed__grid {
+        align-items: stretch;
+      }
+      .creed__say {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .creed__body {
+        max-width: 46ch;
+      }
+      .creed__band {
+        width: 100%;
+        margin-top: var(--s6);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .creed__band .creed__stat {
+        text-align: left;
+        padding: var(--s5) var(--s4) var(--s5) 0;
+        border-left: 1px solid var(--line);
+        padding-left: var(--s4);
+      }
+      .creed__band .creed__stat:first-child {
+        border-left: 0;
+        padding-left: 0;
+      }
+      .creed__band .creed__stat b {
+        font-size: clamp(1.5rem, 1.1rem + 1.1vw, 2.1rem);
+        font-variant-numeric: lining-nums;
+        font-feature-settings: "lnum" 1;
+      }
+      .creed__band .creed__stat span {
+        font-size: 0.78rem;
+      }
+      .creed__say .creed__cta {
+        margin-top: auto;
+        padding-top: 0;
+      }
+      .creed__say .btn {
+        margin-top: var(--s6);
+      }
+      .creed__fig {
+        height: 100%;
+        min-height: clamp(360px, 34vw, 520px);
+      }
+      .creed__fig img {
+        height: 100%;
+        aspect-ratio: auto;
+      }
+      @media (max-width: 900px) {
+        .creed__fig {
+          min-height: 0;
+        }
+        .creed__fig img {
+          aspect-ratio: 5 / 4;
+        }
+        .creed__band {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .creed__band .creed__stat {
+          border-left: 1px solid var(--line);
+          border-top: 0;
+          padding-block: var(--s5);
+        }
+        .creed__band .creed__stat:first-child {
+          border-left: 0;
+        }
+        .creed__say .creed__cta {
+          margin-top: var(--s6);
+        }
+      }
+      @media (max-width: 520px) {
+        .creed__band {
+          grid-template-columns: 1fr;
+        }
+        .creed__band .creed__stat {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+          padding-left: 0;
+        }
+        .creed__band .creed__stat:first-child {
+          border-top: 0;
+        }
+      }
     </style>
   </head>
   <body>
@@ -4191,106 +4464,54 @@
             <li>Non GMO</li>
             <li>Science backed</li>
           </ul>
-          <a class="stage__cue" href="#about" aria-label="Skip to what we do">
-            <span></span>
-          </a>
         </div>
       </section>
 
-      <!-- ══════════════════ 4 · CREED ══════════════════ -->
-      <section class="sec creed" id="about">
-        <div class="container">
-          <div class="creed__grid">
-            <div class="creed__say rv">
-              <h2 class="creed__q">
-                At YourCYM, we believe that good health is a fundamental human
-                right, <em>not a privilege.</em>
-              </h2>
-              <p class="creed__lab">Supplier of quality life products</p>
-              <p class="creed__body">
-                We have been in business more than 20 years, and our products
-                are developed by an experienced team backed by 26+ years of
-                scientific and medical knowledge. Every order is covered by the
-                same 45-day money-back guarantee.
-              </p>
-              <a class="btn btn--ghost" href="#shop"
-                >See what we make <svg><use href="#i-arrow" /></svg
-              ></a>
-            </div>
 
-            <figure class="creed__fig rv rv--1">
-              <img
-                src="assets/science-graded.jpg"
-                srcset="
-                  assets/science-graded@900.jpg  900w,
-                  assets/science-graded.jpg     1400w
-                "
-                sizes="(max-width:900px) 92vw, 44vw"
-                width="1400"
-                height="1120"
-                alt="A researcher at work in the laboratory"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-
-          <div class="creed__band">
-            <div class="creed__stat rv">
-              <b data-count="20" data-suffix="+">20+</b>
-              <span>Years in business</span>
-            </div>
-            <div class="creed__stat rv rv--1">
-              <b data-count="652035">652,035</b>
-              <span>Satisfied customers</span>
-            </div>
-            <div class="creed__stat rv rv--2">
-              <b data-count="4.56">4.56</b>
-              <span>Average customer rating</span>
-            </div>
-          </div>
-
-          <div class="creed__press rv">
-            <p class="press__lab">Featured in</p>
-            <div class="creed__logos">
-              <img
-                src="assets/site/times.png"
-                width="215"
-                height="34"
-                alt="Times Square"
-                loading="lazy"
-              />
-              <img
-                src="assets/site/abnew.png"
-                width="200"
-                height="49"
-                alt="ABNewswire"
-                loading="lazy"
-              />
-              <img
-                src="assets/site/izona.png"
-                width="200"
-                height="38"
-                alt="iZona News Online"
-                loading="lazy"
-              />
-              <img
-                src="assets/site/trinity.png"
-                width="182"
-                height="69"
-                alt="Trinity Digest"
-                loading="lazy"
-              />
-              <img
-                src="assets/site/thechronicle.png"
-                width="301"
-                height="55"
-                alt="The Chronicle Journal"
-                loading="lazy"
-              />
-            </div>
+      <!-- ══════════════════ 4a · FEATURED IN ══════════════════ -->
+      <section class="pressband" id="press">
+        <div class="container pressband__in">
+          <p class="press__lab">Featured in</p>
+          <div class="creed__logos">
+            <img
+              src="assets/site/times.png"
+              width="215"
+              height="34"
+              alt="Times Square"
+              loading="lazy"
+            />
+            <img
+              src="assets/site/abnew.png"
+              width="200"
+              height="49"
+              alt="ABNewswire"
+              loading="lazy"
+            />
+            <img
+              src="assets/site/izona.png"
+              width="200"
+              height="38"
+              alt="Arizona News Online"
+              loading="lazy"
+            />
+            <img
+              src="assets/site/trinity.png"
+              width="182"
+              height="69"
+              alt="Trinity Digest"
+              loading="lazy"
+            />
+            <img
+              src="assets/site/thechronicle.png"
+              width="301"
+              height="55"
+              alt="The Chronicle Journal"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
+
 
       <!-- ══════════════════ 5 · GOALS ══════════════════ -->
       <section class="sec sec--dark goals" id="goals">
@@ -4671,16 +4892,12 @@
       </section>
 
       <!-- ══════════════════ 7 · PACKS ══════════════════ -->
-      <section class="sec sec--ink packs" id="packages">
+      <section class="sec packs" id="packages">
         <div class="container">
           <div class="sec__head center rv">
             <h2 class="d2">
               Holistic packages for your <em>health and wellness.</em>
             </h2>
-            <p class="lead" style="max-width: 60ch">
-              Each package brings formulas together that are meant to be taken
-              alongside one another, at a price below buying them separately.
-            </p>
           </div>
 
           <div class="packs__grid">
@@ -4695,28 +4912,13 @@
                 />
               </div>
               <h3>Wellness Starter Pack</h3>
-              <p class="pk__d">
-                GSH Complex and UNE VIE together: cellular defense, hydration
-                and renewal, in the simplest pairing we make.
-              </p>
-              <ul class="pk__has">
-                <li>
-                  <svg><use href="#i-check-c" /></svg><span>GSH Complex</span>
-                </li>
-                <li>
-                  <svg><use href="#i-check-c" /></svg><span>UNE VIE</span>
-                </li>
-              </ul>
-              <div class="pk__price">
-                <b>$115.24</b><s>$121.30</s>
-              </div>
-              <button class="btn btn--ghost btn--onDark btn--block" type="button" data-add data-name="Wellness Starter Pack">
-                Add to Cart
+              <div class="pk__price"><s>$121.30</s><b>$115.24</b></div>
+              <button class="pk__act" type="button" data-add data-name="Wellness Starter Pack">
+                Add to cart
               </button>
             </article>
 
-            <article class="pk pk--hero rv rv--2">
-              <span class="pk__flag">The complete system</span>
+            <article class="pk rv rv--2">
               <div class="pk__fig">
                 <img
                   src="assets/site/pack3.png"
@@ -4727,34 +4929,8 @@
                 />
               </div>
               <h3>VIPROX<sup class="rmk">&reg;</sup></h3>
-              <p class="pk__d">
-                Three formulas taken in a set order at every meal. The one
-                package built to be a whole daily protocol rather than a
-                shortlist.
-              </p>
-              <ul class="pk__has">
-                <li>
-                  <svg><use href="#i-check-c" /></svg
-                  ><span>2 &times; GSH Complex</span>
-                </li>
-                <li>
-                  <svg><use href="#i-check-c" /></svg
-                  ><span>Triozyme Complex</span>
-                </li>
-                <li>
-                  <svg><use href="#i-check-c" /></svg><span>Une Vie Solution</span>
-                </li>
-                <li>
-                  <svg><use href="#i-check-c" /></svg
-                  ><span>Your personal shaker</span>
-                </li>
-              </ul>
-              <div class="pk__price">
-                <b>$250</b><s>$267.20</s><i>Best value</i>
-              </div>
-              <a class="btn btn--gold btn--block" href="viprox.html"
-                ><span>See VIPROX<sup class="rmk">&reg;</sup></span> <svg><use href="#i-arrow" /></svg
-              ></a>
+              <div class="pk__price"><s>$267.20</s><b>$250.00</b></div>
+              <a class="pk__act" href="viprox.html">See VIPROX</a>
             </article>
 
             <article class="pk rv rv--3">
@@ -4768,29 +4944,9 @@
                 />
               </div>
               <h3>Prezerv Gold</h3>
-              <p class="pk__d">
-                Our skin and aging package: an all-in-one daily wellness
-                selection built around how you look as well as how you feel.
-              </p>
-              <ul class="pk__has">
-                <li>
-                  <svg><use href="#i-check-c" /></svg
-                  ><span>Supports youthful, glowing skin</span>
-                </li>
-                <li>
-                  <svg><use href="#i-check-c" /></svg
-                  ><span>Promotes healthy aging from within</span>
-                </li>
-                <li>
-                  <svg><use href="#i-check-c" /></svg
-                  ><span>Enhances overall cellular wellness</span>
-                </li>
-              </ul>
-              <div class="pk__price">
-                <b>$305.62</b><s>$321.70</s>
-              </div>
-              <button class="btn btn--ghost btn--onDark btn--block" type="button" data-add data-name="Prezerv Gold">
-                Add to Cart
+              <div class="pk__price"><s>$321.70</s><b>$305.62</b></div>
+              <button class="pk__act" type="button" data-add data-name="Prezerv Gold">
+                Add to cart
               </button>
             </article>
           </div>
@@ -4871,6 +5027,61 @@
               >Get both in the Starter Pack
               <svg><use href="#i-arrow" /></svg
             ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════ 10a · CREED ══════════════════ -->
+      <section class="sec creed" id="about">
+        <div class="container">
+          <div class="creed__grid">
+            <div class="creed__say rv">
+              <h2 class="creed__q">
+                At YourCYM, we believe that good health is a fundamental human
+                right, <em>not a privilege.</em>
+              </h2>
+              <p class="creed__lab">Supplier of quality life products</p>
+              <p class="creed__body">
+                We have been in business more than 20 years, and our products
+                are developed by an experienced team backed by 26+ years of
+                scientific and medical knowledge. Every order is covered by the
+                same 45-day money-back guarantee.
+              </p>
+
+              <div class="creed__band">
+                <div class="creed__stat">
+                  <b data-count="20" data-suffix="+">20+</b>
+                  <span>Years in business</span>
+                </div>
+                <div class="creed__stat">
+                  <b data-count="652035">652,035</b>
+                  <span>Satisfied customers</span>
+                </div>
+                <div class="creed__stat">
+                  <b data-count="4.56">4.56</b>
+                  <span>Average customer rating</span>
+                </div>
+              </div>
+
+              <a class="btn btn--ghost creed__cta" href="#shop"
+                >See what we make <svg><use href="#i-arrow" /></svg
+              ></a>
+            </div>
+
+            <figure class="creed__fig rv rv--1">
+              <img
+                src="assets/science-graded.jpg"
+                srcset="
+                  assets/science-graded@900.jpg  900w,
+                  assets/science-graded.jpg     1400w
+                "
+                sizes="(max-width:900px) 92vw, 46vw"
+                width="1400"
+                height="1120"
+                alt="A researcher at work in the laboratory"
+                loading="lazy"
+              />
+            </figure>
           </div>
         </div>
       </section>

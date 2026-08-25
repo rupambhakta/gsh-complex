@@ -1,0 +1,460 @@
+================================================================================
+QUALITY CONTROL REPORT
+GSH Complex and VIPROX product pages
+25 August 2026
+================================================================================
+
+Every point from the review has been traced to its cause, corrected, and
+re-checked in a browser. Twelve of the thirteen points are closed. One is
+blocked on a document we do not have.
+
+The same sweep turned up four further defects that were not on the list. Nine
+items are flagged at the end because they need a decision from CYM rather than
+a change to the code.
+
+  Closed and verified ............ 16
+  Blocked, waiting on CYM ........  1
+  Advisories, need a decision ....  9
+
+
+================================================================================
+PART 1 - THE POINTS RAISED IN THE REVIEW
+================================================================================
+
+Every document link was fetched and opened to confirm what it actually
+contains, rather than trusting the filename.
+
+
+--------------------------------------------------------------------------------
+1. GSH COMPLEX - WORDING OVERLAPS THE PRODUCT POUCH                       CLOSED
+--------------------------------------------------------------------------------
+
+Reproduced at every phone width. Below 560px the hero copy was positioned on
+top of the banner photograph at 62% width, so the headline and the promise line
+ran straight across the pouch and its gluten-free and sugar-free badges. The
+overlay also carried a second H1 duplicating the real one.
+
+  Was:  Copy floated over the photo. Pouch cropped out of frame at 480 to
+        540px. A dead gap between the image and the price.
+
+  Now:  Copy sits below the image at every width, as it already did on tablet.
+        Image recropped so the pouch is fully in frame. Duplicate H1 removed.
+
+
+--------------------------------------------------------------------------------
+2. GSH COMPLEX - "TWO INGREDIENTS" AS THE POSITIONING                     CLOSED
+--------------------------------------------------------------------------------
+
+Rewritten along the line suggested in the review. Health Canada's licence
+record for NPN 80021489 confirms whey protein isolate is the sole medicinal
+ingredient, which is what the new copy now says.
+
+  Was:  "Two ingredients. One serving a day."
+
+  Now:  "A highly bioavailable whey protein isolate, one to three servings a
+        day."
+
+The old line had a second problem. "One serving a day" contradicted the page's
+own dosing section and both labels, which say one to three scoops daily. That
+is corrected in the same edit.
+
+
+--------------------------------------------------------------------------------
+3. GSH COMPLEX - "ALMOST", AND LECITHIN SHOWN AS NUTRITIONAL              CLOSED
+--------------------------------------------------------------------------------
+
+The hedge is gone and lecithin is now unambiguously a processing aid. It had
+been sitting in a co-equal row with a leaf icon and an "Under 1%" badge, which
+read as a second nutritional ingredient.
+
+  Was:  Heading: "Made from fresh whey, and almost nothing else."
+        Lecithin: leaf icon, "Under 1%", "a plant-derived emulsifier, not a
+        filler."
+
+  Now:  Heading: "One ingredient does the work: fresh whey."
+        Whey is badged "Medicinal ingredient". Lecithin is badged "Processing
+        aid" with a neutral icon and the sentence: "It is a processing aid,
+        not a nutrient, and carries no nutritional or medicinal value."
+
+
+--------------------------------------------------------------------------------
+4. LIVE BROCHURE TRACKED TO THE HEALTH QUESTIONNAIRE                      CLOSED
+    (on both the GSH Complex and VIPROX pages)
+--------------------------------------------------------------------------------
+
+The URL did not exist. The path
+
+    yourcym.com/files/Booklet-GSHE-9avril_en.pdf
+
+returns HTTP 200 with content type text/html, not a PDF. Because the server
+answers 200 rather than 404, the site's router swallowed the request and
+dropped the visitor on another page. That is why it looked like the
+questionnaire.
+
+The real file is one path away and has been confirmed as the brochure:
+19 pages, opening "Live GSH Complex for your immune system".
+
+  Now:  yourcym.com/files/Booklet-GSHE-9avril.pdf   (3.9 MB, 19 pages)
+
+
+--------------------------------------------------------------------------------
+5. PRODUCT PROFILE TRACKED TO THE BACK OF THE LABEL                       CLOSED
+    (on both the GSH Complex and VIPROX pages)
+--------------------------------------------------------------------------------
+
+Correct diagnosis. The file is
+
+    112222-011-RV0418-USAback_en.pdf
+
+which is the back of the United States label. It was opened to be certain.
+
+There is no separate nutrition-and-enzymes profile for GSH Complex anywhere on
+yourcym.com. That title was inherited boilerplate from a product that has
+enzymes. Rather than link a real document to a false name, the card now says
+what the file is.
+
+  Was:  "Product profile (nutrition & enzymes)", flask icon, "View profile"
+
+  Now:  "GSH Complex label (United States)", document icon, "View label".
+        The Canadian card is retitled "GSH Complex label (Canada)" so the pair
+        reads as one set.
+
+
+--------------------------------------------------------------------------------
+6. VITAMIN PRODUCT PROFILE TRACKED TO THE AMINO ACID PROFILE              CLOSED
+    (on both the GSH Complex and VIPROX pages)
+--------------------------------------------------------------------------------
+
+Same cause. The file is genuinely the amino acid profile, and GSH Complex has
+no vitamin or mineral sheet to point at. The card is now named for the document
+it opens.
+
+  Was:  "Product profile (vitamins & minerals)", described as "every vitamin,
+        mineral and trace element in the product"
+
+  Now:  "Amino acid profile", described as "the typical amino acid profile per
+        100 g, including the cysteine and cystine content that precedes
+        glutathione synthesis"
+
+
+--------------------------------------------------------------------------------
+7. VIPROX - POSITIONING NOT IMMEDIATELY UNDERSTANDABLE                    CLOSED
+--------------------------------------------------------------------------------
+
+The hero opened on a symptom question and never said what VIPROX is. The
+central message is now the first thing on the page.
+
+  Was:  H1: "Tired, burnt out, not quite yourself?"
+        Lead: "Take a holistic approach to restoring vitality, energy and a
+        more youthful sense of well-being."
+
+  Now:  H1: "One box. Three formulas. Air, water, food."
+        Lead: "VIPROX addresses the three fundamental elements that sustain
+        life: the air you breathe, the water you drink and the food you eat,
+        brought together through one holistic approach to health and
+        wellness."
+
+The same framing carries into the section where the box is unpacked. The three
+products are now labelled by the element each one answers:
+
+    GSH Complex ....... The air you breathe
+    Triozyme .......... The food you eat
+    Une Vie ........... The water you drink
+
+so the claim is shown rather than only asserted. The emotional hook that the
+new headline displaced still opens the following section.
+
+
+--------------------------------------------------------------------------------
+8. VIPROX - ADDITIONAL PRODUCT PROFILE DID NOT TRACK ANYWHERE             CLOSED
+--------------------------------------------------------------------------------
+
+The Triozyme tab carried two cards, "label" and "Product profile", pointing at
+the identical PDF. One document under two names, so the second card appeared to
+lead nowhere new.
+
+The duplicate has been removed and the surviving label card now describes
+everything the file actually contains: "The official label: nutritional facts,
+the enzyme analysis, the full ingredient list and the method of use."
+
+
+--------------------------------------------------------------------------------
+9. VIPROX - TRIOZYME NPN APPEARING UNDER UNE VIE                          CLOSED
+--------------------------------------------------------------------------------
+
+Confirmed against Health Canada's licensed natural health products database.
+
+    NPN 80094773 = Triozyme, CYMCORP International Inc., active since
+                   October 2019.
+
+For completeness: the Une Vie label itself carries a Nutrition Facts panel and
+reads "Natural Spring Water" with no NPN at all, so Une Vie has no licence
+number to display.
+
+  Now:  The number has been moved onto the Triozyme tab, where it belongs, and
+        removed from the Une Vie tab.
+
+
+--------------------------------------------------------------------------------
+10. VIPROX - UNE VIE DECK LED NOWHERE                                     CLOSED
+--------------------------------------------------------------------------------
+
+Same failure mode as the brochure. The path
+
+    cymcorp.us/files/EN/Une-Vie-Presentation.pdf
+
+returns the cymcorp.us HTML shell with a 200 status. The working file is on
+yourcym.com: 16 pages, opening on the water-quality argument.
+
+  Now:  yourcym.com/files/Une-Vie-Presentation.pdf   (3.9 MB, 16 pages)
+
+
+--------------------------------------------------------------------------------
+11. CLINICAL STUDY DISCLAIMER - REFERENCES CANNOT BE LOCATED             BLOCKED
+--------------------------------------------------------------------------------
+
+This point is correct, and the reason is worse than a missing link.
+
+Both pages cited "published research on PubMed" behind a link that went to the
+PubMed home page, not to any paper. Searching PubMed for author "Bender RI"
+returns two results, from 1951 and 1963, on unrelated surgical subjects. There
+is no glutathione research under that name to link to.
+
+The PubMed links have been removed from both pages rather than leave a citation
+that does not survive being clicked. The credential now points at the paper we
+do host and can stand behind: "Give Yourself A Fighting Chance", 16 pages, by
+Dr. Robert I. Bender, MD, FAAFP. The clinical study paragraph on the VIPROX
+page now also points readers to the Documentation section.
+
+  NEEDED FROM CYM
+  The citation for the 115-participant randomised, double-blind,
+  placebo-controlled study. Journal and year, or the report PDF, plus the names
+  of the two U.S. universities. Send it and it will be wired in the same day.
+
+  Until then the study is described on the page with no reference behind it,
+  which is exactly the exposure the review is pointing at.
+
+
+================================================================================
+PART 2 - FOUND IN THE SAME SWEEP
+================================================================================
+
+Not raised in the review. These came out of checking every link, button and
+claim on both pages the way a first-time customer would.
+
+
+--------------------------------------------------------------------------------
+12. GSH COMPLEX - THE PURCHASE OPTIONS SECTION WAS COMMENTED OUT,         CLOSED
+    AND EIGHT LINKS POINTED AT IT
+--------------------------------------------------------------------------------
+
+This is the largest single item on the page and it does not appear in the
+review, which suggests the reviewer never reached it.
+
+The section id "pricing" did not exist in the document. The 129 lines holding
+the three packs were wrapped in an HTML comment. Everything aimed at it
+silently did nothing:
+
+    - "Pre-Launch Offer" in the main navigation
+    - "Products" in the main navigation
+    - "Shop Now" in the top utility bar
+    - "Products" in the mobile drawer
+    - "Pre-Launch Offer" in the mobile drawer
+    - "Shop GSH Complex" button in the mobile drawer
+    - "Start my 45 days" on the guarantee section
+    - "Compare packs" on the closing call to action
+
+Two claims elsewhere on the page had also lost their support: "Save up to 30%
+on volume", and "volume pricing brings this to $1.34 a day", with no table
+anywhere to back them.
+
+The section has been restored. Every figure in it was re-derived and is
+correct: 25% off at six units gives $64.46 a pack and $1.43 a day; 30% off at
+twelve gives $60.17 and $1.34; the Scholar rate of $77.36 is exactly 10% off.
+
+  NOTE FOR CYM
+  If this section was hidden deliberately, say so and it will be hidden again,
+  with the volume-pricing claims stripped out at the same time so nothing on
+  the page promises a table that is not there.
+
+
+--------------------------------------------------------------------------------
+13. NPN 800021489 - NINE DIGITS, IN SIX PLACES                            CLOSED
+--------------------------------------------------------------------------------
+
+Health Canada NPNs are eight digits. GSH Complex is 80021489.
+
+The extra zero appeared in the VIPROX documentation tab, the VIPROX formula
+spec table, the VIPROX kit note, the VIPROX trust row, the VIPROX footer legal
+line, and the GSH Complex licence card. The rest of both pages used the correct
+number, so the two versions sat side by side.
+
+
+--------------------------------------------------------------------------------
+14. VIPROX - "SEE THE FULL GSH COMPLEX PAGE" WENT TO THE HOME PAGE        CLOSED
+--------------------------------------------------------------------------------
+
+The link in the formulas section pointed at the site home page rather than the
+GSH Complex page. Corrected. Triozyme and Une Vie were given the same link,
+which they were missing entirely.
+
+
+--------------------------------------------------------------------------------
+15. GSH COMPLEX - DOSAGE CONTRADICTED THE LABEL                           CLOSED
+--------------------------------------------------------------------------------
+
+Covered under point 2 above, recorded separately because it is a compliance
+matter rather than a copy preference. The hero and the closing call to action
+both said "one serving a day" while the page's own dosing section, the Canadian
+label and the United States label all say one to three scoops daily. Both
+instances corrected.
+
+
+--------------------------------------------------------------------------------
+16. GSH COMPLEX - DUPLICATE H1 IN THE MOBILE HERO                         CLOSED
+--------------------------------------------------------------------------------
+
+Covered under point 1 above. The mobile copy overlay carried a second H1 with
+the same text as the desktop one. Removed with the overlay.
+
+
+================================================================================
+PART 3 - ADVISORIES: THESE NEED A DECISION, NOT A CODE CHANGE
+================================================================================
+
+Nine items that were deliberately not changed without someone at CYM saying so.
+Several are the kind of item that will come back on the next review if they go
+untouched.
+
+
+A. THE UNITED STATES LABEL SAYS SOY LECITHIN, THE PAGES SAY SUNFLOWER
+   The supplement facts panel on 112222-011-RV0418-USAback reads
+   "Soy lecithin / Lecithine de soya". The review email and both pages say
+   sunflower. Soy is a declarable allergen, so this needs settling at source
+   before either statement stays published. The pages have been left saying
+   sunflower and the conflict flagged here rather than resolved by guesswork.
+
+B. THE CANADIAN LABEL LINK OPENS A PRINTER'S APPROVAL PROOF
+   GSHCOMPLEX-BACK-CAN_en.pdf is a pre-press sheet. It carries an
+   "Epreuve d'approbation / Approbation proof" header, sign-off boxes reading
+   "Approved (no corrections needed)", dieline and web-direction marks, and a
+   customer ID. The label content is correct and legible, but a customer
+   clicking "View label" is shown an internal production document. Worth
+   requesting clean artwork from the printer.
+
+C. THE BROCHURE'S COVER CARRIES A THIRD-PARTY BRAND
+   Page one of the live brochure ends "www.nutraxis.com". The Michrowski
+   scientific opinion is likewise addressed to Nutraxis International Inc.,
+   not Cymcorp, and dated 2014. Both are the documents the review asked us to
+   link, so they are linked, but a customer who reads them meets a different
+   company's name.
+
+D. THE MICHROWSKI OPINION MAY NOT BE OURS TO PUBLISH
+   Its own first page states that reports are "the confidential property of
+   submitter" and that authorisation for publication "is reserved pending our
+   written approval". It is linked from the VIPROX page. Someone should
+   confirm that approval exists.
+
+E. THE GSH FORMULA PHOTOGRAPH CONTRADICTS THE NEW COPY
+   Directly beside "One ingredient does the work: fresh whey" sits a flat lay
+   of capsules, bright green powder, blueberries, seeds and dried botanicals.
+   None of it is in GSH Complex, and the capsules imply a format the product
+   does not come in. Now that the section makes a single-ingredient claim, the
+   picture works against it. A shot prompt for a replacement can be supplied
+   on request.
+
+F. THE VIPROX PHOTO SHOWS A BOTTLE THE COPY DOES NOT DESCRIBE
+   Une Vie appears in the box shot as a 32 fl oz "Blue Wave Balance" bottle.
+   The page, and the real label, say a 500 ml concentrate. Separately, the two
+   GSH pouches in that shot read "Immune Support" while the pouch on the GSH
+   Complex page reads "Immune System": two versions of the pack artwork across
+   two pages.
+
+G. "98.9% EFFICACY" HAS NO SOURCE ON THE PAGE
+   Stated as fact in the VIPROX protocol section: "Three elements working in
+   synergy for 98.9% efficacy, which no single product can reach on its own."
+   A precise percentage invites the question of where it came from, and the
+   page cannot answer it. Same family of problem as the missing study
+   reference.
+
+H. AN UNUSABLE PRODUCT MOCK IS SITTING IN THE ASSETS FOLDER
+   assets/hero-banner-mobile.jpg shows a pouch branded "GSH NUTRITION" rather
+   than CYM, with garbled badge text and "60 Vegetarian Capsules / Dietary
+   Supplement" on a product that is a 450 g powder. It is not referenced by
+   either page, but it is one careless import away from being published.
+   Recommend deleting it.
+
+I. DEAD MARKUP AND PLACEHOLDER LINKS
+   The GSH Complex page still carries the previous hero, roughly 150 lines,
+   hidden with display:none. Harmless to customers but it ships on every page
+   load. It can be deleted on request.
+
+   There are also 24 href="#" placeholders per page: About Us, Terms, Refund
+   Policy, the social icons. Every one of them is in the header, drawer or
+   footer, which the live site replaces with its own, since only the page's
+   main content block is deployed. No customer meets them, so destinations
+   have deliberately not been invented for them.
+
+
+================================================================================
+PART 4 - HOW EACH FIX WAS CHECKED
+================================================================================
+
+This is the step the review says is missing. Nothing below is a claim about the
+code. It is what the browser and the network actually returned after the edits
+were made.
+
+EVERY DOCUMENT LINK
+    All external links on both pages were fetched. Every one returns HTTP 200
+    with content type application/pdf, or a live YouTube page. No soft 404s
+    remain. Each PDF was opened and read to confirm it is the document the card
+    names.
+
+EVERY ON-PAGE LINK
+    Every internal anchor was resolved against the rendered page. Zero broken
+    anchors on either page, down from eight.
+
+EVERY BUTTON
+    Clicked in a real browser. The three pack buttons add 1, 6 and 12 to the
+    cart. The hero button adds 1. The purchase plan toggle switches. The FAQ
+    opens one panel at a time. All three VIPROX documentation tabs open, and
+    every link inside them was captured and checked.
+
+THE POUCH OVERLAP
+    Re-rendered at 360, 480 and 540px through an iframe harness, because
+    headless Chrome on Windows will not go below about 489px directly. No text
+    touches the pouch at any width and the pouch is fully in frame. Desktop
+    re-checked at 1024, 1150, 1280, 1440 and 1600.
+
+LICENCE NUMBERS
+    Both NPNs were looked up in Health Canada's licensed natural health
+    products database. 80021489 returns GSH Complex and CelluVie, CYMCORP
+    International Inc., sole medicinal ingredient whey protein isolate.
+    80094773 returns Triozyme.
+
+PRICING ARITHMETIC
+    Every price, per-day figure, saving and total in the restored purchase
+    section was recalculated by hand against the base price of $85.95. All
+    correct.
+
+STRUCTURE
+    Tag balance, duplicate IDs, missing images and heading counts checked. No
+    duplicate IDs and no broken images on either page.
+
+HOUSE STYLE
+    Zero em dashes in visible copy on either page.
+
+
+================================================================================
+SUMMARY OF EDITS
+================================================================================
+
+    GSHcomplex.html ....... 23 edits
+    viprox.html ........... 24 edits
+
+Nothing has been committed. All changes are in the working tree and can be
+reviewed or reverted file by file.
+
+================================================================================
+END OF REPORT
+================================================================================
