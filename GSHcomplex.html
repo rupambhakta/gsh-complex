@@ -1516,7 +1516,6 @@
       .vh .rail__trust li:last-child { flex-wrap: wrap; }
       .vh .rail__trust li:last-child .stars { flex: none; white-space: nowrap; }
       .vh__media figcaption { display: none; }
-      .vh__mobile-copy { display: none; }
       @media (max-width: 1360px) {
         .vh__media img { object-position: 52% 50%; }
         .vh__copy { max-width: 560px; }
@@ -1534,26 +1533,12 @@
         .vh .rail { max-width: none; }
       }
       @media (max-width: 560px) {
-        .vh__media { aspect-ratio: 5 / 5.2; }
-        .vh__media img { object-position: 50% 58%; }
-        .vh__mobile-copy {
-          display: block;
-          position: absolute;
-          left: var(--gutter);
-          top: var(--s5);
-          z-index: 2;
-          width: min(62%, 280px);
-          color: var(--forest);
-        }
-        .vh__mobile-copy .kicker { display: block; font-size: .63rem; line-height: 1.3; letter-spacing: .14em; text-transform: uppercase; }
-        .vh__mobile-copy h1 { margin-top: 8px; font-size: 1.85rem; line-height: 1.04; }
-        .vh__mobile-copy h1 em { color: var(--botanical); }
-        .vh__mobile-copy .lead { margin-top: 10px; font-size: .86rem; line-height: 1.45; color: var(--tx-soft); }
-        .vh__mobile-copy .promise { margin-top: 10px; padding-left: 10px; border-left: 2px solid var(--gold); font-family: var(--serif); font-size: .82rem; line-height: 1.35; }
-        .vh__copy > .kicker,
-        .vh__copy > h1,
-        .vh__copy > .vh__lead,
-        .vh__copy > .vh__promise { display: none; }
+        .vh__media { aspect-ratio: 5 / 3.6; }
+        .vh__media img { object-position: 63% 50%; }
+        .vh__copy { padding-block: var(--s5) var(--s7); }
+        .vh h1 { font-size: clamp(1.95rem, 1.15rem + 3.6vw, 2.45rem); }
+        .vh__lead { font-size: 1rem; }
+        .vh__promise { font-size: .95rem; }
       }
 
       /* ============================================================
@@ -3818,19 +3803,13 @@
       <section class="vh" id="buy">
         <figure class="vh__media">
           <img src="assets/hero-banner-new.png" width="1774" height="887" fetchpriority="high" alt="A GSH Complex pouch arranged on the right side of a warm cream surface, leaving clear space on the left for the headline." />
-          <div class="vh__mobile-copy">
-            <span class="kicker">Daily immune &amp; antioxidant support</span>
-            <h1>Your daily foundation for immunity, <em>vitality</em> and healthy aging.</h1>
-            <p class="lead">Two ingredients. One serving a day. The raw material your body uses to make glutathione, its own master antioxidant.</p>
-            <p class="promise">A simple daily foundation for cellular health, backed by a 45-day money-back guarantee.</p>
-          </div>
           <figcaption>Daily support, made simple</figcaption>
         </figure>
         <div class="vh__inner">
           <div class="vh__copy rv">
             <span class="kicker">Daily immune &amp; antioxidant support</span>
             <h1 class="d0">Your daily foundation for immunity, <em>vitality</em> and healthy aging.</h1>
-            <p class="vh__lead">Two ingredients. One serving a day. The raw material your body uses to make glutathione, its own master antioxidant.</p>
+            <p class="vh__lead">A highly bioavailable whey protein isolate, one to three servings a day. The raw material your body uses to make glutathione, its own master antioxidant.</p>
             <p class="vh__promise">A simple daily foundation for cellular health, backed by a 45-day money-back guarantee.</p>
             <div class="rail">
               <div class="rail__top"><span class="rail__now">$85.95</span><span class="rail__was">per 450 g family pack</span></div>
@@ -3882,8 +3861,9 @@
                 healthy aging.
               </h1>
               <p class="lead">
-                Two ingredients. One serving a day. The raw material your
-                body uses to make glutathione, its own master antioxidant.
+                A highly bioavailable whey protein isolate, one to three
+                servings a day. The raw material your body uses to make
+                glutathione, its own master antioxidant.
               </p>
               <ul class="hero__benefits">
                 <li><svg><use href="#i-immune" /></svg><span>Immune Support</span></li>
@@ -4235,13 +4215,13 @@
           <div class="rv">
             <!-- <span class="eyebrow">The formula</span> -->
             <h2 class="d2" style="margin-top: 12px">
-              Made from fresh whey, and <em>almost nothing else.</em>
+              One ingredient does the work: <em>fresh whey.</em>
             </h2>
             <p class="lead" style="margin-top: 14px">
               GSH Complex is made from high-quality, minimally processed fresh
-              dairy whey, the source of its glutathione precursors. One
-              functional ingredient, one solubility aid, and nothing added to
-              pad the label.
+              dairy whey, the source of its glutathione precursors. Whey protein
+              isolate is the single medicinal ingredient on the licence, taken
+              one to three times a day.
             </p>
 
             <div class="ing2">
@@ -4249,7 +4229,7 @@
                 <div class="ing2__top">
                   <span class="ing2__i"><svg><use href="#i-flask" /></svg></span>
                   <div class="ing2__n">Whey Protein Isolate</div>
-                  <span class="ing2__v">Primary</span>
+                  <span class="ing2__v">Medicinal ingredient</span>
                 </div>
                 <p class="ing2__d">
                   High-quality, minimally processed fresh dairy whey, the
@@ -4258,13 +4238,14 @@
               </div>
               <div class="ing2__row">
                 <div class="ing2__top">
-                  <span class="ing2__i"><svg><use href="#i-leaf" /></svg></span>
+                  <span class="ing2__i"><svg><use href="#i-refresh" /></svg></span>
                   <div class="ing2__n">Sunflower Lecithin</div>
-                  <span class="ing2__v">Under 1%</span>
+                  <span class="ing2__v">Processing aid</span>
                 </div>
                 <p class="ing2__d">
-                  A plant-derived emulsifier, added at less than 1% purely so
-                  the powder disperses smoothly in liquid, not a filler.
+                  Present at under 1% and used only so the powder wets and
+                  disperses evenly in liquid. It is a processing aid, not a
+                  nutrient, and carries no nutritional or medicinal value.
                 </p>
               </div>
             </div>
@@ -4328,14 +4309,15 @@
                 <div class="block">
                   <dt>Scientific advisor</dt>
                   <dd>
-                    <b>Dr. Robert Bender, MD, FAAFP</b>, with
+                    <b>Dr. Robert I. Bender, MD, FAAFP</b>, former medical
+                    advisor to CYM and author of
                     <a
-                      href="https://pubmed.ncbi.nlm.nih.gov/"
+                      href="https://yourcym.com/labels/EN/Give-Yourself-A-Fighting-Chance_en.pdf"
                       target="_blank"
                       rel="noopener"
-                      >published research on PubMed
+                      >Give Yourself A Fighting Chance
                       <svg width="12" height="12"><use href="#i-ext" /></svg
-                    ></a>
+                    ></a>, his paper on glutathione and health
                   </dd>
                 </div>
                 <div class="block">
@@ -4567,7 +4549,7 @@
       </section>
 
       <!-- ══════════════════ 10 · PURCHASE OPTIONS ══════════════════ -->
-      <!-- <section class="sec sec--sage" id="pricing">
+      <section class="sec sec--sage" id="pricing">
         <div class="container">
           <div class="sec__head center rv">
             <h2 class="d2">
@@ -4647,7 +4629,7 @@
               </div>
               <div class="plan__p"><b>$60.17</b><span>per pack</span></div>
               <div class="plan__day">$1.34 per day, our lowest</div>
-              <div class="plan__save">$721.98 total — you keep $309.42</div>
+              <div class="plan__save">$721.98 total · you keep $309.42</div>
               <ul>
                 <li>
                   <svg><use href="#i-check" /></svg>30% volume discount, our
@@ -4695,7 +4677,7 @@
             are before tax and shipping and are confirmed at checkout.
           </p>
         </div>
-      </section> -->
+      </section>
 
       <!-- ══════════════════ 11 · GUARANTEE ══════════════════ -->
       <section class="sec" id="guarantee">
@@ -4990,7 +4972,7 @@
               </p>
               <a
                 class="link-u doc__a"
-                href="https://yourcym.com/files/Booklet-GSHE-9avril_en.pdf"
+                href="https://yourcym.com/files/Booklet-GSHE-9avril.pdf"
                 target="_blank"
                 rel="noopener"
                 >View brochure <svg><use href="#i-ext" /></svg
@@ -5000,11 +4982,11 @@
             <li class="doc">
               <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
               <h3 class="doc__t">
-                GSH Complex<sup class="rmk">&reg;</sup> label
+                GSH Complex<sup class="rmk">&reg;</sup> label (Canada)
               </h3>
               <p class="doc__d">
-                The official label for all nutrition facts, method of use and
-                benefits.
+                The Canadian label: medicinal ingredient, recommended dose,
+                duration of use, cautions and known adverse reactions.
               </p>
               <a
                 class="link-u doc__a"
@@ -5016,27 +4998,29 @@
             </li>
 
             <li class="doc">
-              <span class="doc__ic"><svg><use href="#i-flask" /></svg></span>
-              <h3 class="doc__t">Product profile (nutrition &amp; enzymes)</h3>
+              <span class="doc__ic"><svg><use href="#i-doc" /></svg></span>
+              <h3 class="doc__t">
+                GSH Complex<sup class="rmk">&reg;</sup> label (United States)
+              </h3>
               <p class="doc__d">
-                The technical sheet, with the basic nutritional facts and the
-                active enzymes.
+                The US label: the supplement facts panel, dosage direction,
+                cautions and the FDA statement.
               </p>
               <a
                 class="link-u doc__a"
                 href="https://yourcym.com/labels/EN/112222-011-RV0418-USAback_en.pdf"
                 target="_blank"
                 rel="noopener"
-                >View profile <svg><use href="#i-ext" /></svg
+                >View label <svg><use href="#i-ext" /></svg
               ></a>
             </li>
 
             <li class="doc">
               <span class="doc__ic"><svg><use href="#i-flask" /></svg></span>
-              <h3 class="doc__t">Product profile (vitamins &amp; minerals)</h3>
+              <h3 class="doc__t">Amino acid profile</h3>
               <p class="doc__d">
-                The technical sheet listing every vitamin, mineral and trace
-                element in the product.
+                The typical amino acid profile per 100 g, including the cysteine
+                and cystine content that precedes glutathione synthesis.
               </p>
               <a
                 class="link-u doc__a"
@@ -5143,7 +5127,7 @@
               <p class="doc__d">
                 GSH Complex<sup class="rmk">&reg;</sup> is a natural health
                 product licensed under Natural Product Number
-                <b>800021489</b>.
+                <b>80021489</b>.
               </p>
               <a class="link-u doc__a" href="#science"
                 >Science &amp; quality <svg><use href="#i-arrow" /></svg
@@ -5207,7 +5191,7 @@
                 Begin your <em>45 days.</em>
               </h2>
               <p class="lead" style="margin-top: 14px">
-                One pack. One serving a day. Forty-five days to judge it
+                One pack, a 45-day supply. Forty-five days to judge it
                 honestly, and a full refund if it isn't for you.
               </p>
               <ul class="final__list">
@@ -5216,8 +5200,8 @@
                   support
                 </li>
                 <li>
-                  <svg><use href="#i-check" /></svg>Two ingredients, nothing
-                  hidden
+                  <svg><use href="#i-check" /></svg>One medicinal
+                  ingredient, nothing hidden
                 </li>
                 <li>
                   <svg><use href="#i-check" /></svg>45-day supply per pack
