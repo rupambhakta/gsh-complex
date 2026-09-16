@@ -3208,7 +3208,7 @@
         --jar: #5e93a2;
       }
       /* Vollkorn ships old-style figures; every display number opts into lining */
-      .path__n,
+      .enzrow__e,
       .dosec__t,
       .spec2 dd,
       .rung__q,
@@ -3301,107 +3301,77 @@
         .vh .rail__now { font-size: 2.3rem; }
       }
 
-      /* ── 2 · THE PATHWAY — four connected steps ─────────────── */
-      .path {
-        /* the base reset only clears ul, and this one is an ol */
-        list-style: none;
-        margin: 0;
-        padding: 0;
+      /* ── 2 · THE PATHWAY — one meal, three nutrients, three enzymes ── */
+      .enzrow {
+        margin-top: var(--s8);
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: var(--s5);
-        margin-top: var(--s9);
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--amber-line);
       }
-      .path__s {
-        position: relative;
-        padding-top: 62px;
-        text-align: center;
+      .enzrow__c {
+        padding: var(--s6) var(--s6) var(--s5) var(--s6);
+        border-left: 1px solid var(--amber-line);
       }
-      .path__s::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 18px;
-        height: 1px;
-        background: var(--amber-line);
+      .enzrow__c:first-child {
+        border-left: 0;
+        padding-left: 0;
       }
-      @media (min-width: 561px) {
-        .path__s:first-child::before {
-          left: 50%;
-        }
-        .path__s:last-child::before {
-          right: 50%;
-        }
+      .enzrow__c:last-child {
+        padding-right: 0;
       }
-      .path__n {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        background: var(--ivory);
-        border: 1px solid var(--gold-2);
-        color: var(--gold);
+      .enzrow__n {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.73rem;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+        color: var(--tx-soft);
+      }
+      .enzrow__n svg {
+        width: 22px;
+        height: 22px;
+        color: var(--olive);
+        flex: none;
+      }
+      .enzrow__e {
+        margin-top: var(--s4);
         font-family: var(--serif);
-        font-size: 0.92rem;
-        font-weight: 500;
-        z-index: 1;
+        font-size: clamp(1.7rem, 1.15rem + 1.5vw, 2.4rem);
+        line-height: 1.04;
+        color: var(--forest);
       }
-      .path__s h3 {
-        font-size: 1.14rem;
-        line-height: 1.24;
-      }
-      .path__s p {
-        margin-top: 11px;
-        font-size: 0.91rem;
+      .enzrow__c > p {
+        margin-top: 12px;
+        font-size: 1rem;
         line-height: 1.6;
         color: var(--tx-soft);
-        max-width: 30ch;
-        margin-inline: auto;
+        max-width: 32ch;
       }
-      @media (min-width: 561px) and (max-width: 900px) {
-        .path {
-          grid-template-columns: 1fr 1fr;
-          row-gap: var(--s7);
-        }
-        .path__s:nth-child(2)::before {
-          right: 50%;
-        }
-        .path__s:nth-child(3)::before {
-          left: 50%;
-        }
+      .enzclose {
+        margin-top: var(--s7);
+        padding-left: var(--s5);
+        border-left: 2px solid var(--gold);
+        font-family: var(--serif);
+        font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.3rem);
+        line-height: 1.5;
+        color: var(--forest);
+        max-width: 62ch;
       }
-      @media (max-width: 560px) {
-        .path {
+      @media (max-width: 900px) {
+        .enzrow {
           grid-template-columns: 1fr;
         }
-        .path__s {
-          padding: 0 0 0 58px;
-          text-align: left;
-          min-height: 44px;
+        .enzrow__c {
+          border-left: 0;
+          border-top: 1px solid var(--amber-line);
+          padding: var(--s5) 0;
         }
-        .path__s::before {
-          left: 18px;
-          right: auto;
-          top: 38px;
-          bottom: calc(var(--s7) * -1);
-          width: 1px;
-          height: auto;
+        .enzrow__c:first-child {
+          border-top: 0;
+          padding-top: var(--s5);
         }
-        .path__s:last-child::before {
-          display: none;
-        }
-        .path__n {
-          left: 0;
-          transform: none;
-        }
-        .path__s p {
-          margin-inline: 0;
+        .enzrow__c > p {
           max-width: none;
         }
       }
@@ -4333,6 +4303,48 @@
         <path d="M7.2 18.3C9 13.6 12.4 10 16.6 8" />
       </symbol>
       <symbol
+        id="i-grain"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 21.5V10" />
+        <path d="M12 13.4c-2.7 0-4.4-1.7-4.4-4.4 2.7 0 4.4 1.7 4.4 4.4Z" />
+        <path d="M12 13.4c2.7 0 4.4-1.7 4.4-4.4-2.7 0-4.4 1.7-4.4 4.4Z" />
+        <path d="M12 8.4C9.3 8.4 7.6 6.7 7.6 4 10.3 4 12 5.7 12 8.4Z" />
+        <path d="M12 8.4c2.7 0 4.4-1.7 4.4-4.4C13.7 4 12 5.7 12 8.4Z" />
+      </symbol>
+      <symbol
+        id="i-drop"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 3.4c3.5 4.1 5.7 6.9 5.7 9.7a5.7 5.7 0 0 1-11.4 0c0-2.8 2.2-5.6 5.7-9.7Z" />
+        <path d="M9.4 14.2a2.6 2.6 0 0 0 2.6 2.6" />
+      </symbol>
+      <symbol
+        id="i-protein"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="5.4" cy="15.6" r="2.6" />
+        <circle cx="12" cy="7.4" r="2.6" />
+        <circle cx="18.6" cy="15.6" r="2.6" />
+        <path d="m7.2 13.5 2.9-3.6" />
+        <path d="m13.9 9.9 2.9 3.6" />
+      </symbol>
+      <symbol
         id="i-flask"
         viewBox="0 0 24 24"
         fill="none"
@@ -4792,10 +4804,9 @@
               A meal is only useful <em>once it is broken down.</em>
             </h2>
             <p class="lead">
-              Your digestive system plays a vital role in breaking down food
-              into nutrients that support energy production and general
-              wellness. Triozyme is chewed, so it starts working where digestion
-              starts.
+              A meal is rarely one kind of nutrient. Carbohydrates, fats and
+              proteins normally arrive on the same plate, and each one needs a
+              different enzyme to break it down. Triozyme carries all three.
             </p>
           </div>
 
@@ -4814,40 +4825,45 @@
             />
           </figure>
 
-          <ol class="path rv rv--1">
-            <li class="path__s">
-              <span class="path__n">01</span>
-              <h3>You eat</h3>
+          <div class="enzrow rv rv--1">
+            <div class="enzrow__c">
+              <span class="enzrow__n"
+                ><svg><use href="#i-grain" /></svg>Carbohydrates</span
+              >
+              <h3 class="enzrow__e">Amylase</h3>
               <p>
-                A meal arrives as carbohydrates, proteins and fats. None of it
-                is usable in that form.
+                Bread, grains, rice, fruit and vegetables. Amylase helps break
+                carbohydrates down so the energy in them can be taken up.
               </p>
-            </li>
-            <li class="path__s">
-              <span class="path__n">02</span>
-              <h3>Enzymes go to work</h3>
+            </div>
+            <div class="enzrow__c">
+              <span class="enzrow__n"
+                ><svg><use href="#i-drop" /></svg>Fats</span
+              >
+              <h3 class="enzrow__e">Lipase</h3>
               <p>
-                Triozyme contains amylase, a digestive enzyme that helps break
-                down carbohydrates at various stages of digestion.
+                Oils, butter, nuts, cheese and oily fish. Lipase helps break
+                fats down into a form the body can absorb.
               </p>
-            </li>
-            <li class="path__s">
-              <span class="path__n">03</span>
-              <h3>Nutrients are assimilated</h3>
+            </div>
+            <div class="enzrow__c">
+              <span class="enzrow__n"
+                ><svg><use href="#i-protein" /></svg>Proteins</span
+              >
+              <h3 class="enzrow__e">Protease</h3>
               <p>
-                A balanced diet and digestive support help maintain your body's
-                natural nutrient absorption.
+                Meat, fish, eggs, dairy and pulses. Protease helps break
+                proteins down into the amino acids the body works with.
               </p>
-            </li>
-            <li class="path__s">
-              <span class="path__n">04</span>
-              <h3>You feel the difference</h3>
-              <p>
-                Comfortable digestion is the part of wellness you only notice
-                when it stops going smoothly.
-              </p>
-            </li>
-          </ol>
+            </div>
+          </div>
+
+          <p class="enzclose rv">
+            All three in one chewable tablet. That is what the balanced blend is
+            for: whatever is on the plate, the enzyme for it is present,
+            supporting the breakdown and absorption of the nutrients in a
+            balanced meal.
+          </p>
         </div>
       </section>
 
@@ -4933,10 +4949,10 @@
               Chew them. <em>That is the instruction.</em>
             </h2>
             <p class="lead">
-              Chewing Triozyme supports optimal nutrient breakdown and
-              absorption, so the tablets are meant to be chewed rather than
-              swallowed whole. You may also use Triozyme as part of your daily
-              wellness routine.
+              Digestion begins in the mouth, not the stomach. Chewing Triozyme
+              mixes the tablet with saliva, so its amylase, lipase and protease
+              meet the food at the very start of the process. That is why the
+              tablets are chewed and never swallowed whole.
             </p>
           </div>
 
@@ -5003,13 +5019,14 @@
 
             <div class="rv rv--1">
               <h2 class="d2">
-                A balanced blend of <em>enzymes and nutrients.</em>
+                A balanced blend of <em>amylase, lipase and protease.</em>
               </h2>
               <p class="lead" style="margin-top: 14px">
-                Triozyme is a dietary enzymatic supplement. Alongside its
-                enzymes it carries nutrients that contribute to general
-                nutritional support, and the full technical sheets are published
-                below.
+                Triozyme is a dietary enzymatic supplement built on three
+                enzymes: amylase for carbohydrates, lipase for fats and protease
+                for proteins. Alongside them it carries nutrients that
+                contribute to general nutritional support, and the full
+                technical sheets are published below.
               </p>
 
               <dl class="spec2">
@@ -5022,8 +5039,8 @@
                   <dd>2 tablets after each meal</dd>
                 </div>
                 <div>
-                  <dt>Named enzyme</dt>
-                  <dd>Amylase</dd>
+                  <dt>Enzymes</dt>
+                  <dd>Amylase, lipase, protease</dd>
                 </div>
                 <div>
                   <dt>Good for</dt>
@@ -5471,9 +5488,12 @@
                 </summary>
                 <div class="faq__a">
                   <p>
-                    Triozyme contains amylase, a digestive enzyme that helps
-                    break down carbohydrates. This supports the normal digestion
-                    of nutrients at various stages of the digestive process.
+                    Triozyme provides three digestive enzymes. Amylase helps
+                    break down carbohydrates, lipase helps break down fats and
+                    protease helps break down proteins. Because a normal meal
+                    contains all three nutrients, the blend supports the
+                    digestion and absorption of the whole plate rather than one
+                    part of it.
                   </p>
                 </div>
               </details>
@@ -5508,9 +5528,11 @@
                     vary depending on dietary habits and wellness goals.
                   </p>
                   <p>
-                    Chew the tablets rather than swallowing them whole. For
-                    occasional digestive challenges, chew one to two tablets as
-                    needed; during periods of dietary stress, chew four to six.
+                    Chew the tablets rather than swallowing them whole. Digestion
+                    starts in the mouth, and chewing mixes the tablet with saliva
+                    so the enzymes meet the food straight away. For occasional
+                    digestive challenges, chew one to two tablets as needed;
+                    during periods of dietary stress, chew four to six.
                   </p>
                 </div>
               </details>
@@ -5672,6 +5694,19 @@
                 target="_blank"
                 rel="noopener"
                 >View profile <svg><use href="#i-ext" /></svg
+              ></a>
+            </li>
+
+            <li class="doc">
+              <span class="doc__ic"><svg><use href="#i-badge" /></svg></span>
+              <h3 class="doc__t">Licence</h3>
+              <p class="doc__d">
+                Triozyme<sup class="rmk">&reg;</sup> is a natural health product
+                licensed by Health Canada under Natural Product Number
+                <b>80094773</b>.
+              </p>
+              <a class="link-u doc__a" href="#ingredients"
+                >The formula <svg><use href="#i-arrow" /></svg
               ></a>
             </li>
 
